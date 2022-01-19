@@ -27,10 +27,10 @@ const time_limit = function(data, next) {
 // compares the chosen answer to the value of `option1`
 // check gender of name? --> personalized data list
 
-const save_response = function(data,next){
-    var array_names = new Array[];
-    array_names.push('input[name=anser]');
-};
+//const save_response = function(data,next){
+    //var array_names = new Array[];
+    //array_names.push('input[name=anser]');
+//};
 
 
 check_response = function(data, next) {
