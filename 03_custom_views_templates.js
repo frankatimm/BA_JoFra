@@ -2,13 +2,13 @@
 const custom_views = {};
 
 custom_views.multi_choice_customized = function(config) {
-      const forced_choice_customized = magpieViews.view_generator(
-          "forced_choice",
+      const forced_choice_customized_function = magpieViews.view_generator(
+          "multi_choice",
           // config information
           {
-              trials: part_one_trial_info.forced_choice.length,
-              name: 'rebuilt_FC',
-              data: forced_choice_3A_trials.forced_choice
+              trials: forced_choice_3A_trials.multi_choice.length,
+              name: 'Forced Choice 3A',
+              data: forced_choice_3A_trials.multi_choice
           },
           // custom generator functions
           {
@@ -26,5 +26,7 @@ custom_views.multi_choice_customized = function(config) {
           }
 
       );
-      return forced_choice_customized;
+      return forced_choice_customized_function;
+
+
 };
