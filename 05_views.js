@@ -130,6 +130,6 @@ const filler_sentences = magpieViews.view_generator('textbox_input', {
 
 const forced_choice_3A = custom_views.multi_choice_customized({
   trails: 36 ,
-  name: "Stereotype Check" ,
+  name: "forced_choice_3A" ,
   data: forced_choice_3A_trials.multi_choice_customized,
 });
