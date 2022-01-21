@@ -15,7 +15,7 @@
 const custom_views = {};
 
 custom_views.multi_choice_customized = function(config) {
-      const forced_choice_customized_function = magpieViews.view_generator(
+      const multi_choice_customized_function = magpieViews.view_generator(
           "multi_choice",
           // config information
           {
@@ -39,7 +39,7 @@ custom_views.multi_choice_customized = function(config) {
           }
 
       );
-      return forced_choice_customized_function;
+      return multi_choice_customized_function;
 
 
 };
