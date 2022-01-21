@@ -1,4 +1,6 @@
 // In this file you can specify the trial data for your experiment
+
+// In this file you can specify the trial data for your experiment
 // practice trails: 24 trails
 //structure:
     //picture;
