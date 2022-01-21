@@ -171,7 +171,7 @@ const filler_sentences = magpieViews.view_generator('textbox_input', {
   // }
 });
 
-const forced_choice_3A = custom_views.forced_choice_customized('forced_choice_customized',{
+const forced_choice_3A = magpieViews.view_generator('forced_choice_customized',{
   trials: forced_choice_3A_trials.forced_choice_customized.length,
   name: 'forced_choice_3A',
   data: forced_choice_3A_trials.forced_choice_customized, //shuffle
