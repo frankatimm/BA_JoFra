@@ -13,9 +13,9 @@ const forced_choice_customized = magpieViews.view_generator(
     "forced_choice",
     // config information
     {
-      trials: forced_choice_3A_trials.forced_choice.length,
+      trials: forced_choice_3A.forced_choice.length,
       name: 'rebuilt_FC',
-      data: forced_choice_3A_trials.forced_choice
+      data: forced_choice_3A.forced_choice
     },
     // custom generator functions
     {
