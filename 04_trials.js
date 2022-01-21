@@ -989,7 +989,7 @@ const textbox_input_trials = {
 
 
 const forced_choice_3A_trials = {
-  forced_choice:[
+  forced_choice_customized:[
     {
         item: 1,
         phase: 3,
