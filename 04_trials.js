@@ -988,7 +988,8 @@ const textbox_input_trials = {
 ]};
 
 
-const forced_choice_3A_trials = [
+const forced_choice_3A_trials = {
+  forced_choice:[
     {
         item: 1,
         phase: 3,
@@ -1350,4 +1351,4 @@ const forced_choice_3A_trials = [
         option3: "Weiblich"
     },
 
-];
+]};
