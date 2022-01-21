@@ -10,8 +10,7 @@
     //expected: "female"/"male"/"neuter";
     //number_of_items: 1,5,15,30 ;
     //condition: "conjunction"/"disjunction.shape"/"disjuction.colour";
-const textbox_input_trials = {
-  textbox_input: [
+const textbox_input_trials = [
     {
         item: 1,
         condition: "m",
@@ -985,11 +984,10 @@ const textbox_input_trials = {
       question: "Während der Pandemie vermissten die StudentInnen vor allem die Mensa. <br /> ___ geht jeden Tag essen, seit sie wieder geöffnet ist. <br /> Bitte schreibe einen passenden Namen in das Feld.",
       min_chars: 2
     },
-]};
+];
 
 
-const forced_choice_3A_trials = {
-  multi_choice: [
+const forced_choice_3A_trials = [
     {
         item: 1,
         phase: 3,
@@ -1351,4 +1349,4 @@ const forced_choice_3A_trials = {
         option3: "Weiblich"
     },
 
-]};
+];
