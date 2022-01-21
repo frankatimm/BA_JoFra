@@ -12,38 +12,35 @@
 // In this file you can create your own custom view templates
 const custom_views = {};
 
-const multi_choice_customized = magpieViews.view_generator(
-    "multi_choice",
-    // config information
-  {
-      trials: forced_choice_3A_trials.multi_choice.length,
-      name: 'forced_choice_3A',
-      data: forced_choice_3A_trials.multi_choice
-  },
-  // custom generator functions
-  {
-  answer_container_generator: function (config, CT) {
-    return `<div class='magpie-view-answer-container magpie-response-multi-dropdown'>
-        ${config.data[CT].sentence_chunk_1}
-          <div class= 'response-table'>
-            <input type='radio' name='answer1' id='o1' style='display:none' value=${config.data[CT].choice_options_1[0]} />
-            <label for='o1' class='magpie-response-buttons'>${config.data[CT].choice_options_1[0]}</label>
-            <input type='radio' name='answer1' id='o2' style='display:none' value=${config.data[CT].choice_options_1[1]} />
-            <label for='o2' class='magpie-response-buttons'>${config.data[CT].choice_options_1[1]}</label>
-            <input type='radio' name='answer1' id='o3' style='display:none' value=${config.data[CT].choice_options_1[2]} />
-            <label for='o3' class='magpie-response-buttons'>${config.data[CT].choice_options_1[2]}</label>
-          </div>
-        ${config.data[CT].sentence_chunk_2}
-          <div class= 'response-table'>
-            <input type='radio' name='answer2' id='p1' style='display:none' value=${config.data[CT].choice_options_2[0]} />
-            <label for='p1' class='magpie-response-buttons'>${config.data[CT].choice_options_2[0]}</label>
-            <input type='radio' name='answer2' id='p2' style='display:none' value=${config.data[CT].choice_options_2[1]} />
-            <label for='p2' class='magpie-response-buttons'>${config.data[CT].choice_options_2[1]}</label>
-            <input type='radio' name='answer2' id='p3' style='display:none' value=${config.data[CT].choice_options_2[2]} />
-            <label for='p3' class='magpie-response-buttons'>${config.data[CT].choice_options_2[2]}</label>
-          </div>
-        ${config.data[CT].sentence_chunk_3}
-          </div>`;
+// In this file you can create your own custom view templates
+const custom_views = {};
+
+custom_views.multi_choice_customized = function(config) {
+      const forced_choice_customized_function = magpieViews.view_generator(
+          "multi_choice",
+          // config information
+          {
+              trials: forced_choice_3A_trials.multi_choice.length,
+              name: 'Forced Choice 3A',
+              data: forced_choice_3A_trials.multi_choice
+          },
+          // custom generator functions
+          {
+            answer_container_generator: function (config, CT) {
+             return `<div class='magpie-view-answer-container'>
+                     <p class='magpie-view-question'>${config.data[CT].question}</p>
+                     <label for='o1' class='magpie-response-buttons'>${config.data[CT].option1}</label>
+                     <input type='radio' name='answer' id='o1' value=${config.data[CT].option1} />
+                     <label for='o2' class='magpie-response-buttons'>${config.data[CT].option2}</label>
+                     <input type='radio' name='answer' id='o2' value=${config.data[CT].option2} />
+                     <label for='o2' class='magpie-response-buttons'>${config.data[CT].option3}</label>
+                     <input type='radio' name='answer' id='o3' value=${config.data[CT].option3} />
+                     </div>`;
         }
-    }
-);
+          }
+
+      );
+      return forced_choice_customized_function;
+
+
+};
