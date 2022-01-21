@@ -18,7 +18,7 @@ const forced_choice_customized = magpieViews.view_generator(
       data: forced_choice_3A_trials.forced_choice
     },
     // custom generator functions
-    {
+    {stimulus_container_generator: stimulus_container_generators.basic_stimulus,
       answer_container_generator: function (config, CT) {
        return `<div class='magpie-view-answer-container'>
                <p class='magpie-view-question'>${config.data[CT].question}</p>
@@ -29,6 +29,28 @@ const forced_choice_customized = magpieViews.view_generator(
                <label for='o2' class='magpie-response-buttons'>${config.data[CT].option3}</label>
                <input type='radio' name='answer' id='o3' value=${config.data[CT].option3} />
                </div>`;
-  }
+  }, handle_response_function: handle_response_functions = {
+    button_choice: function(config, CT, magpie, answer_container_generator, startingTime) {
+        $(".magpie-view").append(answer_container_generator(config, CT));
+
+        // attaches an event listener to the yes / no radio inputs
+        // when an input is selected a response property with a value equal
+        // to the answer is added to the trial object
+        // as well as a readingTimes property with value
+        $("input[name=answer]").on("change", function() {
+            const RT = Date.now() - startingTime;
+            let trial_data = {
+                trial_name: config.name,
+                trial_number: CT + 1,
+                response: $("input[name=answer]:checked").val(),
+                RT: RT
+            };
+
+            trial_data = magpieUtils.view.save_config_trial_data(config.data[CT], trial_data);
+
+            magpie.trial_data.push(trial_data);
+            magpie.findNextView();
+        });
+    },
     }
 );
