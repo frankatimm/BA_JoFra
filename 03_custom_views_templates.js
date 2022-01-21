@@ -19,9 +19,9 @@ custom_views.multi_choice_customized = function(config) {
           "multi_choice",
           // config information
           {
-              trials: forced_choice_3A_trials.multi_choice.length,
+              trials: forced_choice_3A_trials.length,
               name: 'Forced Choice 3A',
-              data: forced_choice_3A_trials.multi_choice
+              data: forced_choice_3A_trials
           },
           // custom generator functions
           {
