@@ -991,18 +991,16 @@ const textbox_input_trials = {
 const forced_choice_3A_trials = {
   forced_choice_customized:[
     {
-
         question: "Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
     },
     {
-
         question: "Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
     },
-    
+
 ]};

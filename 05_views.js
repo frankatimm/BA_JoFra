@@ -171,10 +171,14 @@ const filler_sentences = magpieViews.view_generator('textbox_input', {
   // }
 });
 
-const forced_choice_3A = magpieViews.view_generator('forced_choice_customized',{
-  trials: forced_choice_3A_trials.forced_choice_customized.length,
+const forced_choice_3A = magpieViews.view_generator('forced_choice',{
+  trials: forced_choice_3A_trials.forced_choice.length,
   name: 'forced_choice_3A',
-  data: forced_choice_3A_trials.forced_choice_customized, //shuffle
+  data: forced_choice_3A_trials.forced_choice, //shuffle,
+  // We add our custom generators here
+   {stimulus_container_generator: forced_choice_customized.stimulus_container_gen,
+   answer_container_generator: forced_choice_customized.answer_container_gen,
+   handle_response_function: forced_choice_customized.handle_response_function}
 });
 
 // There are many more templates available:
