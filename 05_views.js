@@ -28,13 +28,16 @@ const intro = magpieViews.view_generator("intro", {
   <br />
   <br />
   Thank you for taking your time and contributing to our research.
-  You can only take part in this experiment using a computer that is connected to a keyboard.
   <br />
-  Before we start, please make sure to not get distracted by anything (e.g. your phone, internet browser,...).
-  Make yourself comfortable.
+  Before you start, make sure you are meeting the following requirements:
+  <br />
+  - You are running this experiment on a device with a stable internet connection.
+  - You have approximately 30 minutes time to complete the full exercise.
+  - You are in a calm and comfortable environment that allows you to focus on the task.
   <br />
   <br />
-  If you feel ready to start the experiment, please click on the "begin the experiment"-button down below.`,
+  <br />
+  If you feel ready to start the experiment, please click on the "Begin the experiment"-button down below.`,
   buttonText: 'Begin the experiment'
 });
 
@@ -46,7 +49,13 @@ const general_instructions = magpieViews.view_generator("instructions", {
   text: `Before we get started we will provide you with some short instructions and explain what your
   task is going to be.
   <br />
-  hier muss unsere instruction hin !!!!!!!!!!!
+  In the following exercise, sentences will be presented to you on your screen. The scheme of those sentences will remain
+  just about the same during the full first task of this experiment. The first sentence is a complete sentence that
+  describes a situation which the second sentence picks up. Your task is going to be to complete the second sentence
+  by inserting a name into the box which will be shown below the text and it should be the name that you think fits
+  best at the empty space of the second sentence.
+  You are allowed to repeat names and choose as many upper- and lowercase letters as you wish but it is important that you answers
+  contain surnames only that you are not using special characters of any kind (_, *, /, 1, 2, 3...)
   <br />
   <br />
   In order to prepare you for the experimental setup you will first run through some practice trials before you proceed to the main task.
@@ -61,7 +70,7 @@ const textbox_input_instructions = magpieViews.view_generator("instructions", {
   name: 'main_instructions',
   title: 'Instructions',
   text: `So far so good!
-  You have now finished the practice phase and hopefully well prepared for the main trials.
+  You have now finished the practice phase and are hopefully well prepared for the main trials.
   They are identical in format and content.
   In order to proceed, press the button below.`,
   buttonText: 'proceed to trials'
@@ -71,8 +80,14 @@ const forced_choice_2A_instructions = magpieViews.view_generator("instructions",
   trials: 1,
   name: 'instructions_conjunction_2',
   title: 'Instructions',
-  text: `The target you are supposed to find is a green T.
-  Again, if you detect the target "green T" press L, otherwise press S.`,
+  text: `You successfully reached the end of the first part of the experiment and will now go on with
+  the second block in which you are asked to work with the earlier inserted names. More precisely, you will see
+  the names you chose to fill in the boxes of task 1 again and are asked to assess if for your personal understanding
+  the name at question is either used to describe female individuals or male ones. Click the button which suits
+  your idea better even though you might feel like some names could describe both sexes. A clear decision is necessary since
+  you cannot proceed with the task otherwise.
+  <br />
+  If you feel ready press the 'Proceed to trials'-button.`,
   buttonText: 'proceed to trials'
 });
 
@@ -80,35 +95,40 @@ const forced_choice_3A_instructions = magpieViews.view_generator("instructions",
   trials: 1,
   name: 'instructions_conjunction_2',
   title: 'Instructions',
-  text: `The target you are supposed to find is a green T.
-  Again, if you detect the target "green T" press L, otherwise press S.`,
+  text: `Great job, you completed the second task of the experiment and there is only one more in order to
+  finish. In the third task you are asked again to rate words. This time you will be represented role nouns
+  and your task is to decide intuitively to which of the categories
+  <strong female strong>, <strong male strong> and <strong neutral strong>
+  you would assign each one of them.
+  <br />
+  To start the last block, click on the 'Proceed to trials'-button. `,
   buttonText: 'proceed to trials'
 });
 
 //feedback after each block
 //little break for participants in order to show that one block is already done
-const after_block_1 = magpieViews.view_generator("instructions", {
-  trials: 1,
-  name: 'after_block_1',
-  title: 'Take a short break!',
-  text: `Good job! You completed one block. If you feel ready to proceed click on the botton below. `,
-  buttonText: 'proceed to trials'
-});
+//const after_block_1 = magpieViews.view_generator("instructions", {
+  //trials: 1,
+  //name: 'after_block_1',
+  //title: 'Take a short break!',
+  //text: `Good job! You completed one block. If you feel ready to proceed click on the botton below. `,
+  //buttonText: 'proceed to trials'
+//});
 
-const after_block_2 = magpieViews.view_generator("instructions", {
-  trials: 1,
-  name: 'after_block_2',
-  title: 'Take a short break!',
-  text: `Good job! You completed one block. If you feel ready to proceed click on the botton below. `,
-  buttonText: 'proceed to trials'
-});
+//const after_block_2 = magpieViews.view_generator("instructions", {
+  //trials: 1,
+  //name: 'after_block_2',
+  //title: 'Take a short break!',
+  //text: `Good job! You completed one block. If you feel ready to proceed click on the botton below. `,
+  //buttonText: 'proceed to trials'
+//});
 
 // In the post test questionnaire you can ask your participants addtional questions
 const post_test = magpieViews.view_generator("post_test", {
   trials: 1,
   name: 'post_test',
   title: 'Additional information',
-  text: 'Answering the following questions is optional, but your answers will help us analyze our results.'
+  text: ' Good job! You nearly done with the experiment. The last step is to answer the following questions.',
 
   // You can change much of what appears here, e.g., to present it in a different language, as follows:
   // buttonText: 'Weiter',
@@ -130,7 +150,7 @@ const post_test = magpieViews.view_generator("post_test", {
 const thanks = magpieViews.view_generator("thanks", {
   trials: 1,
   name: 'thanks',
-  title: 'Thank you for taking part in this experiment!',
+  title: 'Perfect, you are done! Thank you for taking part in our experiment! Have a great day!:)',
   prolificConfirmText: 'Press the button'
 });
 
@@ -161,25 +181,52 @@ const thanks = magpieViews.view_generator("thanks", {
 // Here, we initialize a normal forced_choice view
 const filler_sentences = magpieViews.view_generator('textbox_input', {
   // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
-  trials: textbox_input_trials.textbox_input.length,
+  trials: 36,
   // name should be identical to the variable name
   name: 'filler_sentences',
-  data: textbox_input_trials.textbox_input, //shuffle
+  data: _.shuffle(textbox_input_trials.textbox_input), //shuffle
   // you can add custom functions at different stages through a view's life cycle
   // hook: {
   //     after_response_enabled: check_response
   // }
 });
 
-const forced_choice_3A = magpieViews.view_generator('forced_choice',{
-  trials: forced_choice_3A_trials.forced_choice.length,
-  name: 'forced_choice_3A',
-  data: forced_choice_3A_trials.forced_choice, //shuffle,
+
+//const forced_choice_3A = magpieViews.view_generator('forced_choice',{
+//  trials: forced_choice_3A_trials.forced_choice.length,
+  //name: 'forced_choice_3A',
+  //data: forced_choice_3A_trials.forced_choice, //shuffle,
   // We add our custom generators here
-  stimulus_container_generator: forced_choice_customized.stimulus_container_gen,
-  answer_container_generator: forced_choice_customized.answer_container_gen,
-  handle_response_function: forced_choice_customized.handle_response_function
-});
+  //stimulus_container_generator: forced_choice_customized.stimulus_container_gen,
+  //answer_container_generator: forced_choice_customized.answer_container_gen,
+  //handle_response_function: forced_choice_customized.handle_response_function
+//});
+
+// Here, we initialize a forced_choice view with a custom answer container
+// We added an additional title above the question
+const forced_choice_3A = magpieViews.view_generator(
+    "forced_choice",
+    {
+        // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
+        trials: forced_choice_3A_trials.forced_choice.length,
+        // name should be identical to the variable name
+        name: 'forced_choice_3A',
+        data: _.shuffle(forced_choice_3A_trials.forced_choice)
+    },
+    {
+        answer_container_generator:  function (config, CT) {
+         return `<div class='magpie-view-answer-container'>
+                 <p class='magpie-view-question'>${config.data[CT].question}</p>
+                 <label for='o1' class='magpie-response-buttons'>${config.data[CT].option1}</label>
+                 <input type='radio' name='answer' id='o1' value=${config.data[CT].option1} />
+                 <label for='o2' class='magpie-response-buttons'>${config.data[CT].option2}</label>
+                 <input type='radio' name='answer' id='o2' value=${config.data[CT].option2} />
+                 <label for='o2' class='magpie-response-buttons'>${config.data[CT].option3}</label>
+                 <input type='radio' name='answer' id='o3' value=${config.data[CT].option3} />
+                 </div>`;
+    }
+    }
+);
 
 // There are many more templates available:
 // forced_choice, slider_rating, dropdown_choice, testbox_input, rating_scale, image_selection, sentence_choice,

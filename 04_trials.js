@@ -988,19 +988,366 @@ const textbox_input_trials = {
 ]};
 
 
-const forced_choice_3A_trials = {
-  forced_choice_customized:[
-    {
-        question: "Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
-        option1: "Männlich",
-        option2: "Neutral",
-        option3: "Weiblich"
-    },
-    {
-        question: "Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
-        option1: "Männlich",
-        option2: "Neutral",
-        option3: "Weiblich"
-    },
 
+const forced_choice_3A_trials = {
+  forced_choice:[
+    {
+      item: 1,
+      phase: 3,
+      stereotype:"female",
+      role_noun: "BabysitterInnen",
+      question: " <strong> BabysiterInnen </strong> <br /> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+      option1: "Männlich",
+      option2: "Neutral",
+      option3: "Weiblich"
+    },{
+        item: 2,
+        phase: 3,
+        stereotype:"female",
+        role_noun: "BalletttänzerInnen",
+        question: "<strong>BalletttänzerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 3,
+        phase: 3,
+        stereotype:"female",
+        role_noun: "KassiererInnen",
+        question: "<strong>KassiererInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 4,
+        phase: 3,
+        stereotype:"female",
+        role_noun: "ErnährungsberaterInnen",
+        question: "<strong>ErnährungsberaterInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 5,
+        phase: 3,
+        stereotype:"female",
+        role_noun: "FloristInnen",
+        question: "<strong>FloristInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 6,
+        phase: 3,
+        stereotype:"female",
+        role_noun: "FlugbegleiterInnen",
+        question: "<strong>FlugbegleiterInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 7,
+        phase: 3,
+        stereotype:"female",
+        role_noun: "FriseurInnen",
+        question: "<strong>FriseurInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 8,
+        phase: 3,
+        stereotype:"female",
+        role_noun: "HaushälterInnen",
+        question: "<strong>HaushälterInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 9,
+        phase: 3,
+        stereotype:"female",
+        role_noun: "KindergärtnerInnen",
+        question: "<strong>KindergärtnerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 10,
+        phase: 3,
+        stereotype:"female",
+        role_noun: "GrundschullehrerInnen",
+        question: "<strong>GrundschullehrerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 11,
+        phase: 3,
+        stereotype:"female",
+        role_noun: "AutorInnen von Liebesromanen",
+        question: "<strong>AutorInnen von Liebesromanen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 12,
+        phase: 3,
+        stereotype:"female",
+        role_noun: "SchneiderInnen",
+        question: "<strong>SchneiderInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 13,
+        phase: 3,
+        stereotype:"male",
+        role_noun: "AstronautInnen",
+        question: "<strong>AstronautInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 14,
+        phase: 3,
+        stereotype:"male",
+        role_noun: "MetzgerInnen",
+        question: "<strong>MetzgerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 15,
+        phase: 3,
+        stereotype:"male",
+        role_noun: "ProgrammiererInnen",
+        question: "<strong>ProgrammiererInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 16,
+        phase: 3,
+        stereotype:"male",
+        role_noun: "ManagerInnen",
+        question: "<strong>ManagerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 17,
+        phase: 3,
+        stereotype:"male",
+        role_noun: "BürgermeisterInnen",
+        question: "<strong>BürgermeisterInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 18,
+        phase: 3,
+        stereotype:"male",
+        role_noun: "MörderInnen",
+        question: "<strong>MörderInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 19,
+        phase: 3,
+        stereotype:"male",
+        role_noun: "PilotInnen",
+        question: "<strong>PilotInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 20,
+        phase: 3,
+        stereotype:"male",
+        role_noun: "PräsidentInnen",
+        question: "<strong>PräsidentInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 21,
+        phase: 3,
+        stereotype:"male",
+        role_noun: "PrivatdetektivInnen",
+        question: "<strong>PrivatdetektivInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 22,
+        phase: 3,
+        stereotype:"male",
+        role_noun: "SoldatInnen",
+        question: "<strong>SoldatInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 23,
+        phase: 3,
+        stereotype:"male",
+        role_noun: "ChirgurInnen",
+        question: "<strong>ChirgurInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 24,
+        phase: 3,
+        stereotype:"male",
+        role_noun: "TaxifahrerInnen",
+        question: "<strong>TaxifahrerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 25,
+        phase: 3,
+        stereotype:"neutral",
+        role_noun: "KünstlerInnen",
+        question: "<strong>KünstlerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 26,
+        phase: 3,
+        stereotype:"neutral",
+        role_noun: "SportlerInnen",
+        question: "<strong>SportlerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 27,
+        phase: 3,
+        stereotype:"neutral",
+        role_noun: "HundehalterInnen",
+        question: "<strong>HundehalterInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 28,
+        phase: 3,
+        stereotype:"neutral",
+        role_noun: "ImmobilienmaklerInnen",
+        question: "<strong>ImmobilienmaklerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 29,
+        phase: 3,
+        stereotype:"neutral",
+        role_noun: "JournalistInnen",
+        question: "<strong>JournalistInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 30,
+        phase: 3,
+        stereotype:"neutral",
+        role_noun: "MieterInnen",
+        question: "<strong>MieterInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 31,
+        phase: 3,
+        stereotype:"neutral",
+        role_noun: "PatientInnen",
+        question: "<strong>PatientInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 32,
+        phase: 3,
+        stereotype:"neutral",
+        role_noun: "FotografInnen",
+        question: "<strong>FotografInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 33,
+        phase: 3,
+        stereotype:"neutral",
+        role_noun: "MedizinerInnen",
+        question: "<strong>MedizinierInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 34,
+        phase: 3,
+        stereotype:"neutral",
+        role_noun: "politische AktivistInnen",
+        question: "<strong>politische AktivistInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 35,
+        phase: 3,
+        stereotype:"neutral",
+        role_noun: "PsychiaterInnen",
+        question: "<strong>PsychiaterInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
+    {
+        item: 36,
+        phase: 3,
+        stereotype:"neutral",
+        role_noun: "StudentInnen",
+        question: "<strong>StudentInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        option1: "Männlich",
+        option2: "Neutral",
+        option3: "Weiblich"
+    },
 ]};
