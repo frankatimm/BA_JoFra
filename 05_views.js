@@ -184,22 +184,19 @@ const filler_sentences = magpieViews.view_generator('textbox_input', {
   trials: 36,
   // name should be identical to the variable name
   name: 'filler_sentences',
-  data: _.shuffle(textbox_input_trials.textbox_input), //shuffle
+  data: _.shuffle(textbox_input_trials.textbox_input)
+},
+//shuffle
   // you can add custom functions at different stages through a view's life cycle
   // hook: {
   //     after_response_enabled: check_response
-  // }
-});
+);
 
 
-//const forced_choice_3A = magpieViews.view_generator('forced_choice',{
-//  trials: forced_choice_3A_trials.forced_choice.length,
-  //name: 'forced_choice_3A',
-  //data: forced_choice_3A_trials.forced_choice, //shuffle,
-  // We add our custom generators here
-  //stimulus_container_generator: forced_choice_customized.stimulus_container_gen,
-  //answer_container_generator: forced_choice_customized.answer_container_gen,
-  //handle_response_function: forced_choice_customized.handle_response_function
+//const forced_choice_2A = magpieViews.view_generator('forced_choice', {
+//  trials: 36,
+//  name: 'forced_choice_2A',
+//  data: textbox_input_trials.trial_data,
 //});
 
 // Here, we initialize a forced_choice view with a custom answer container

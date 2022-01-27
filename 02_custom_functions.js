@@ -61,8 +61,27 @@ check_response = function(data, next) {
     })
 }
 
-// Declare your hooks here
+unique_item = function(data,next){
 
+}
+
+// Declare your hooks here
+function create_forced_choice_2A_trials(old_trials) {
+  var trials = [];
+  var i = 0;
+  for (var k = 0; k < old_trials.length; k++) {
+    trials[i] = {
+      option1: "männlich",
+      option2: "weiblich",
+      question: old_trials[k].statements,
+      stereotype: old_trials[k].stereotype,
+      condition: old_trials[k].condition,
+      role_noun: old_trials[k].role_noun,
+    };
+    i += 1;
+  }
+  return (trials);
+};
 
 /* Generators for custom view templates, answer container elements and enable response functions
 *
