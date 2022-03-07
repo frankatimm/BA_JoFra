@@ -84,7 +84,7 @@ const forced_choice_2A_instructions = magpieViews.view_generator("instructions",
   <br />
   <br />
   Wenn Sie bereit sind, betätigen Sie den "Mit dem Experiment fortfahren"-Button.
-  <p style="text-align:center;"><img src="images/picture_phase1.png" alt="instructions" height="300" width="400"></p>`,
+  <p style="text-align:center;"><img src="images/picture_phase2.png" alt="instructions" height="auto" width="auto"></p>`,
   buttonText: 'Mit dem Experiment fortfahren'
 });
 
@@ -104,7 +104,7 @@ const forced_choice_3A_instructions = magpieViews.view_generator("instructions",
   <br />
   <br />
   Um mit der letzten Phase des Experiments zu beginnen, klicken Sie bitt auf den "Mit dem Experiment fortfahren"-Button.
-  <p style="text-align:center;"><img src="images/picture_phase1.png" alt="instructions" height="300" width="400"></p>`,
+  <p style="text-align:center;"><img src="images/picture_phase3.png" alt="instructions" height="300" width="400"></p>`,
   buttonText: 'Mit dem Experiment fortfahren'
 });
 
