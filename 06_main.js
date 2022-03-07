@@ -13,24 +13,24 @@ $("document").ready(function() {
     // e.g. >> window.magpie_monitor or window.magpie_monitor.findNextView()
     // in all other modes null will be returned
     window.magpie_monitor = magpieInit({
-        // You have to specify all views you want to use in this experiment and the order of them
+        // Here, we specify all views you want to use in this experiment and the order of them
         views_seq: [
-          //introduction
+          // introduction
           intro,
-          general_instructions,
+          // Phase 1 --- filler sentences
           textbox_input_instructions,
           filler_sentences,
-          //after_block_1,
+          // Phase 2 --- name review
           //forced_choice_2A_instructions,
           //forced_choice_2A,
-          //after_block_2,
+          // Phase 3 --- stereotype check
           forced_choice_3A_instructions,
           forced_choice_3A,
           //post test and thanks
-          post_test,
+          post_test_customized,
           thanks,
         ],
-        // Here, you can specify all information for the deployment
+        // Here, we specify all information for the deployment
         deploy: {
             experimentID: "292",
             serverAppURL: "https://magpie-demo.herokuapp.com/api/submit_experiment/",
@@ -41,20 +41,17 @@ $("document").ready(function() {
             contact_email: "franka.timm00@gmail.com",
             prolificURL: "https://app.prolific.ac/submissions/complete?cc=SAMPLE1234"
         },
-        // Here, you can specify how the progress bar should look like
+        // Here, we specify how the progress bar should look like
         progress_bar: {
             in: [
               // list the view-names of the views for which you want a progress bar
-              general_instructions.name,
               textbox_input_instructions.name,
               filler_sentences.name,
-              //after_block_1.name,
               //forced_choice_2A_instructions.name,
               //forced_choice_2A.name,
-              //after_block_2.name,
               forced_choice_3A_instructions.name,
               forced_choice_3A.name,
-              post_test.name,
+              post_test_customized.name,
             ],
              // Possible styles are "default", "separate" and "chunks"
             style: "separate",
