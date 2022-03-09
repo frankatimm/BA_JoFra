@@ -21,11 +21,11 @@ $("document").ready(function() {
           textbox_input_instructions,
           filler_sentences,
           // Phase 2 --- name review
-          //forced_choice_2A_instructions,
-          //forced_choice_2A,
+          name_check_instructions,
+          name_check,
           // Phase 3 --- stereotype check
-          forced_choice_3A_instructions,
-          forced_choice_3A,
+          stereotype_check_instructions,
+          stereotype_check,
           //post test and thanks
           post_test_customized,
           thanks,
@@ -47,10 +47,10 @@ $("document").ready(function() {
               // list the view-names of the views for which you want a progress bar
               textbox_input_instructions.name,
               filler_sentences.name,
-              //forced_choice_2A_instructions.name,
-              //forced_choice_2A.name,
-              forced_choice_3A_instructions.name,
-              forced_choice_3A.name,
+              name_check_instructions.name,
+              name_check.name,
+              stereotype_check_instructions.name,
+              stereotype_check.name,
               post_test_customized.name,
             ],
              // Possible styles are "default", "separate" and "chunks"

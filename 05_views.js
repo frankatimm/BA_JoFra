@@ -25,10 +25,15 @@ const intro = magpieViews.view_generator("intro", {
   Vielen Dank, dass Sie sich dazu entschieden haben, an unserem Experiment teilzunehmen und auf diese
   Weise das Projekt für unsere Bachelorarbeit zu unterstützen.
   <br />
+  Ihre Daten werden anonymisiert, dementsprechend ist eine Rückverfolgung zu Ihrer Person nicht möglich.
+  Die erhobenen Daten werden ausschließlich für die Analyse dieses Experiments verwendet.
+  Falls Sie sich während der Bearbeitung doch gegen die Verwendung Ihrer Daten entscheiden sollten,
+  können Sie das Experiment jederzeit abbrechen und somit eine Speicherung Ihrer Antworten verhindern.
+  <br />
   Bitte beachten Sie, dass eine Teilnahme nur unter folgenden Bedingungen möglich ist:
   <br />
   <br />
-  - Das Gerät, auf dem Sie arbeiten verfügt über eine stabile Internetverbindung.
+  - Das Gerät, auf dem Sie arbeiten, verfügt über eine stabile Internetverbindung.
   <br />
   - Sie haben ausreichend Zeit, um das Experiment vollständig zu bearbeiten (ca. 30 Minuten).
   <br />
@@ -36,7 +41,7 @@ const intro = magpieViews.view_generator("intro", {
   <br />
   <br />
   <br />
-  Sobald Sie bereit sind, clicken Sie auf den "Weiter zu den Instructionen"-Button um mit dem Experiment fortzufahren.`,
+  Sobald Sie bereit sind, klicken Sie auf den <strong>Weiter zu den Instruktionen</strong>-Button um mit dem Experiment fortzufahren.`,
   buttonText: 'Weiter zu den Instruktionen'
 });
 
@@ -46,44 +51,44 @@ const textbox_input_instructions = magpieViews.view_generator("instructions", {
   trials: 1,
   name: 'instructions phase 1',
   title: 'Instruktionen',
-  text: `Bevor es losgeht, erteilen wir Ihnen eine kurze Unterweisung und erklären, was Ihre Aufgabe im Verlauf des Experiments sein wird.
-  <br />
-  <br />
-  Im Folgenden werden Sätze auf Ihrem Bildschirm erscheinen. Der Aufbau dieser Sätze folgt stets dem gleichen Schema.
+  text: `Im Folgenden werden Sätze auf Ihrem Bildschirm erscheinen. Der Aufbau dieser Sätze folgt stets dem gleichen Schema.
   Dabei ist der erste Satz vollständig und beschreibt eine bestimmte Situation, auf die sich wiederum der zweite Satz bezieht.
   <br />
   <br />
   Ihre Aufgabe ist es, den zweiten Satz zu vervollständigen, indem Sie einen Namen in das leere Feld schreiben, welcher Ihrer Vorstelleung
-  nach am besten in den vorherigen Satz passt.
+  nach am besten zu dem vorherigen Satz passt.
+  <br />
   Namenswiederholungen sind zulässig, jedoch sollte es sich bei Ihrer Wahl nur um Vornamen handeln, die zudem keine Sonderzeichen (_, *, /, 1, 2, 3...)
   enthalten.
   <br />
   <br />
-  Sobald Sie bereit sind, zögern Sie nicht, das Experiment mithilfe eines Clicks auf das "Mit dem Experiment beginnen"-Feld.
+  Sobald Sie bereit sind, zögern Sie nicht, das Experiment mithilfe eines Klicks auf das <strong>Mit dem Experiment beginnen</strong>-Feld.
   <p style="text-align:center;"><img src="images/picture_phase1.png" alt="instructions" height="300" width="400"></p>`,
   buttonText: 'Mit dem Experiment beginnen'
 });
 
 
-//instruction for phase 3 ---- Stereotype Check
+//instruction for phase 2 ---- Name-Gender Check
 
-const forced_choice_2A_instructions = magpieViews.view_generator("instructions", {
+const name_check_instructions = magpieViews.view_generator("instructions", {
   trials: 1,
-  name: 'instructions phase 2',
+  name: 'name_check_instructions',
   title: 'Instruktionen',
-  text: `Gratulation, der erste Teil des Experiments ist geschafft. Im zweiten Teil des Experiments sind Sie nun
-  dazu aufgefordert, sich erneut mit den von Ihnen gewählten Namen aus der ersten Phase zu befassen.
+  text: `Gratulation, der erste Teil des Experiments ist geschafft.
+  <br />
+  Im zweiten Teil des Experiments sind Sie nun dazu aufgefordert,
+  sich mit den von Ihnen gewählten Namen aus der ersten Phase zu befassen.
   <br />
   <br />
-  Genauer gesagt, ist es Ihre Aufgabe, zu beurteilen, ob die gewählten Namen für Sie persönlich eher weibliche oder
-  männliche Individuen beschreiben. Dafür werden Ihnen die Namen einzeln präsentiert und Sie sollen den
-  eingeblendeten Namen in eine der durch Felder markierten Kategorien "weiblich" oder "männlich" einordnen.
+  Genauer gesagt, ist es Ihre Aufgabe, zu beurteilen, ob die von Ihnen gewählten Namen eher <strong>weibliche</strong> oder
+  <strong>männliche</strong> Individuen beschreiben. Dafür werden Ihnen die Namen einzeln präsentiert und Sie sollen den
+  eingeblendeten Namen in eine der durch Felder markierten Kategorien <strong>weiblich</strong> oder <strong>männlich</strong> einordnen.
   <br />
   <br />
   Falls ein Name beiden Geschlechtern zugeordnet werden kann, lassen Sie Ihr Bauchgefühl entscheiden.
   <br />
   <br />
-  Wenn Sie bereit sind, betätigen Sie den "Mit dem Experiment fortfahren"-Button.
+  Wenn Sie bereit sind, betätigen Sie den <strong>Mit dem Experiment fortfahren</strong>-Button.
   <p style="text-align:center;"><img src="images/picture_phase2.png" alt="instructions" height="auto" width="auto"></p>`,
   buttonText: 'Mit dem Experiment fortfahren'
 });
@@ -91,19 +96,19 @@ const forced_choice_2A_instructions = magpieViews.view_generator("instructions",
 //instruction for phase 3 ---- Stereotype Check
 
 
-const forced_choice_3A_instructions = magpieViews.view_generator("instructions", {
+const stereotype_check_instructions = magpieViews.view_generator("instructions", {
   trials: 1,
   name: 'instructions phase 3',
   title: 'Instruktionen',
   text: `Gut gemacht, Sie haben den zweiten Teil des Experiments abgeschlossen und müssen nun nur noch einen letzten Teil bearbeiten.
   <br />
   <br />
-  In dieser dritten Aufgabe sollen Sie erneut Wörter bewerten. Hierbei handelt es sich allerdings nicht um die von Ihnen gewählten Namen,
+  In der dritten Aufgabe sollen Sie erneut Wörter bewerten. Hierbei handelt es sich allerdings nicht um die von Ihnen gewählten Namen,
   sondern um Substantive, die Personen beschreiben (Beispiel: Kollegen). Auch hier sollen intuitiv entscheiden, ob die beschriebene Personengruppe
   für Sie eher männlich, weiblich oder neutral besetzt ist.
   <br />
   <br />
-  Um mit der letzten Phase des Experiments zu beginnen, klicken Sie bitt auf den "Mit dem Experiment fortfahren"-Button.
+  Um mit der letzten Phase des Experiments zu beginnen, klicken Sie bitt auf den <strong>Mit dem Experiment fortfahren</strong>-Button.
   <p style="text-align:center;"><img src="images/picture_phase3.png" alt="instructions" height="300" width="400"></p>`,
   buttonText: 'Mit dem Experiment fortfahren'
 });
@@ -165,6 +170,8 @@ const thanks = magpieViews.view_generator("thanks", {
 
 // Here, we initialize a normal textbox input view
 const filler_sentences = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
   // This will use all trials specified in `textbox_input_trials` in 04_trials.js
   trials: textbox_input_trials.textbox_input.length,
   // name should be identical to the variable name
@@ -175,16 +182,16 @@ const filler_sentences = magpieViews.view_generator('textbox_input', {
 );
 
 
-//const forced_choice_2A = magpieViews.view_generator('forced_choice', {
-//  trials: 36,
-//  name: 'forced_choice_2A',
-//  data: textbox_input_trials.trial_data,
-//});
+const name_check = forced_choice_2A_customized({
+  trials: 36,
+  name: 'name_check',
+  data: _.shuffle(textbox_input_trials.iteration),
+});
 
 // Initialization of a forced_choice view with a custom answer container
 // forced choice of three instead of two alternatives
 
-const forced_choice_3A = magpieViews.view_generator(
+const stereotype_check = magpieViews.view_generator(
     "forced_choice",
     {
         // This will use all trials specified in `forced_choice_3A_trials' in 04_trials.js

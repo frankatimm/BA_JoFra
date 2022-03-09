@@ -22,33 +22,33 @@ const textbox_input_trials = {
         item: 1,
         phase: 1,
         stereotype: "female",
-        role_noun: "BabysitterInnen",
+        role_noun: "Babysitter*innen",
         question:
-        _.sample(["Babysitter werden trotz fehlender Kitaplätze immer schlechter bezahlt. <br /> ______ möchte sich deshalb einen neuen Job suchen.<br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Babysitterinnen werden trotz fehlender Kitaplätze immer schlechter bezahlt. <br /> ______ möchte sich deshalb einen neuen Job suchen.<br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "BabysitterInnen werden trotz fehlender Kitaplätze immer schlechter bezahlt. <br /> ______ möchte sich deshalb einen neuen Job suchen.<br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Babysitter werden trotz fehlender Kitaplätze immer schlechter bezahlt. <br /> ____________ möchte sich deshalb einen neuen Job suchen.<br /> <br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Babysitterinnen werden trotz fehlender Kitaplätze immer schlechter bezahlt. <br /> ____________ möchte sich deshalb einen neuen Job suchen.<br /> <br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Babysitter*innen werden trotz fehlender Kitaplätze immer schlechter bezahlt. <br /> ____________ möchte sich deshalb einen neuen Job suchen.<br /> <br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 2,
         phase: 1,
         stereotype: "female",
-        role_noun: "BaletttänzerInnen",
+        role_noun: "Baletttänzer*innen",
         question:
-        _.sample(["Die Balletttänzer der Kompanie haben ihre Generalprobe auf der großen Bühne. <br /> ______ verletzt sich dabei am Bein. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Die Balletttänzerinnen der Kompanie haben ihre Generalprobe auf der großen Bühne. <br /> ______ verletzt sich dabei am Bein. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Die BalletttänzerInnen der Kompanie haben ihre Generalprobe auf der großen Bühne. <br /> ______ verletzt sich dabei am Bein. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Die Balletttänzer der Kompanie haben ihre Generalprobe auf der großen Bühne. <br /> ____________ verletzt sich dabei am Bein. <br /> <br />Bitte schreibe einen passenden Namen in das Feld.",
+        "Die Balletttänzerinnen der Kompanie haben ihre Generalprobe auf der großen Bühne. <br /> ____________ verletzt sich dabei am Bein. <br /> <br />Bitte schreibe einen passenden Namen in das Feld.",
+        "Die Balletttänzer*innen der Kompanie haben ihre Generalprobe auf der großen Bühne. <br /> ____________ verletzt sich dabei am Bein. <br /> <br />Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 3,
         phase: 1,
         stereotype: "female",
-        role_noun: "KassiererInnen",
+        role_noun: "Kassierer*innen",
         question:
-        _.sample(["Der Arbeitsalltag von Kassierern ist sehr anstrengend. <br /> ______ muss jeden Morgen um fünf Uhr aufstehen. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Der Arbeitsalltag von Kassiererinnen ist sehr anstrengend. <br /> ______ muss jeden Morgen um fünf Uhr aufstehen. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Der Arbeitsalltag von KassiererInnen ist sehr anstrengend. <br /> ______ muss jeden Morgen um fünf Uhr aufstehen. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Der Arbeitsalltag von Kassierern ist sehr anstrengend. <br /> __________ muss jeden Morgen um fünf Uhr aufstehen. <br /> <br />Bitte schreibe einen passenden Namen in das Feld.",
+        "Der Arbeitsalltag von Kassiererinnen ist sehr anstrengend. <br /> ____________ muss jeden Morgen um fünf Uhr aufstehen. <br /> <br />Bitte schreibe einen passenden Namen in das Feld.",
+        "Der Arbeitsalltag von Kassierer*innen ist sehr anstrengend. <br /> __________ muss jeden Morgen um fünf Uhr aufstehen. <br /> <br />Bitte schreibe einen passenden Namen in das Feld."]),
 
         min_chars: 2
     },
@@ -56,366 +56,371 @@ const textbox_input_trials = {
         item: 4,
         phase: 1,
         stereotype: "female",
-        role_noun: "ErnährungsberaterInnen",
+        role_noun: "Ernährungsberater*innen",
         question:
-        _.sample(["Ernährungsberater empfehlen die Einnahme von Vitaminpräparaten. <br />_____ hält Vitamin D im Winter besonders wichtig. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Ernährungsberaterinnen empfehlen die Einnahme von Vitaminpräparaten. <br />_____ hält Vitamin D im Winter besonders wichtig. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "ErnährungsberaterInnen empfehlen die Einnahme von Vitaminpräparaten. <br />_____ hält Vitamin D im Winter besonders wichtig. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Ernährungsberater empfehlen die Einnahme von Vitaminpräparaten. <br />__________ hält Vitamin D im Winter besonders wichtig. <br /> <br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Ernährungsberaterinnen empfehlen die Einnahme von Vitaminpräparaten. <br />__________ hält Vitamin D im Winter besonders wichtig. <br /> <br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Ernährungsberater*innen empfehlen die Einnahme von Vitaminpräparaten. <br />___________ hält Vitamin D im Winter besonders wichtig. <br /> <br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 5,
         phase: 1,
         stereotype: "female",
-        role_noun: "FloristInnen",
+        role_noun: "Florist*innen",
         question:
-        _.sample(["Wenn die Jahreszeiten wechseln, müssen Floristen die ganze Gärtnerei neu dekorieren. <br /> _____ liebt vor allem die Herbstdekoration. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Wenn die Jahreszeiten wechseln, müssen Floristinnen die ganze Gärtnerei neu dekorieren. <br /> _____ liebt vor allem die Herbstdekoration. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Wenn die Jahreszeiten wechseln, müssen FloristInnen die ganze Gärtnerei neu dekorieren. <br /> _____ liebt vor allem die Herbstdekoration. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Wenn die Jahreszeiten wechseln, müssen Floristen die ganze Gärtnerei neu dekorieren. <br /> __________ liebt vor allem die Herbstdekoration. <br /> <br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Wenn die Jahreszeiten wechseln, müssen Floristinnen die ganze Gärtnerei neu dekorieren. <br /> __________ liebt vor allem die Herbstdekoration. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Wenn die Jahreszeiten wechseln, müssen Florist*innen die ganze Gärtnerei neu dekorieren. <br /> ___________ liebt vor allem die Herbstdekoration. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 6,
         phase: 1,
         stereotype: "female",
-        role_noun: "FlugbegleiterInnen",
+        role_noun: "Flugbegleiter*innen",
         question:
-        _.sample(["Im Gegensatz zu allen Fluggästen mögen Flugbegleiter keinen Tomatensaft.<br /> _____ bevorzugt Orangensaft während einer langen Flugreise. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Im Gegensatz zu allen Fluggästen mögen Flugbegleiterinnen keinen Tomatensaft.<br /> _____ bevorzugt Orangensaft während einer langen Flugreise. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Im Gegensatz zu allen Fluggästen mögen FlugbegleiterInnen keinen Tomatensaft.<br /> _____ bevorzugt Orangensaft während einer langen Flugreise. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Im Gegensatz zu allen Fluggästen mögen Flugbegleiter keinen Tomatensaft.<br /> __________ bevorzugt Orangensaft während einer langen Flugreise. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Im Gegensatz zu allen Fluggästen mögen Flugbegleiterinnen keinen Tomatensaft.<br /> ___________ bevorzugt Orangensaft während einer langen Flugreise. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Im Gegensatz zu allen Fluggästen mögen Flugbegleiter*innen keinen Tomatensaft.<br /> ___________ bevorzugt Orangensaft während einer langen Flugreise. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 7,
         phase: 1,
         stereotype: "female",
-        role_noun: "FriseurInnen",
+        role_noun: "Friseur*innen",
         question:
-        _.sample(["Bei den ganzen neuen Trends kommen Friseure kaum noch hinterher.<br /> _____ schneidet am liebsten klassische Frisuren. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Bei den ganzen neuen Trends kommen Friseurinnen kaum noch hinterher.<br /> _____ schneidet am liebsten klassische Frisuren. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Bei den ganzen neuen Trends kommen FriseurInnen kaum noch hinterher.<br /> _____ schneidet am liebsten klassische Frisuren. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Bei den ganzen neuen Trends kommen Friseure kaum noch hinterher.<br /> __________ schneidet am liebsten klassische Frisuren. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Bei den ganzen neuen Trends kommen Friseurinnen kaum noch hinterher.<br /> __________ schneidet am liebsten klassische Frisuren. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Bei den ganzen neuen Trends kommen Friseur*innen kaum noch hinterher.<br /> ___________ schneidet am liebsten klassische Frisuren. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 8,
         phase: 1,
         stereotype: "female",
-        role_noun: "HaushälterInnen",
+        role_noun: "Haushälter*innen",
         question:
-        _.sample(["Viele Haushälter kümmern sich neben dem Haushalt auch um das seelische Wohl ihrer Vorgesetzten.<br /> _____ hat immer ein offenes Ohr, wenn die Kinder Probleme in der Schule haben. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Viele Haushälterinnen kümmern sich neben dem Haushalt auch um das seelische Wohl ihrer Vorgesetzten.<br /> _____ hat immer ein offenes Ohr, wenn die Kinder Probleme in der Schule haben. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Viele HaushälterInnen kümmern sich neben dem Haushalt auch um das seelische Wohl ihrer Vorgesetzten.<br /> _____ hat immer ein offenes Ohr, wenn die Kinder Probleme in der Schule haben. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
-
+        _.sample(["Viele Haushälter kümmern sich neben dem Haushalt auch um das seelische Wohl ihrer Vorgesetzten.<br /> ___________ hat immer ein offenes Ohr, wenn die Kinder Probleme in der Schule haben. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Viele Haushälterinnen kümmern sich neben dem Haushalt auch um das seelische Wohl ihrer Vorgesetzten.<br /> ___________ hat immer ein offenes Ohr, wenn die Kinder Probleme in der Schule haben. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Viele Haushälter*innen kümmern sich neben dem Haushalt auch um das seelische Wohl ihrer Vorgesetzten.<br /> ___________ hat immer ein offenes Ohr, wenn die Kinder Probleme in der Schule haben. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 9,
         phase: 1,
         stereotype: "female",
-        role_noun: "KindergärtnerInnen",
+        role_noun: "Kindergärtner*innen",
         question:
-        _.sample(["Nach dem Feierabend genießen die Kindergärtner die Ruhe von ihren kleinen Schützlingen.<br /> _____ geht nach der Arbeit eine Runde joggen, um den Kopf freizubekommen. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Nach dem Feierabend genießen die Kindergärtnerinnen die Ruhe von ihren kleinen Schützlingen.<br /> _____ geht nach der Arbeit eine Runde joggen, um den Kopf freizubekommen. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Nach dem Feierabend genießen die KindergärtnerInnen die Ruhe von ihren kleinen Schützlingen.<br /> _____ geht nach der Arbeit eine Runde joggen, um den Kopf freizubekommen. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Nach dem Feierabend genießen die Kindergärtner die Ruhe von ihren kleinen Schützlingen.<br /> ___________ geht nach der Arbeit eine Runde joggen, um den Kopf freizubekommen. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Nach dem Feierabend genießen die Kindergärtnerinnen die Ruhe von ihren kleinen Schützlingen.<br /> ___________ geht nach der Arbeit eine Runde joggen, um den Kopf freizubekommen. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Nach dem Feierabend genießen die Kindergärtner*innen die Ruhe von ihren kleinen Schützlingen.<br /> ___________ geht nach der Arbeit eine Runde joggen, um den Kopf freizubekommen. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 10,
         phase: 1,
         stereotype: "female",
-        role_noun: "GrundschullehrerInnen",
+        role_noun: "Grundschullehrer*innen",
         question:
-        _.sample(["Um den Unterricht möglichst abwechslungsreich zu gestalten, nutzen Grundschullehrer gerne verschiedene Medien.<br /> _____ verwendet am liebsten das Whiteboard, um Inhalte zu visualisieren. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Um den Unterricht möglichst abwechslungsreich zu gestalten, nutzen Grundschullehrerinnen gerne verschiedene Medien.<br /> _____ verwendet am liebsten das Whiteboard, um Inhalte zu visualisieren. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Um den Unterricht möglichst abwechslungsreich zu gestalten, nutzen GrundschullehrerInnen gerne verschiedene Medien.<br /> _____ verwendet am liebsten das Whiteboard, um Inhalte zu visualisieren. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Um den Unterricht möglichst abwechslungsreich zu gestalten, nutzen Grundschullehrer gerne verschiedene Medien.<br /> __________ verwendet am liebsten das Whiteboard, um Inhalte zu visualisieren. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Um den Unterricht möglichst abwechslungsreich zu gestalten, nutzen Grundschullehrerinnen gerne verschiedene Medien.<br /> __________ verwendet am liebsten das Whiteboard, um Inhalte zu visualisieren. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Um den Unterricht möglichst abwechslungsreich zu gestalten, nutzen Grundschullehrer*innen gerne verschiedene Medien.<br /> ___________ verwendet am liebsten das Whiteboard, um Inhalte zu visualisieren. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 11,
         phase: 1,
         stereotype: "female",
-        role_noun: "AutorInnen von Liebesromanen",
+        role_noun: "Autor*innen von Liebesromanen",
         question:
-        _.sample(["Autoren von Liebesromanen wird oft ein Hang zur Dramatik nachgesagt.<br /> _____ lässt Geschichten deshalb stets mit einem Happy End enden. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Autorinnen von Liebesromanen wird oft ein Hang zur Dramatik nachgesagt.<br /> _____ lässt Geschichten deshalb stets mit einem Happy End enden. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "AutorInnen von Liebesromanen wird oft ein Hang zur Dramatik nachgesagt.<br /> _____ lässt Geschichten deshalb stets mit einem Happy End enden. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Autoren von Liebesromanen wird oft ein Hang zur Dramatik nachgesagt.<br /> ___________ lässt Geschichten deshalb stets mit einem Happy End enden. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Autorinnen von Liebesromanen wird oft ein Hang zur Dramatik nachgesagt.<br /> ___________ lässt Geschichten deshalb stets mit einem Happy End enden. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Autor*innen von Liebesromanen wird oft ein Hang zur Dramatik nachgesagt.<br /> ___________ lässt Geschichten deshalb stets mit einem Happy End enden. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 12,
         phase: 1,
         stereotype: "female",
-        role_noun: "SchneiderInnen",
+        role_noun: "Schneider*innen",
         question:
-        _.sample(["Die Fast-Fashion Industrie sorgt dafür, dass Schneider kaum noch Aufträge bekommen. <br /> _____ sucht daher nach einem Nebenjob, um die Miete bezahlen zu können. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Die Fast-Fashion Industrie sorgt dafür, dass Schneiderinnen kaum noch Aufträge bekommen. <br /> _____ sucht daher nach einem Nebenjob, um die Miete bezahlen zu können. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Die Fast-Fashion Industrie sorgt dafür, dass SchneiderInnen kaum noch Aufträge bekommen. <br /> _____ sucht daher nach einem Nebenjob, um die Miete bezahlen zu können. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Die Fast-Fashion Industrie sorgt dafür, dass Schneider kaum noch Aufträge bekommen. <br /> __________ sucht daher nach einem Nebenjob, um die Miete bezahlen zu können. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Die Fast-Fashion Industrie sorgt dafür, dass Schneiderinnen kaum noch Aufträge bekommen. <br /> __________ sucht daher nach einem Nebenjob, um die Miete bezahlen zu können. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Die Fast-Fashion Industrie sorgt dafür, dass Schneider*innen kaum noch Aufträge bekommen. <br /> __________ sucht daher nach einem Nebenjob, um die Miete bezahlen zu können. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 13,
         phase: 1,
         stereotype: "male",
-        role_noun: "AstronautInnen",
+        role_noun: "Astronaut*innen",
         question:
-        _.sample(["Um sich auf die Zeit im All vorzubereiten, müssen Astronauten eine spezielle Schulung durchlaufen. <br /> _____ fällt es schwer, sich an die Trockennahrung zu gewöhnen. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Um sich auf die Zeit im All vorzubereiten, müssen Astronautinnen eine spezielle Schulung durchlaufen. <br /> _____ fällt es schwer, sich an die Trockennahrung zu gewöhnen. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Um sich auf die Zeit im All vorzubereiten, müssen AstronautInnen eine spezielle Schulung durchlaufen. <br /> _____ fällt es schwer, sich an die Trockennahrung zu gewöhnen. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Um sich auf die Zeit im All vorzubereiten, müssen Astronauten eine spezielle Schulung durchlaufen. <br /> __________ fällt es schwer, sich an die Trockennahrung zu gewöhnen. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Um sich auf die Zeit im All vorzubereiten, müssen Astronautinnen eine spezielle Schulung durchlaufen. <br /> __________ fällt es schwer, sich an die Trockennahrung zu gewöhnen. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Um sich auf die Zeit im All vorzubereiten, müssen Astronaut*innen eine spezielle Schulung durchlaufen. <br /> __________ fällt es schwer, sich an die Trockennahrung zu gewöhnen. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 14,
         phase: 1,
         stereotype: "male",
-        role_noun: "MetzgerInnen",
+        role_noun: "Metzger*innen",
         question:
-        _.sample(["Seit einiger Zeit nehmen Metzger auch vegetarische Produkte in ihr Sortiment auf. <br /> _____ bietet jetzt auch Gemüsefrikadellen an der Frischetheke an. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Seit einiger Zeit nehmen Metzgerinnen auch vegetarische Produkte in ihr Sortiment auf. <br /> _____ bietet jetzt auch Gemüsefrikadellen an der Frischetheke an. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Seit einiger Zeit nehmen MetzgerInnen auch vegetarische Produkte in ihr Sortiment auf. <br /> _____ bietet jetzt auch Gemüsefrikadellen an der Frischetheke an. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Seit einiger Zeit nehmen Metzger auch vegetarische Produkte in ihr Sortiment auf. <br /> __________ bietet jetzt auch Gemüsefrikadellen an der Frischetheke an. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Seit einiger Zeit nehmen Metzgerinnen auch vegetarische Produkte in ihr Sortiment auf. <br /> __________ bietet jetzt auch Gemüsefrikadellen an der Frischetheke an. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Seit einiger Zeit nehmen Metzger*innen auch vegetarische Produkte in ihr Sortiment auf. <br /> __________ bietet jetzt auch Gemüsefrikadellen an der Frischetheke an. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 15,
         phase: 1,
         stereotype: "male",
-        role_noun: "ProgrammiererInnen",
+        role_noun: "Programmierer*innen",
         question:
-        _.sample(["Ein leistungsstarker Computer ist ausschlaggebend für die Arbeit von Programmierern. <br /> _____ installiert regelmäßig die neuesten Softwareupdates, um nicht von der Konkurrenz abgehängt zu werden. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Ein leistungsstarker Computer ist ausschlaggebend für die Arbeit von Programmiererinnen. <br /> _____ installiert regelmäßig die neuesten Softwareupdates, um nicht von der Konkurrenz abgehängt zu werden. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Ein leistungsstarker Computer ist ausschlaggebend für die Arbeit von ProgrammiererInnen. <br /> _____ installiert regelmäßig die neuesten Softwareupdates, um nicht von der Konkurrenz abgehängt zu werden. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Ein leistungsstarker Computer ist ausschlaggebend für die Arbeit von Programmierern. <br /> __________ installiert regelmäßig die neuesten Softwareupdates, um nicht von der Konkurrenz abgehängt zu werden. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Ein leistungsstarker Computer ist ausschlaggebend für die Arbeit von Programmiererinnen. <br /> __________ installiert regelmäßig die neuesten Softwareupdates, um nicht von der Konkurrenz abgehängt zu werden. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Ein leistungsstarker Computer ist ausschlaggebend für die Arbeit von Programmierer*innen. <br /> __________ installiert regelmäßig die neuesten Softwareupdates, um nicht von der Konkurrenz abgehängt zu werden. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 16,
         phase: 1,
         stereotype: "male",
-        role_noun: "ManagerInnen",
+        role_noun: "Manager*innen",
         question:
-        _.sample(["Organisation und Führungsstärke gehören zu den wichtigsten Merkmalen von Managern. <br /> _____ legt trotzdem viel Wert auf ein freundliches Arbeitsklima im Büro. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Organisation und Führungsstärke gehören zu den wichtigsten Merkmalen von Managerinnen. <br /> _____ legt trotzdem viel Wert auf ein freundliches Arbeitsklima im Büro. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Organisation und Führungsstärke gehören zu den wichtigsten Merkmalen von ManagerInnen. <br /> _____ legt trotzdem viel Wert auf ein freundliches Arbeitsklima im Büro. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Organisation und Führungsstärke gehören zu den wichtigsten Merkmalen von Managern. <br /> __________ legt trotzdem viel Wert auf ein freundliches Arbeitsklima im Büro. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Organisation und Führungsstärke gehören zu den wichtigsten Merkmalen von Managerinnen. <br /> __________ legt trotzdem viel Wert auf ein freundliches Arbeitsklima im Büro. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Organisation und Führungsstärke gehören zu den wichtigsten Merkmalen von Manager*innen. <br /> __________ legt trotzdem viel Wert auf ein freundliches Arbeitsklima im Büro. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 17,
         phase: 1,
         stereotype: "male",
-        role_noun: "BürgermeisterInnen",
+        role_noun: "Bürgermeister*innen",
         question:
-        _.sample(["Urbane Bürgermeister haben andere Prioritäten als jene auf dem Land. <br />	_____ legt das Hauptaugenmerk in der aktuellen Kampagne auf Innovation und Klimaschutz. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Urbane Bürgermeisterinnen haben andere Prioritäten als jene auf dem Land. <br />	_____ legt das Hauptaugenmerk in der aktuellen Kampagne auf Innovation und Klimaschutz. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Urbane BürgermeisterInnen haben andere Prioritäten als jene auf dem Land. <br />	_____ legt das Hauptaugenmerk in der aktuellen Kampagne auf Innovation und Klimaschutz. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Urbane Bürgermeister haben andere Prioritäten als jene auf dem Land. <br />	__________ legt das Hauptaugenmerk in der aktuellen Kampagne auf Innovation und Klimaschutz. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Urbane Bürgermeisterinnen haben andere Prioritäten als jene auf dem Land. <br />	__________ legt das Hauptaugenmerk in der aktuellen Kampagne auf Innovation und Klimaschutz. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Urbane Bürgermeister*innen haben andere Prioritäten als jene auf dem Land. <br />	__________ legt das Hauptaugenmerk in der aktuellen Kampagne auf Innovation und Klimaschutz. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 18,
         phase: 1,
         stereotype: "male",
-        role_noun: "MörderInnen",
+        role_noun: "Mörder*innen",
         question:
-        _.sample(["Die erfolgreiche Festnahme von Mördern nimmt aufgrund technologischen Fortschritts immer weiter zu. <br />	_____ konnte aufgrund von Videoüberwachung und der Ortung seines Smartphones schnell verhaftet werde, bevor es ein neues Opfer gab. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Die erfolgreiche Festnahme von Mörderinnen nimmt aufgrund technologischen Fortschritts immer weiter zu. <br />	_____ konnte aufgrund von Videoüberwachung und der Ortung seines Smartphones schnell verhaftet werde, bevor es ein neues Opfer gab. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Die erfolgreiche Festnahme von MörderInnen nimmt aufgrund technologischen Fortschritts immer weiter zu. <br />	_____ konnte aufgrund von Videoüberwachung und der Ortung seines Smartphones schnell verhaftet werde, bevor es ein neues Opfer gab. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Die erfolgreiche Festnahme von Mördern nimmt aufgrund technologischen Fortschritts immer weiter zu. <br />	__________ konnte aufgrund von Videoüberwachung und der Ortung seines Smartphones schnell verhaftet werde, bevor es ein neues Opfer gab. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Die erfolgreiche Festnahme von Mörderinnen nimmt aufgrund technologischen Fortschritts immer weiter zu. <br />	__________ konnte aufgrund von Videoüberwachung und der Ortung seines Smartphones schnell verhaftet werde, bevor es ein neues Opfer gab. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Die erfolgreiche Festnahme von Mörder*innen nimmt aufgrund technologischen Fortschritts immer weiter zu. <br />	__________ konnte aufgrund von Videoüberwachung und der Ortung seines Smartphones schnell verhaftet werde, bevor es ein neues Opfer gab. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 19,
         phase: 1,
         stereotype: "male",
-        role_noun: "PilotInnen",
+        role_noun: "Pilot*innen",
         question:
-        _.sample(["Weil Piloten beim Fliegen einer erhöhten Strahlung ausgesetzt sind, müssen sie früher in den Ruhestand. <br />		_____ geht Ende des Jahres bereits in Rente, während Gleichaltrige noch 8 Jahre in ihrem Job arbeiten müssen. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Weil Pilotinnen beim Fliegen einer erhöhten Strahlung ausgesetzt sind, müssen sie früher in den Ruhestand. <br />		_____ geht Ende des Jahres bereits in Rente, während Gleichaltrige noch 8 Jahre in ihrem Job arbeiten müssen. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Weil PilotInnen beim Fliegen einer erhöhten Strahlung ausgesetzt sind, müssen sie früher in den Ruhestand. <br />		_____ geht Ende des Jahres bereits in Rente, während Gleichaltrige noch 8 Jahre in ihrem Job arbeiten müssen. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Weil Piloten beim Fliegen einer erhöhten Strahlung ausgesetzt sind, müssen sie früher in den Ruhestand. <br />		__________ geht Ende des Jahres bereits in Rente, während Gleichaltrige noch 8 Jahre in ihrem Job arbeiten müssen. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Weil Pilotinnen beim Fliegen einer erhöhten Strahlung ausgesetzt sind, müssen sie früher in den Ruhestand. <br />		__________ geht Ende des Jahres bereits in Rente, während Gleichaltrige noch 8 Jahre in ihrem Job arbeiten müssen. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Weil Pilot*innen beim Fliegen einer erhöhten Strahlung ausgesetzt sind, müssen sie früher in den Ruhestand. <br />		__________ geht Ende des Jahres bereits in Rente, während Gleichaltrige noch 8 Jahre in ihrem Job arbeiten müssen. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 20,
         phase: 1,
         stereotype: "male",
-        role_noun: "PräsidentInnen",
+        role_noun: "Präsident*innen",
         question:
-        _.sample(["Auf dem Weltklima-Gipfel versammeln sich unter anderem Präsidenten verschiedener Länder, um über eine politische Zusammenarbeit zu diskutieren. <br />	_____ ist für die Einführung einer einheitlichen, verpflichtenden CO2-Besteuerung. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Auf dem Weltklima-Gipfel versammeln sich unter anderem Präsidentinnen verschiedener Länder, um über eine politische Zusammenarbeit zu diskutieren. <br />	_____ ist für die Einführung einer einheitlichen, verpflichtenden CO2-Besteuerung. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Auf dem Weltklima-Gipfel versammeln sich unter anderem PräsidentInnen verschiedener Länder, um über eine politische Zusammenarbeit zu diskutieren. <br />	_____ ist für die Einführung einer einheitlichen, verpflichtenden CO2-Besteuerung. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Auf dem Weltklima-Gipfel versammeln sich unter anderem Präsidenten verschiedener Länder, um über eine politische Zusammenarbeit zu diskutieren. <br />	__________ ist für die Einführung einer einheitlichen, verpflichtenden CO2-Besteuerung. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Auf dem Weltklima-Gipfel versammeln sich unter anderem Präsidentinnen verschiedener Länder, um über eine politische Zusammenarbeit zu diskutieren. <br />	__________ ist für die Einführung einer einheitlichen, verpflichtenden CO2-Besteuerung. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Auf dem Weltklima-Gipfel versammeln sich unter anderem Präsident*innen verschiedener Länder, um über eine politische Zusammenarbeit zu diskutieren. <br />	__________ ist für die Einführung einer einheitlichen, verpflichtenden CO2-Besteuerung. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 21,
         phase: 1,
         stereotype: "male",
-        role_noun: "PrivatdetektivInnen",
+        role_noun: "Privatdetektiv*innen",
         question:
-        _.sample(["Eine erfolgreiche TV-Serie berichtet über die spannende Arbeit von Privatdetektiven. <br />	_____ arbeitet schon seit langem in einer Detektei und ärgert sich über die unauthentische Darstellung des Berufes. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Eine erfolgreiche TV-Serie berichtet über die spannende Arbeit von Privatdetektivinnen. <br />	_____ arbeitet schon seit langem in einer Detektei und ärgert sich über die unauthentische Darstellung des Berufes. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Eine erfolgreiche TV-Serie berichtet über die spannende Arbeit von PrivatdetektivInnen. <br />	_____ arbeitet schon seit langem in einer Detektei und ärgert sich über die unauthentische Darstellung des Berufes. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Eine erfolgreiche TV-Serie berichtet über die spannende Arbeit von Privatdetektiven. <br />	__________ arbeitet schon seit langem in einer Detektei und ärgert sich über die unauthentische Darstellung des Berufes. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Eine erfolgreiche TV-Serie berichtet über die spannende Arbeit von Privatdetektivinnen. <br />	__________ arbeitet schon seit langem in einer Detektei und ärgert sich über die unauthentische Darstellung des Berufes. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Eine erfolgreiche TV-Serie berichtet über die spannende Arbeit von Privatdetektiv*innen. <br />	__________ arbeitet schon seit langem in einer Detektei und ärgert sich über die unauthentische Darstellung des Berufes. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 22,
         phase: 1,
         stereotype: "male",
-        role_noun: "SoldatInnen",
+        role_noun: "Soldat*innen",
         question:
-        _.sample(["In Deutschland dürfen Soldaten kostenlos die öffentlichen Verkehrsmittel nutzen. <br />	_____ besucht deshalb jede Woche die Familie. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "In Deutschland dürfen Soldatinnen kostenlos die öffentlichen Verkehrsmittel nutzen. <br />	_____ besucht deshalb jede Woche die Familie. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "In Deutschland dürfen SoldatInnen kostenlos die öffentlichen Verkehrsmittel nutzen. <br />	_____ besucht deshalb jede Woche die Familie. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["In Deutschland dürfen Soldaten kostenlos die öffentlichen Verkehrsmittel nutzen. <br />	__________ besucht deshalb jede Woche die Familie. <br /> <br />Bitte schreibe einen passenden Namen in das Feld.",
+        "In Deutschland dürfen Soldatinnen kostenlos die öffentlichen Verkehrsmittel nutzen. <br />	__________ besucht deshalb jede Woche die Familie. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "In Deutschland dürfen Soldat*innen kostenlos die öffentlichen Verkehrsmittel nutzen. <br />	__________ besucht deshalb jede Woche die Familie. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 23,
         phase: 1,
         stereotype: "male",
-        role_noun: "ChirurgInnen",
+        role_noun: "Chirurg*innen",
         question:
-        _.sample(["Um während Operationen konzentriert zu bleiben, haben alle Chirurgen ihre ganz persönlichen Strategien. <br />	_____ hört gerne klassische Musik während eines Eingriffs. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Um während Operationen konzentriert zu bleiben, haben alle Chirurginnen ihre ganz persönlichen Strategien. <br />	_____ hört gerne klassische Musik während eines Eingriffs. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Um während Operationen konzentriert zu bleiben, haben alle ChirurgInnen ihre ganz persönlichen Strategien. <br />	_____ hört gerne klassische Musik während eines Eingriffs. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Um während Operationen konzentriert zu bleiben, haben alle Chirurgen ihre ganz persönlichen Strategien. <br />	__________ hört gerne klassische Musik während eines Eingriffs. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Um während Operationen konzentriert zu bleiben, haben alle Chirurginnen ihre ganz persönlichen Strategien. <br />	__________ hört gerne klassische Musik während eines Eingriffs. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Um während Operationen konzentriert zu bleiben, haben alle Chirurg*innen ihre ganz persönlichen Strategien. <br />	__________ hört gerne klassische Musik während eines Eingriffs. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
         item: 24,
         phase: 1,
         stereotype: "male",
-        role_noun: "TaxifahrerInnen",
+        role_noun: "Taxifahrer*innen",
         question:
-        _.sample(["Während einer Nachtschicht wird der Dienst von Taxifahrern hauptsächlich von Betrunkenen in Anspruch genommen. <br />	_____ arbeitet deswegen lieber tagsüber. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Während einer Nachtschicht wird der Dienst von Taxifahrerinnen hauptsächlich von Betrunkenen in Anspruch genommen. <br />	_____ arbeitet deswegen lieber tagsüber. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Während einer Nachtschicht wird der Dienst von TaxifahrerInnen hauptsächlich von Betrunkenen in Anspruch genommen. <br />	_____ arbeitet deswegen lieber tagsüber. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Während einer Nachtschicht wird der Dienst von Taxifahrern hauptsächlich von Betrunkenen in Anspruch genommen. <br />	__________ arbeitet deswegen lieber tagsüber. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Während einer Nachtschicht wird der Dienst von Taxifahrerinnen hauptsächlich von Betrunkenen in Anspruch genommen. <br />	__________ arbeitet deswegen lieber tagsüber. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Während einer Nachtschicht wird der Dienst von Taxifahrer*innen hauptsächlich von Betrunkenen in Anspruch genommen. <br />	__________ arbeitet deswegen lieber tagsüber. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
       item: 25,
       phase: 1,
       stereotype: "neutral",
-      role_noun: "KünstlerInnen",
+      role_noun: "Künstler*innen",
       question:
-      _.sample(["Bei einer Vernissage stellen Künstler ihre aktuellen Werke vor. <br /> ___ präsentiert stolz eine neue Technik, die Gips und Sand auf eine einzigartige Art und Weise  miteinander verbindet. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Bei einer Vernissage stellen Künstlerinnen ihre aktuellen Werke vor. <br /> ___ präsentiert stolz eine neue Technik, die Gips und Sand auf eine einzigartige Art und Weise  miteinander verbindet. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Bei einer Vernissage stellen KünstlerInnen ihre aktuellen Werke vor. <br /> ___ präsentiert stolz eine neue Technik, die Gips und Sand auf eine einzigartige Art und Weise  miteinander verbindet. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+      _.sample(["Bei einer Vernissage stellen Künstler ihre aktuellen Werke vor. <br /> ________ präsentiert stolz eine neue Technik, die Gips und Sand auf eine einzigartige Art und Weise  miteinander verbindet. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Bei einer Vernissage stellen Künstlerinnen ihre aktuellen Werke vor. <br /> ________ präsentiert stolz eine neue Technik, die Gips und Sand auf eine einzigartige Art und Weise  miteinander verbindet. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Bei einer Vernissage stellen Künstler*innen ihre aktuellen Werke vor. <br /> ________ präsentiert stolz eine neue Technik, die Gips und Sand auf eine einzigartige Art und Weise  miteinander verbindet. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
       min_chars: 2
     },
     {
       item: 26,
       phase: 1,
       stereotype: "neutral",
-      role_noun: "SportlerInnen",
+      role_noun: "Sportler*innen",
       question:
-      _.sample(["Bei Olympia werden die besten Sportler mit einer Medaille gekürt. <br /> ___ erhält Gold in der Disziplin Schwimmen. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Bei Olympia werden die besten Sportlerinnen mit einer Medaille gekürt. <br /> ___ erhält Gold in der Disziplin Schwimmen. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Bei Olympia werden die besten SportlerInnen mit einer Medaille gekürt. <br /> ___ erhält Gold in der Disziplin Schwimmen. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+      _.sample(["Bei Olympia werden die besten Sportler mit einer Medaille gekürt. <br /> ________ erhält Gold in der Disziplin Schwimmen. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Bei Olympia werden die besten Sportlerinnen mit einer Medaille gekürt. <br /> ________ erhält Gold in der Disziplin Schwimmen. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Bei Olympia werden die besten Sportler*innen mit einer Medaille gekürt. <br /> ________ erhält Gold in der Disziplin Schwimmen. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
       min_chars: 2
     },
     {
       item: 27,
       phase: 1,
       stereotype: "neutral",
-      role_noun: "HundehalterInnen",
+      role_noun: "Hundehalter*innen",
       question:
-      _.sample(["Während der Corona-Pandemie hatten Hundehalter mehr Zeit für ihre Vierbeiner. <br /> ___ ging jeden Nachmittag ausgiebig mit dem Hund spazieren. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Während der Corona-Pandemie hatten Hundehalterinnen mehr Zeit für ihre Vierbeiner. <br /> ___ ging jeden Nachmittag ausgiebig mit dem Hund spazieren. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Während der Corona-Pandemie hatten HundehalterInnen mehr Zeit für ihre Vierbeiner. <br /> ___ ging jeden Nachmittag ausgiebig mit dem Hund spazieren. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+      _.sample(["Während der Corona-Pandemie hatten Hundehalter mehr Zeit für ihre Vierbeiner. <br /> ________ ging jeden Nachmittag ausgiebig mit dem Hund spazieren. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Während der Corona-Pandemie hatten Hundehalterinnen mehr Zeit für ihre Vierbeiner. <br /> __________ ging jeden Nachmittag ausgiebig mit dem Hund spazieren. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Während der Corona-Pandemie hatten Hundehalter*innen mehr Zeit für ihre Vierbeiner. <br /> __________ ging jeden Nachmittag ausgiebig mit dem Hund spazieren. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
       min_chars: 2
     },
     {
       item: 28,
       phase: 1,
       stereotype: "neutral",
-      role_noun: "ImmobilienmaklerInnen",
+      role_noun: "Immobilienmakler*innen",
       question:
-      _.sample(["Um die besten Angebote nicht zu verpassen, müssen Immobilienmakler täglich das Internet durchforsten. <br /> ___ hat allein heute 3 Stunden recherchiert. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Um die besten Angebote nicht zu verpassen, müssen Immobilienmaklerinnen täglich das Internet durchforsten. <br /> ___ hat allein heute 3 Stunden recherchiert. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Um die besten Angebote nicht zu verpassen, müssen ImmobilienmaklerInnen täglich das Internet durchforsten. <br /> ___ hat allein heute 3 Stunden recherchiert. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+      _.sample(["Um die besten Angebote nicht zu verpassen, müssen Immobilienmakler täglich das Internet durchforsten. <br /> ________ hat allein heute 3 Stunden recherchiert. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Um die besten Angebote nicht zu verpassen, müssen Immobilienmaklerinnen täglich das Internet durchforsten. <br /> ________ hat allein heute 3 Stunden recherchiert. <br /><br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Um die besten Angebote nicht zu verpassen, müssen Immobilienmakler*innen täglich das Internet durchforsten. <br /> ________ hat allein heute 3 Stunden recherchiert. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
       min_chars: 2
     },
     {
       item: 29,
       phase: 1,
       stereotype: "neutral",
-      role_noun: "JournalistInnen",
+      role_noun: "Journalist*innen",
       question:
-      _.sample(["Ein Journalismus Studium zu beginnen, ist in Deutschland sehr schwierig, weshalb viele angehende Journalisten einen alternativen Bildungsweg einschlagen. <br /> ___ möchte sich trotzdem an der Universität in Berlin bewerben. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Ein Journalismus Studium zu beginnen, ist in Deutschland sehr schwierig, weshalb viele angehende Journalistinnen einen alternativen Bildungsweg einschlagen. <br /> ___ möchte sich trotzdem an der Universität in Berlin bewerben. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Ein Journalismus Studium zu beginnen, ist in Deutschland sehr schwierig, weshalb viele angehende JournalistInnen einen alternativen Bildungsweg einschlagen. <br /> ___ möchte sich trotzdem an der Universität in Berlin bewerben. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+      _.sample(["Ein Journalismus Studium zu beginnen, ist in Deutschland sehr schwierig, weshalb viele angehende Journalisten einen alternativen Bildungsweg einschlagen. <br /> ________ möchte sich trotzdem an der Universität in Berlin bewerben. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Ein Journalismus Studium zu beginnen, ist in Deutschland sehr schwierig, weshalb viele angehende Journalistinnen einen alternativen Bildungsweg einschlagen. <br /> ________ möchte sich trotzdem an der Universität in Berlin bewerben. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Ein Journalismus Studium zu beginnen, ist in Deutschland sehr schwierig, weshalb viele angehende Journalist*innen einen alternativen Bildungsweg einschlagen. <br /> ________ möchte sich trotzdem an der Universität in Berlin bewerben. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
       min_chars: 2
     },
     {
       item: 30,
       phase: 1,
       stereotype: "neutral",
-      role_noun: "MieterInnen",
+      role_noun: "Mieter*innen",
       question:
-      _.sample(["Wegen des Mietendeckels konnten viele Mieter während der Pandemie zu günstigen Mieten in den Wohnungen bleiben. <br /> ___ wurde jedoch kürzlich wegen Eigenbedarfs der Mietvertrag gekündigt. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Wegen des Mietendeckels konnten viele Mieterinnen während der Pandemie zu günstigen Mieten in den Wohnungen bleiben. <br /> ___ wurde jedoch kürzlich wegen Eigenbedarfs der Mietvertrag gekündigt. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Wegen des Mietendeckels konnten viele MieterInnen während der Pandemie zu günstigen Mieten in den Wohnungen bleiben. <br /> ___ wurde jedoch kürzlich wegen Eigenbedarfs der Mietvertrag gekündigt. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+      _.sample(["Wegen des Mietendeckels konnten viele Mieter während der Pandemie zu günstigen Mieten in den Wohnungen bleiben. <br /> ________ wurde jedoch kürzlich wegen Eigenbedarfs der Mietvertrag gekündigt. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Wegen des Mietendeckels konnten viele Mieterinnen während der Pandemie zu günstigen Mieten in den Wohnungen bleiben. <br /> ________ wurde jedoch kürzlich wegen Eigenbedarfs der Mietvertrag gekündigt. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Wegen des Mietendeckels konnten viele Mieter*innen während der Pandemie zu günstigen Mieten in den Wohnungen bleiben. <br /> ________ wurde jedoch kürzlich wegen Eigenbedarfs der Mietvertrag gekündigt. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
       min_chars: 2
     },
     {
       item: 31,
       phase: 1,
       stereotype: "neutral",
-      role_noun: "PatientInnen",
+      role_noun: "Patient*innen",
       question:
-      _.sample(["In den Wintermonaten steigt die Anzahl der Patienten in den Arztpraxen stark an. <br /> ___ wartet schon seit Tagen auf einen Termin. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "In den Wintermonaten steigt die Anzahl der Patientinnen in den Arztpraxen stark an. <br /> ___ wartet schon seit Tagen auf einen Termin. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "In den Wintermonaten steigt die Anzahl der PatientInnen in den Arztpraxen stark an. <br /> ___ wartet schon seit Tagen auf einen Termin. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+      _.sample(["In den Wintermonaten steigt die Anzahl der Patienten in den Arztpraxen stark an. <br /> ________ wartet schon seit Tagen auf einen Termin. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "In den Wintermonaten steigt die Anzahl der Patientinnen in den Arztpraxen stark an. <br /> ________ wartet schon seit Tagen auf einen Termin. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "In den Wintermonaten steigt die Anzahl der Patient*innen in den Arztpraxen stark an. <br /> ________ wartet schon seit Tagen auf einen Termin. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
       min_chars: 2
     },
     {
       item: 32,
       phase: 1,
       stereotype: "neutral",
-      role_noun: "FotografInnen",
+      role_noun: "Fotograf*innen",
       question:
-      _.sample(["Fotografen werden häufig für große Hochzeiten engagiert. <br /> ___ fotografiert dabei am liebsten spontane Momente, die nicht gestellt sind. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Fotografinnen werden häufig für große Hochzeiten engagiert. <br /> ___ fotografiert dabei am liebsten spontane Momente, die nicht gestellt sind. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "FotografInnen werden häufig für große Hochzeiten engagiert. <br /> ___ fotografiert dabei am liebsten spontane Momente, die nicht gestellt sind. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+      _.sample(["Fotografen werden häufig für große Hochzeiten engagiert. <br /> ________ fotografiert dabei am liebsten spontane Momente, die nicht gestellt sind. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Fotografinnen werden häufig für große Hochzeiten engagiert. <br /> ________ fotografiert dabei am liebsten spontane Momente, die nicht gestellt sind. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Fotograf*innen werden häufig für große Hochzeiten engagiert. <br /> ________ fotografiert dabei am liebsten spontane Momente, die nicht gestellt sind. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
       min_chars: 2
     },
     {
       item: 33,
       phase: 1,
       stereotype: "neutral",
-      role_noun: "MedizinerInnen",
+      role_noun: "Mediziner*innen",
       question:
-      _.sample(["Als Mediziner trägt man eine große Verantwortung. <br /> ___ kontrolliert jedes Rezept, das ausgestellt wird mehrfach, um Fehler zu vermeiden. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Als Medizinerinnen trägt man eine große Verantwortung. <br /> ___ kontrolliert jedes Rezept, das ausgestellt wird mehrfach, um Fehler zu vermeiden. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Als MedizinerInnen trägt man eine große Verantwortung. <br /> ___ kontrolliert jedes Rezept, das ausgestellt wird mehrfach, um Fehler zu vermeiden. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+      _.sample(["Als Mediziner trägt man eine große Verantwortung. <br /> ________ kontrolliert jedes Rezept, das ausgestellt wird mehrfach, um Fehler zu vermeiden. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Als Medizinerinnen trägt man eine große Verantwortung. <br /> ________ kontrolliert jedes Rezept, das ausgestellt wird mehrfach, um Fehler zu vermeiden. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Als Mediziner*innen trägt man eine große Verantwortung. <br /> ________ kontrolliert jedes Rezept, das ausgestellt wird mehrfach, um Fehler zu vermeiden. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
       min_chars: 2
     },
     {
       item: 34,
       phase: 1,
       stereotype: "neutral",
-      role_noun: "AktivistInnen",
+      role_noun: "Aktivist*innen",
       question:
-      _.sample(["Die Relevanz von politischen Aktivisten nimmt immer mehr zu. <br /> ___ geht jede Woche auf die Straße, um für den Klimaschutz zu demonstrieren. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Die Relevanz von politischen Aktivistinnen nimmt immer mehr zu. <br /> ___ geht jede Woche auf die Straße, um für den Klimaschutz zu demonstrieren. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Die Relevanz von politischen AktivistInnen nimmt immer mehr zu. <br /> ___ geht jede Woche auf die Straße, um für den Klimaschutz zu demonstrieren. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+      _.sample(["Die Relevanz von politischen Aktivisten nimmt immer mehr zu. <br /> ________ geht jede Woche auf die Straße, um für den Klimaschutz zu demonstrieren. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Die Relevanz von politischen Aktivistinnen nimmt immer mehr zu. <br /> ________ geht jede Woche auf die Straße, um für den Klimaschutz zu demonstrieren. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Die Relevanz von politischen Aktivist*innen nimmt immer mehr zu. <br /> ________ geht jede Woche auf die Straße, um für den Klimaschutz zu demonstrieren. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
       min_chars: 2
     },
     {
       item: 35,
       phase: 1,
       stereotype: "neutral",
-      role_noun: "PsychiaterInnen",
+      role_noun: "Psychiater*innen",
       question:
-      _.sample(["Eine eigene Praxis ist der Traum vieler Psychiater. <br /> ___ erhofft sich davon besonders flexible Arbeitszeiten. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Eine eigene Praxis ist der Traum vieler Psychiaterinnen. <br /> ___ erhofft sich davon besonders flexible Arbeitszeiten. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Eine eigene Praxis ist der Traum vieler PsychiaterInnen. <br /> ___ erhofft sich davon besonders flexible Arbeitszeiten. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+      _.sample(["Eine eigene Praxis ist der Traum vieler Psychiater. <br /> ________ erhofft sich davon besonders flexible Arbeitszeiten. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Eine eigene Praxis ist der Traum vieler Psychiaterinnen. <br /> ________ erhofft sich davon besonders flexible Arbeitszeiten. <br /><br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Eine eigene Praxis ist der Traum vieler Psychiater*innen. <br /> ________ erhofft sich davon besonders flexible Arbeitszeiten. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
       min_chars: 2
     },
     {
       item: 36,
       phase: 1,
       stereotype: "neutral",
-      role_noun: "StudentInnen",
+      role_noun: "Student*innen",
       question:
-      _.sample(["Während der Pandemie vermissten die Studenten vor allem die Mensa. <br /> ___ geht jeden Tag essen, seit sie wieder geöffnet ist. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Während der Pandemie vermissten die Studentinnen vor allem die Mensa. <br /> ___ geht jeden Tag essen, seit sie wieder geöffnet ist. <br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Während der Pandemie vermissten die StudentInnen vor allem die Mensa. <br /> ___ geht jeden Tag essen, seit sie wieder geöffnet ist. <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+      _.sample(["Während der Pandemie vermissten die Studenten vor allem die Mensa. <br /> ________ geht jeden Tag essen, seit sie wieder geöffnet ist. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Während der Pandemie vermissten die Studentinnen vor allem die Mensa. <br /> ________ geht jeden Tag essen, seit sie wieder geöffnet ist. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Während der Pandemie vermissten die Student*innen vor allem die Mensa. <br /> ________ geht jeden Tag essen, seit sie wieder geöffnet ist. <br /> <br /> Bitte schreibe einen passenden Namen in das Feld."]),
       min_chars: 2
     },
+],
+
+// Phase 2 ---- NAME CHECK
+// list that allows iteration through all 36 previous trials from phase 1
+iteration: [
+  ([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35]),
 ]};
 
 
@@ -442,8 +447,8 @@ const forced_choice_3A_trials = {
       item: 1,
       phase: 3,
       stereotype:"female",
-      role_noun: "BabysitterInnen",
-      question: "<strong> BabysiterInnen </strong> <br /> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+      role_noun: "Babysitter*innen",
+      question: "<strong> Babysiter*innen </strong> <br /> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
       option1: "Männlich",
       option2: "Neutral",
       option3: "Weiblich"
@@ -452,8 +457,8 @@ const forced_choice_3A_trials = {
         item: 2,
         phase: 3,
         stereotype:"female",
-        role_noun: "BalletttänzerInnen",
-        question: "<strong>BalletttänzerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Balletttänzer*innen",
+        question: "<strong>Balletttänzer*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -462,8 +467,8 @@ const forced_choice_3A_trials = {
         item: 3,
         phase: 3,
         stereotype:"female",
-        role_noun: "KassiererInnen",
-        question: "<strong>KassiererInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Kassierer*innen",
+        question: "<strong>Kassierer*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -472,8 +477,8 @@ const forced_choice_3A_trials = {
         item: 4,
         phase: 3,
         stereotype:"female",
-        role_noun: "ErnährungsberaterInnen",
-        question: "<strong>ErnährungsberaterInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Ernährungsberater*innen",
+        question: "<strong>Ernährungsberater*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -482,8 +487,8 @@ const forced_choice_3A_trials = {
         item: 5,
         phase: 3,
         stereotype:"female",
-        role_noun: "FloristInnen",
-        question: "<strong>FloristInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Florist*innen",
+        question: "<strong>Florist*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -492,8 +497,8 @@ const forced_choice_3A_trials = {
         item: 6,
         phase: 3,
         stereotype:"female",
-        role_noun: "FlugbegleiterInnen",
-        question: "<strong>FlugbegleiterInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Flugbegleiter*innen",
+        question: "<strong>Flugbegleiter*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -502,8 +507,8 @@ const forced_choice_3A_trials = {
         item: 7,
         phase: 3,
         stereotype:"female",
-        role_noun: "FriseurInnen",
-        question: "<strong>FriseurInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Friseur*innen",
+        question: "<strong>Friseur*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -512,8 +517,8 @@ const forced_choice_3A_trials = {
         item: 8,
         phase: 3,
         stereotype:"female",
-        role_noun: "HaushälterInnen",
-        question: "<strong>HaushälterInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Haushälter*innen",
+        question: "<strong>Haushälter*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -522,8 +527,8 @@ const forced_choice_3A_trials = {
         item: 9,
         phase: 3,
         stereotype:"female",
-        role_noun: "KindergärtnerInnen",
-        question: "<strong>KindergärtnerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Kindergärtner*innen",
+        question: "<strong>Kindergärtner*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -532,8 +537,8 @@ const forced_choice_3A_trials = {
         item: 10,
         phase: 3,
         stereotype:"female",
-        role_noun: "GrundschullehrerInnen",
-        question: "<strong>GrundschullehrerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Grundschullehrer*innen",
+        question: "<strong>Grundschullehrer*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -542,8 +547,8 @@ const forced_choice_3A_trials = {
         item: 11,
         phase: 3,
         stereotype:"female",
-        role_noun: "AutorInnen von Liebesromanen",
-        question: "<strong>AutorInnen von Liebesromanen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Autor*innen von Liebesromanen",
+        question: "<strong>Autor*innen von Liebesromanen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -552,8 +557,8 @@ const forced_choice_3A_trials = {
         item: 12,
         phase: 3,
         stereotype:"female",
-        role_noun: "SchneiderInnen",
-        question: "<strong>SchneiderInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Schneider*innen",
+        question: "<strong>Schneider*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -562,8 +567,8 @@ const forced_choice_3A_trials = {
         item: 13,
         phase: 3,
         stereotype:"male",
-        role_noun: "AstronautInnen",
-        question: "<strong>AstronautInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Astronaut*innen",
+        question: "<strong>Astronaut*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -572,8 +577,8 @@ const forced_choice_3A_trials = {
         item: 14,
         phase: 3,
         stereotype:"male",
-        role_noun: "MetzgerInnen",
-        question: "<strong>MetzgerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Metzger*innen",
+        question: "<strong>Metzger*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -582,8 +587,8 @@ const forced_choice_3A_trials = {
         item: 15,
         phase: 3,
         stereotype:"male",
-        role_noun: "ProgrammiererInnen",
-        question: "<strong>ProgrammiererInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Programmierer*innen",
+        question: "<strong>Programmierer*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -592,8 +597,8 @@ const forced_choice_3A_trials = {
         item: 16,
         phase: 3,
         stereotype:"male",
-        role_noun: "ManagerInnen",
-        question: "<strong>ManagerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Manager*innen",
+        question: "<strong>Manager*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -602,8 +607,8 @@ const forced_choice_3A_trials = {
         item: 17,
         phase: 3,
         stereotype:"male",
-        role_noun: "BürgermeisterInnen",
-        question: "<strong>BürgermeisterInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Bürgermeister*innen",
+        question: "<strong>Bürgermeister*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -612,8 +617,8 @@ const forced_choice_3A_trials = {
         item: 18,
         phase: 3,
         stereotype:"male",
-        role_noun: "MörderInnen",
-        question: "<strong>MörderInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Mörder*innen",
+        question: "<strong>Mörder*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -622,8 +627,8 @@ const forced_choice_3A_trials = {
         item: 19,
         phase: 3,
         stereotype:"male",
-        role_noun: "PilotInnen",
-        question: "<strong>PilotInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Pilot*innen",
+        question: "<strong>Pilot*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -632,8 +637,8 @@ const forced_choice_3A_trials = {
         item: 20,
         phase: 3,
         stereotype:"male",
-        role_noun: "PräsidentInnen",
-        question: "<strong>PräsidentInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Präsident*innen",
+        question: "<strong>Präsident*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -642,8 +647,8 @@ const forced_choice_3A_trials = {
         item: 21,
         phase: 3,
         stereotype:"male",
-        role_noun: "PrivatdetektivInnen",
-        question: "<strong>PrivatdetektivInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Privatdetektiv*innen",
+        question: "<strong>Privatdetektiv*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -652,8 +657,8 @@ const forced_choice_3A_trials = {
         item: 22,
         phase: 3,
         stereotype:"male",
-        role_noun: "SoldatInnen",
-        question: "<strong>SoldatInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Soldat*innen",
+        question: "<strong>Soldat*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -662,8 +667,8 @@ const forced_choice_3A_trials = {
         item: 23,
         phase: 3,
         stereotype:"male",
-        role_noun: "ChirgurInnen",
-        question: "<strong>ChirgurInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Chirgur*innen",
+        question: "<strong>Chirgur*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -672,8 +677,8 @@ const forced_choice_3A_trials = {
         item: 24,
         phase: 3,
         stereotype:"male",
-        role_noun: "TaxifahrerInnen",
-        question: "<strong>TaxifahrerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Taxifahrer*innen",
+        question: "<strong>Taxifahrer*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -682,8 +687,8 @@ const forced_choice_3A_trials = {
         item: 25,
         phase: 3,
         stereotype:"neutral",
-        role_noun: "KünstlerInnen",
-        question: "<strong>KünstlerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Künstler*innen",
+        question: "<strong>Künstler*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -692,8 +697,8 @@ const forced_choice_3A_trials = {
         item: 26,
         phase: 3,
         stereotype:"neutral",
-        role_noun: "SportlerInnen",
-        question: "<strong>SportlerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Sportler*innen",
+        question: "<strong>Sportler*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -702,8 +707,8 @@ const forced_choice_3A_trials = {
         item: 27,
         phase: 3,
         stereotype:"neutral",
-        role_noun: "HundehalterInnen",
-        question: "<strong>HundehalterInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Hundehalter*innen",
+        question: "<strong>Hundehalter*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -712,8 +717,8 @@ const forced_choice_3A_trials = {
         item: 28,
         phase: 3,
         stereotype:"neutral",
-        role_noun: "ImmobilienmaklerInnen",
-        question: "<strong>ImmobilienmaklerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Immobilienmakler*innen",
+        question: "<strong>Immobilienmakler*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -722,8 +727,8 @@ const forced_choice_3A_trials = {
         item: 29,
         phase: 3,
         stereotype:"neutral",
-        role_noun: "JournalistInnen",
-        question: "<strong>JournalistInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Journalist*innen",
+        question: "<strong>Journalist*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -732,8 +737,8 @@ const forced_choice_3A_trials = {
         item: 30,
         phase: 3,
         stereotype:"neutral",
-        role_noun: "MieterInnen",
-        question: "<strong>MieterInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Mieter*innen",
+        question: "<strong>Mieter*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -742,8 +747,8 @@ const forced_choice_3A_trials = {
         item: 31,
         phase: 3,
         stereotype:"neutral",
-        role_noun: "PatientInnen",
-        question: "<strong>PatientInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Patient*innen",
+        question: "<strong>Patient*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -752,8 +757,8 @@ const forced_choice_3A_trials = {
         item: 32,
         phase: 3,
         stereotype:"neutral",
-        role_noun: "FotografInnen",
-        question: "<strong>FotografInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Fotograf*innen",
+        question: "<strong>Fotograf*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -762,8 +767,8 @@ const forced_choice_3A_trials = {
         item: 33,
         phase: 3,
         stereotype:"neutral",
-        role_noun: "MedizinerInnen",
-        question: "<strong>MedizinerInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Mediziner*innen",
+        question: "<strong>Mediziner*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -772,8 +777,8 @@ const forced_choice_3A_trials = {
         item: 34,
         phase: 3,
         stereotype:"neutral",
-        role_noun: "politische AktivistInnen",
-        question: "<strong>politische AktivistInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "politische Aktivist*innen",
+        question: "<strong>politische Aktivist*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -782,8 +787,8 @@ const forced_choice_3A_trials = {
         item: 35,
         phase: 3,
         stereotype:"neutral",
-        role_noun: "PsychiaterInnen",
-        question: "<strong>PsychiaterInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Psychiater*innen",
+        question: "<strong>Psychiater*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
@@ -792,8 +797,8 @@ const forced_choice_3A_trials = {
         item: 36,
         phase: 3,
         stereotype:"neutral",
-        role_noun: "StudentInnen",
-        question: "<strong>StudentInnen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
+        role_noun: "Student*innen",
+        question: "<strong>Student*innen</strong> <br /> Mit welchem Geschlecht würdest du dieses Wort am ehesten assoziieren?",
         option1: "Männlich",
         option2: "Neutral",
         option3: "Weiblich"
