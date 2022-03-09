@@ -1,4 +1,0 @@
-1. Phase: textbox input task
-2. Phase: Image selection (Problem mit 3 Bildern?)
-3. Phase: forced choice
-4. Phase: ist der name männlich oder weiblich? forced forced_choice
