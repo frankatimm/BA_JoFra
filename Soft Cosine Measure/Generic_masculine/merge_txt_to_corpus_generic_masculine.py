@@ -5,7 +5,7 @@ filenames = ['Wahlprogramme_konservativtext\AFD_2013.txt', 'Wahlprogramme_konser
              'Wahlprogramme_konservativtext\FDP_2021.txt']
 
 # Open file3 in write mode
-with open('/Users/johannaschillig/Documents/Gender_neutral_language/full_right.txt', 'w') as outfile:
+with open('C:/Users/Franka/Soft_Cosine_Measure/Generic_masculine/corpus_generic_masculine.txt', 'w') as outfile:
 
     for fname in filenames:
         with open(fname) as infile:

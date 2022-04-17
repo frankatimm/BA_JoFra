@@ -11,7 +11,7 @@ class MyCorpus:
 
     def __iter__(self):
         #corpus_path = datapath('C:/Users/Franka/Wahlprogrammetext/leftwing.txt')
-        for line in open('C:/Users/Franka/Wahlprogrammetext/leftwing.txt',encoding="utf8"):
+        for line in open('C:/Users/Franka/Soft_Cosine_Measure/Generic_masculine/corpus_generic_masculine.txt',encoding="utf8"):
             # assume there's one document per line, tokens separated by whitespace
             yield utils.simple_preprocess(line)
 
@@ -49,23 +49,14 @@ for index, word in enumerate(model.wv.index_to_key):
 #
 
 
-# #rightwing
-#open text file in read mode
-generic_masculine_nouns = open('C:/Users/Franka/Wahlprogrammetext/generic_masculine_nouns.txt', "r")
-#encoding="utf8")
-
-#read whole file to a string
-data = generic_masculine_nouns.read()
-
-#close file
-generic_masculine_nouns.close()
 
 # query_basic =  'Mann, Männer, Frau, Frauen, Kinder, Menschen, Mensch, Jugendliche, Teenager, Familie, Jung, Alt, Identität, Religion, Kultur, Herkunft, Gesellschaft, Deutschland, Ehefrau, Ehemann, Ehepaar'
 query_basic = 'Deutschland  Land  Mensch  Demokrat Europa Staat Afd Kind  Unternehmen  Bildung Chance  Jahr  Bürger  Familie  Zukunft  Eu  Wirtschaft  Sicherheit  Freiheit  Ziel  Schule  Euro  Entwicklung  Welt  Gesellschaft  Weg  Schutz  Möglichkeit  Leistung  Arbeit  Seite  Verantwortung  Politik  Leben  Recht  Zeit  Union  Bereich  Digitalisierung  Forschung  Demokratie  Arbeitsplatz  Beispiel  Wettbewerb  Rahmen  Wohlstand  Ausbau  Bund  Interesse  Förderung  Maßnahme  Prozent  Frau  Beitrag  Zusammenarbeit  Aufgabe  Ausbildung  Investition  Infrastruktur  Mittel  Wachstum  Teil  Steuer  Hochschule  Geld  Einführung  Integration  Versorgung  Ebene  Herausforderung  Entscheidung  Grundlage  Eltern  Raum  Regel  Marktwirtschaft  Landwirtschaft  Bürgerinnen  Datum  Partner  Kultur  Rahmenbedingung  Dienst  Energie  Region  Chen  Stärkung  Einsatz  Voraussetzung  Gesetz  Betrieb  Ge  Programm  Finanzierung  Kommune  Innovation  Vielfalt  Rente  Lösung  Hilfe  Cdu  Csu  Technologie  Unterstützung  Reform  Mittelstand  Prinzip  Erfolg  Beruf  Altersvorsorge  Schritt  Bürokratie  Zugang  Form  Idee  Generation  Bundestagswahl  Rechtsstaat  Partei  Regelung  Bundesregierung  Markt  Pflege  Mobilität  Grundgesetz  Ort  Schüler  Nutzung  Million  Arbeitsmarkt  Angebot  Anreiz  Einkommen  Alter  Arbeitnehmer  Grenze  Abschaffung  Kosten  Bundeswehr  Blick  Menschenrecht  Stadt  Zahl  Verwaltung  Wert  Frieden  Migration  Nation  Volk  Milliarde  Rolle  Parlament  Art  Standard  Einrichtung  Kraft  Nato  Kontorolle  Sprache  Bedeutung  Arbeitgeber  Produkt  Ezb  Fortschritt  Wettbewerbsfähigkeit  Verbraucher  Asyl  Selbstbestimmung  Industrie  Höhe  Anspruch  Internet  %  Studierend  Schuld  Verbesserung  Instrument  Sinn  Hand  Ausland  Grund  Wissenschaft  Mann  Beschäftigt  Behinderung  Polizei  Kooperation  Fall  System  Usa  Lernen  Stärke  Problem  Regierungsprogramm  Türkei  Vorbild Patient Finanz Kriminalität Währung'
-query_wähler_gmasc = 'Wähler'
-query_wähler_gneu = data
+
+query_generic_masculine = 'Bürger  Kinder  Länder  Schüler  Alter  Arbeitnehmer  Verbraucher  Arbeitgeber  Partner  Lehrer  Dauer  Schweizer  Steuerzahler  Ferner  Mitarbeiter  Zeitalter  Mitglieder  Männer  Träger  Opfer  Wälder  Asylbewerber  Krankenhäuser  Erbschaftsteuer  Gründer  Täter  Rentner  Miteinander  Digitalsteuer  Mutter  Väter  Völker  Bundesländer  Vermögensteuer  Unternehmer  Anbieter  Grunderwerbsteuer  Umsatzsteuer  Gewerbesteuer  Einkommensteuer  Wasser  Tarifpartner  Sparer  Pariser  Regierungspolitiker  Vorreiter  Minister  Stabilitätsanker  Verkehrsträger  Hinweisgeber  Vaterländer  Mieter  Impulsgeber  Wähler  Vermögenssteuer  Moderner  Gelder  Forscher  Sozialer  Straftäter  Neuer  Politiker  Master  Sozialgesetzbücher  Beitragszahler  Stromsteuer  Fächer  Krimineller  Rentenalter  Fairer  Digitalzeitalter  Transfer  Güter  Richter  Meister  Freier  Mütter  Magister  Internationaler  Urheber  Leistungsträger  Gefährder  Partnerländer  Bewerber  Ausländer  Einwanderer  Geschlechter  Entwicklungsländer  Bezugsdauer  Leider  September  Vorbilder  Steuer  Handwerker  Vater  Digitaler  Bundeskanzler  Nutzer  Künstlicher  Riester  Nummer  Vertreter  Wirtschaftsgüter  Genfer  Geldgeber  Ämter  Leiharbeitnehmer  Parlamentarier  Gläubiger  Grundpfeiler  Mittelmeer  Volksvertreter  Finger  Leistungsempfänger  Bündnispartner  Hersteller  Grundsteuer  Wissenschaftler  Hunger  Mandatsträger  Besserer  Zentraler  Europäer  Flexiblerer  Aussiedler  Aktivierender  Whistleblower  Fehler  Erzieher  Biersteuer  Flexibler  Newcomer  Wettbewerber  Erneuerbarer  Nebeneinander  Neugier  Klassenzimmer  Auftraggeber  Pfeiler  Herkunftsländer  Renteneintrittsalter  Betreiber  Anleger  CO-neutraler  Zweitwohnungssteuer  MINT-Fächer  Zuwanderer  Deutscher  Finanztransaktionssteuer  Jugendämter  Geber  Angehöriger  Energieträger  Königsteiner  Justizminister  Gegner  Effektiver  Sozialpartner  Oktober  Eigentümer  Berliner  Jäger  Sicher  Landesämter  Entscheidungsträger  Freiberufler  Strafmündigkeitsalter  November  EU-Ausländer  Mehrwertsteuer  Technischer  Eckpfeiler  Schaumweinsteuer  Fischereisteuer  Generationsübergreifender  Treiber  Kindesalter  Nachhaltiger  Bezieher  Verfassungsrechtler  Einwohner  Körperschaftsteuer  Einkommensteuerzahler  Speicher  Voller  Erfinder  Quereinsteiger  Mehrgenerationenhäuser  Wirksamer  Beschäftigtenvertreter  Vermieter  Rentenbezieher  Gewässer  Zeitarbeitnehmer  Per  Lindner  Finanzminister  Schiller  Regenwälder  Weimarer  Semester  Anwohner  Gesetzgeber  Wachstumstreiber  Handelspartner  Entwickler  Gesellschafter  Weder  Trinkwasser  Erzeuger  Kleinkinder  Stromzähler  Wider  Schlecker  Ungeborener  Ehepartner  Luftverkehrssteuer  Schuldner  Fördergelder  Existenzgründer  Steuerschlupflöcher  Tier  Marschflugkörper  Legalwaffenbesitzer  Wiener  Gemeinsamer  Stimmungsbilder  Schulabgänger  Clan-Mitglieder  Flüchtlingskinder  Aufenthaltsdauer  Marktteilnehmer  Sportler  Personenstandsregister  Standesämter  Abgeltungsteuer  Berufsschüler  Fürsprecher  Prozentualer  Automobilhersteller  Deutsch-französischer  Aachener  Spätaussiedler  Kandidatenländer  Urlaubssemester  EU-Bürger  Berufsfelder  Niedriglohnempfänger  Abgelehnter  Asylantragsteller  Schwellenländer  Verfahrensdauer  EU-Länder  Endlager  Tech-Gründer  Ausreisepflichtiger  Erbschaftssteuer  Dienstleister  Identitätstäuscher  Mitwirkungsverweigerer  Datenträger  Mitbürger  Papier  Alzheimer  Amtsträger  Quantencomputer  Provider  Parlamentarischer'
 ##similarity = 0.0955
 
+#similarity = 0.0727 für "query_basic" und "query_generic_masculine"
 # Import and download stopwords from NLTK.
 from nltk.corpus import stopwords
 from nltk import download
@@ -76,27 +67,26 @@ def preprocess(sentence):
     return [w for w in sentence.lower().split() if w not in stop_words]
 
 query_basic = preprocess(query_basic)
-query_wähler_gmasc = preprocess(query_wähler_gmasc)
-query_wähler_gneu = preprocess(query_wähler_gneu)
+query_generic_masculine = preprocess(query_generic_masculine)
 
-print(query_basic, query_wähler_gmasc, query_wähler_gneu)
+print(query_basic, query_generic_masculine)
 
 from gensim.corpora import Dictionary
-documents = [query_basic, query_wähler_gmasc, query_wähler_gneu]
+documents = [query_basic, query_generic_masculine]
 dictionary = Dictionary(documents)
 
 query_basic = dictionary.doc2bow(query_basic)
-query_wähler_gmasc = dictionary.doc2bow(query_wähler_gmasc)
-query_wähler_gneu = dictionary.doc2bow(query_wähler_gneu)
+
+query_generic_masculine = dictionary.doc2bow(query_generic_masculine)
 
 
 from gensim.models import TfidfModel
-documents = [query_basic, query_wähler_gmasc, query_wähler_gneu]
+documents = [query_basic, query_generic_masculine]
 tfidf = TfidfModel(documents)
 
 query_basic = tfidf[query_basic]
-query_wähler_gmasc = tfidf[query_wähler_gmasc]
-query_wähler_gneu = tfidf[query_wähler_gneu]
+
+query_generic_masculine = tfidf[query_generic_masculine]
 
 
 from gensim.similarities import SparseTermSimilarityMatrix, WordEmbeddingSimilarityIndex
@@ -105,5 +95,5 @@ termsim_index = WordEmbeddingSimilarityIndex(model.wv)
 termsim_matrix = SparseTermSimilarityMatrix(termsim_index, dictionary, tfidf)
 
 
-similarity = termsim_matrix.inner_product(query_basic, query_wähler_gneu, normalized=(True, True))
-print('similarity = %.4f' % similarity ,'für "Wählerinnen und Wähler" und query_basic(Mann, Männer, Frau, Frauen, Kinder, Menschen, Mensch, Jugendliche, Teenager, Familie, Jung, Alt, Identität, Religion, Kultur, Herkunft, Gesellschaft, Deutschland, Ehefrau, Ehemann, Ehepaar)"')
+similarity = termsim_matrix.inner_product(query_basic, query_generic_masculine, normalized=(True, True))
+print('similarity = %.4f' % similarity ,'für "query_basic" und "query_generic_masculine"')

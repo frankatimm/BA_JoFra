@@ -1,7 +1,7 @@
 import sys, fitz
 import glob, os
 
-DIR = '/Users/johannaschillig/Documents/Gender_neutral_language/Wahlprogramme_konservativ'
+DIR = 'C:/Users/Franka/Soft_Cosine_Measure/Generic_masculine/Wahlprogramme'
 os.chdir(DIR + '')
 
 def listToString(s):
