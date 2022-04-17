@@ -5,7 +5,7 @@ filenames2 = ['Wahlprogrammetext\Gruene_2013.txt', 'Wahlprogrammetext\Gruene_201
              'Wahlprogrammetext\SPD_2021.txt']
 
 # Open file3 in write mode
-with open('/Users/johannaschillig/Documents/Gender_neutral_language/full_left.txt', 'w') as outfile:
+with open('C:/Users/Franka/Soft_Cosine_Measure/Gender_neutral_language/corpus_gender_neutral.txt', 'w') as outfile:
 
     for fname in filenames2:
         with open(fname) as infile:
