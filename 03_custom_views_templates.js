@@ -34,8 +34,20 @@ const forced_choice_2A_customized = function(config) {
                             trial_number: CT + 1,
                             response: e.target.id
                         };
+
+                        $("input[name=answer]").on("change", function() {
+                          const RT = Date.now() - startTime;
+                          let trial_data = {
+                              // nicht vergessen
+                              name: magpie.trial_data[0].response,
+                              trial_name: config.name,
+                              trial_number: CT + 1,
+                              response: $("input[name=answer]:checked").val(),
+                              RT: RT
+                          };
+
                         // Often it makes sense to also save the config information
-                        // trial_data = magpieUtils.view.save_config_trial_data(config.data[CT], trial_data);
+                        trial_data = magpieUtils.view.save_config_trial_data(config.data[CT], trial_data);
 
                         // Here, we save the trial_data
                         magpie.trial_data.push(trial_data);
@@ -45,16 +57,7 @@ const forced_choice_2A_customized = function(config) {
                     };
 
                     // We will add the handle_click functions to both buttons
-                    $("input[name=answer]").on("change", function() {
-                      const RT = Date.now() - startTime;
-                      let trial_data = {
-                // nicht vergessen
-                name: magpie.trial_data[0].response,
-                trial_name: config.name,
-                trial_number: CT + 1,
-                response: $("input[name=answer]:checked").val(),
-                RT: RT
-            };
+                  
 
                     $('#first').on("click", handle_click);
                     $('#second').on("click", handle_click);
