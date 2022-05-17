@@ -16,7 +16,7 @@
 //min_chars: participant has to enter at least 2 letters in order to be allowed to proceed with the experiment
 
 const textbox_input_trials = {
-  textbox_input: [
+  textbox_input_Babysitter: [
     {
       item: 1,
       phase: 1,
@@ -45,7 +45,7 @@ const textbox_input_trials = {
       min_chars: 2
     },
   ],
-  
+
 // const textbox_input_trials = {
 //   textbox_input: [
 //     {
