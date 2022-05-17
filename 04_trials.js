@@ -44,8 +44,8 @@ const textbox_input_trials = {
       question:"Babysitter*innen werden trotz fehlender Kitaplätze immer schlechter bezahlt. <br /> ____________ möchte sich deshalb einen neuen Job suchen.<br /> <br /> Bitte schreibe einen passenden Namen in das Feld.",
       min_chars: 2
     },
-  ]
-}
+  ],
+},
 // const textbox_input_trials = {
 //   textbox_input: [
 //     {
