@@ -26,28 +26,14 @@ const forced_choice_2A_customized = function(config) {
               <button id="second" class='magpie-view-button'>männlich</button>
         </div>
         `)
-
-
-        $("input[name=answer]").on("change", function() {
-          const RT = Date.now() - startTime;
-          let trial_data = {
-              // nicht vergessen
-              name: magpie.trial_data[0].response,
-              trial_name: config.name,
-              trial_number: CT + 1,
-              response: $("input[name=answer]:checked").val(),
-              RT: RT
-          };
-        }
         // This function will handle  the response
-                  const handle_click = function(e){
+                    const handle_click = function(e) {
                         // We will just save the response and continue to the next view
                         let trial_data = {
                             trial_name: config.name,
                             trial_number: CT + 1,
-                            response: e.target.id,
+                            response: e.target.id
                         };
-
                         // Often it makes sense to also save the config information
                         // trial_data = magpieUtils.view.save_config_trial_data(config.data[CT], trial_data);
 
@@ -63,6 +49,7 @@ const forced_choice_2A_customized = function(config) {
                     $('#second').on("click", handle_click);
 
                     // That's everything for this view
-              }  
+                }
+            };
   return view;
 }
