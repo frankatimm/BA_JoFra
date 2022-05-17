@@ -563,7 +563,7 @@ const filler_sentences_Fotografen = magpieViews.view_generator('textbox_input', 
 },
 );
 
-const filler_sentences_Medizinier = magpieViews.view_generator('textbox_input', {
+const filler_sentences_Mediziner = magpieViews.view_generator('textbox_input', {
   //title
   title: 'Fügen Sie einen passenden Namen ein!',
   // This will use all trials specified in `textbox_input_trials` in 04_trials.js
