@@ -22,8 +22,8 @@ const forced_choice_2A_customized = function(config) {
               <p class='magpie-view-question'> Würden Sie den Namen <strong>${magpie.trial_data[CT].response}</strong> eher der Kategorie "männlich" oder "weiblich" zuordnen?</p>
 
         <div class='magpie-view-answer-container'>
-              <button id="weiblich" class='magpie-view-button'>weiblich</button>
-              <button id="männlich" class='magpie-view-button'>männlich</button>
+              <button id="first" class='magpie-view-button'>weiblich</button>
+              <button id="second" class='magpie-view-button'>männlich</button>
         </div>
         `)
         // This function will handle  the response
