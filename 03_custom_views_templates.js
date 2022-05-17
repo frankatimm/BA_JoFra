@@ -56,8 +56,8 @@ const forced_choice_2A_customized = function(config) {
                 RT: RT
             };
 
-                    $('#weiblich').on("click", handle_click);
-                    $('#männlich').on("click", handle_click);
+                    $('#first').on("click", handle_click);
+                    $('#second').on("click", handle_click);
 
                     // That's everything for this view
                 }
