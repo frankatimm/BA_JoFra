@@ -640,7 +640,7 @@ textbox_input_Piloten: [
         stereotype: "male",
         condition: "gender-neutral",
         role_noun: "Privatdetektiv*innen",
-        question: "Eine erfolgreiche TV-Serie berichtet über die spannende Arbeit von Privatdetektiv*innen. <br />	____ arbeitet schon seit langem in einer Detektei und ärgert sich über die unauthentische Darstellung des Berufes. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."
+        question: "Eine erfolgreiche TV-Serie berichtet über die spannende Arbeit von Privatdetektiv*innen. <br />	____ arbeitet schon seit langem in einer Detektei und ärgert sich über die unauthentische Darstellung des Berufes. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
         min_chars: 2
     },
   ],
