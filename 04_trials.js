@@ -45,7 +45,7 @@ const textbox_input_trials = {
       min_chars: 2
     },
   ],
-},
+  
 // const textbox_input_trials = {
 //   textbox_input: [
 //     {

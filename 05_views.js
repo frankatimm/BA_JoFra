@@ -192,10 +192,11 @@ const filler_sentences = magpieViews.view_generator('textbox_input', {
 },
 );
 
+
 const name_check = forced_choice_2A_customized({
   trials: 36,
   name: 'name_check',
-  data: _.shuffle(textbox_input_trials.iteration),
+  data: textbox_input_trials.iteration,
 });
 
 // Initialization of a forced_choice view with a custom answer container
