@@ -19,7 +19,8 @@ $("document").ready(function() {
           intro,
           // Phase 1 --- filler sentences
           textbox_input_instructions,
-          filler_sentences,
+          filler_sentences_Babysitter,
+          filler_sentences_Baletttänzer,
           // Phase 2 --- name review
           name_check_instructions,
           name_check,
