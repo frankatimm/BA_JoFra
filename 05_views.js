@@ -169,18 +169,28 @@ const thanks = magpieViews.view_generator("thanks", {
 
 
 // Here, we initialize a normal textbox input view
+// const filler_sentences = magpieViews.view_generator('textbox_input', {
+//   //title
+//   title: 'Fügen Sie einen passenden Namen ein!',
+//   // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+//   trials: textbox_input_trials.textbox_input.length,
+//   // name should be identical to the variable name
+//   name: 'filler_sentences',
+//   //shuffle data
+//   data: _.shuffle(textbox_input_trials.textbox_input)
+// },
+// );
 const filler_sentences = magpieViews.view_generator('textbox_input', {
   //title
   title: 'Fügen Sie einen passenden Namen ein!',
   // This will use all trials specified in `textbox_input_trials` in 04_trials.js
-  trials: textbox_input_trials.textbox_input.length,
+  trials: 1,
   // name should be identical to the variable name
   name: 'filler_sentences',
   //shuffle data
   data: _.shuffle(textbox_input_trials.textbox_input)
 },
 );
-
 
 const name_check = forced_choice_2A_customized({
   trials: 36,
