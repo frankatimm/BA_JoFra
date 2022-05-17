@@ -47,7 +47,8 @@ $("document").ready(function() {
             in: [
               // list the view-names of the views for which you want a progress bar
               textbox_input_instructions.name,
-              filler_sentences.name,
+              filler_sentences_Babysitter.name,
+              filler_sentences_Baletttänzer.name,
               name_check_instructions.name,
               name_check.name,
               stereotype_check_instructions.name,

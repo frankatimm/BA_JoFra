@@ -73,7 +73,7 @@ const textbox_input_trials = {
                     question:"Die Balletttänzer*innen der Kompanie haben ihre Generalprobe auf der großen Bühne. <br /> ____________ verletzt sich dabei am Bein. <br /> <br />Bitte schreibe einen passenden Namen in das Feld."]),
                     min_chars: 2
                 },
-  ]
+  ],
 
 // const textbox_input_trials = {
 //   textbox_input: [
