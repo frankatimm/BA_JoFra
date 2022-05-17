@@ -204,6 +204,412 @@ const filler_sentences_Baletttänzer = magpieViews.view_generator('textbox_input
 },
 );
 
+const filler_sentences_Kassierer = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Kassierer)
+},
+);
+
+const filler_sentences_Ernährungsberater = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Ernährungsberater)
+},
+);
+
+const filler_sentences_Floristen = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Floristen)
+},
+);
+
+const filler_sentences_Flugbegleiter = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Flugbegleiter)
+},
+);
+const filler_sentences_Friseure = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Friseure)
+},
+);
+
+const filler_sentences_Haushälter = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Haushälter)
+},
+);
+
+const filler_sentences_Kindergärtner = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Kindergärtner)
+},
+);
+
+const filler_sentences_Grundschullehrer = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Grundschullehrer)
+},
+);
+
+const filler_sentences_Autoren = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Autoren)
+},
+);
+
+
+const filler_sentences_Schneider = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Schneider)
+},
+);
+
+const filler_sentences_Astronauten = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Astronauten)
+},
+);
+
+const filler_sentences_Metzger = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Metzger)
+},
+);
+
+const filler_sentences_Programmierer = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Programmierer)
+},
+);
+
+const filler_sentences_Manager = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Manager)
+},
+);
+
+const filler_sentences_Bürgermeister = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Bürgermeister)
+},
+);
+
+const filler_sentences_Mörder = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Mörder)
+},
+);
+
+const filler_sentences_Piloten = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Piloten)
+},
+);
+
+const filler_sentences_Präsidenten = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Präsidenten)
+},
+);
+
+const filler_sentences_Privatdetektive = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Privatdetektive)
+},
+);
+
+const filler_sentences_Soldaten = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Soldaten)
+},
+);
+
+const filler_sentences_Chirurgen = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Chirurgen)
+},
+);
+
+const filler_sentences_Taxifahrer = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Taxifahrer)
+},
+);
+
+const filler_sentences_Künstler = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Künstler)
+},
+);
+
+const filler_sentences_Sportler = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Sportler)
+},
+);
+const filler_sentences_Hundehalter = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Hundehalter)
+},
+);
+
+const filler_sentences_Immmobilienmakler = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Immobilienmakler)
+},
+);
+
+const filler_sentences_Journalisten = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Journalisten)
+},
+);
+
+const filler_sentences_Mieter = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Mieter)
+},
+);
+
+const filler_sentences_Patienten = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Patienten)
+},
+);
+
+const filler_sentences_Fotografen = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Fotografen)
+},
+);
+
+const filler_sentences_Medizinier = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Medizinier)
+},
+);
+
+const filler_sentences_Aktivisten = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Aktivisten)
+},
+);
+
+const filler_sentences_Psychiater = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Psychiater)
+},
+);
+
+const filler_sentences_Studenten = magpieViews.view_generator('textbox_input', {
+  //title
+  title: 'Fügen Sie einen passenden Namen ein!',
+  // This will use all trials specified in `textbox_input_trials` in 04_trials.js
+  trials: 1,
+  // name should be identical to the variable name
+  name: 'filler_sentences',
+  //shuffle data
+  data: _.shuffle(textbox_input_trials.textbox_input_Studenten)
+},
+);
 
 
 const name_check = forced_choice_2A_customized({
