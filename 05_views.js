@@ -571,7 +571,7 @@ const filler_sentences_Mediziner = magpieViews.view_generator('textbox_input', {
   // name should be identical to the variable name
   name: 'filler_sentences',
   //shuffle data
-  data: _.shuffle(textbox_input_trials.textbox_input_Medizinier)
+  data: _.shuffle(textbox_input_trials.textbox_input_Mediziner)
 },
 );
 
