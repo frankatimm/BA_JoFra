@@ -27,6 +27,7 @@ const textbox_input_trials = {
         _.sample(["Babysitter werden trotz fehlender Kitaplätze immer schlechter bezahlt. <br /> ____________ möchte sich deshalb einen neuen Job suchen.<br /> <br /> Bitte schreibe einen passenden Namen in das Feld.",
         "Babysitterinnen werden trotz fehlender Kitaplätze immer schlechter bezahlt. <br /> ____________ möchte sich deshalb einen neuen Job suchen.<br /> <br /> Bitte schreibe einen passenden Namen in das Feld.",
         "Babysitter*innen werden trotz fehlender Kitaplätze immer schlechter bezahlt. <br /> ____________ möchte sich deshalb einen neuen Job suchen.<br /> <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        sample_info: textbox_input_trials.question[0],
         min_chars: 2
     },
     {
