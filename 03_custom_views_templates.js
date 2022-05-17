@@ -29,11 +29,7 @@ const forced_choice_2A_customized = function(config) {
         // This function will handle  the response
                     const handle_click = function(e) {
                         // We will just save the response and continue to the next view
-                        let trial_data = {
-                            trial_name: config.name,
-                            trial_number: CT + 1,
-                            response: e.target.id
-                        };
+                        
 
                         $("input[name=answer]").on("change", function() {
                           const RT = Date.now() - startTime;
@@ -57,8 +53,6 @@ const forced_choice_2A_customized = function(config) {
                     };
 
                     // We will add the handle_click functions to both buttons
-                  
-
                     $('#first').on("click", handle_click);
                     $('#second').on("click", handle_click);
 
