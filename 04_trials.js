@@ -45,6 +45,7 @@ const textbox_input_trials = {
       min_chars: 2
     },
   ],
+
   textbox_input_Baletttänzer: [
     {
             item: 2,
@@ -70,7 +71,7 @@ const textbox_input_trials = {
                     stereotype: "female",
                     condition: "gender-neutral",
                     role_noun: "Baletttänzer*innen",
-                    question:"Die Balletttänzer*innen der Kompanie haben ihre Generalprobe auf der großen Bühne. <br /> ____________ verletzt sich dabei am Bein. <br /> <br />Bitte schreibe einen passenden Namen in das Feld."]),
+                    question:"Die Balletttänzer*innen der Kompanie haben ihre Generalprobe auf der großen Bühne. <br /> ____________ verletzt sich dabei am Bein. <br /> <br />Bitte schreibe einen passenden Namen in das Feld.",
                     min_chars: 2
                 },
   ],
