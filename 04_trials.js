@@ -1483,7 +1483,7 @@ const forced_choice_3A_trials = {
         option2: "Neutral",
         option3: "Weiblich"
     },
-]};
+],
 
 
 
