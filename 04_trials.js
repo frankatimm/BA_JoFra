@@ -58,9 +58,9 @@ const textbox_input_trials = {
         stereotype: "female",
         role_noun: "Ernährungsberater*innen",
         question:
-        _.sample(["Ernährungsberater empfehlen die Einnahme von Vitaminpräparaten. <br />__________ hält Vitamin D im Winter besonders wichtig. <br /> <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Ernährungsberaterinnen empfehlen die Einnahme von Vitaminpräparaten. <br />__________ hält Vitamin D im Winter besonders wichtig. <br /> <br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Ernährungsberater*innen empfehlen die Einnahme von Vitaminpräparaten. <br />___________ hält Vitamin D im Winter besonders wichtig. <br /> <br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Ernährungsberater empfehlen die Einnahme von Vitaminpräparaten. <br />__________ hält Vitamin D im Winter für besonders wichtig. <br /> <br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Ernährungsberaterinnen empfehlen die Einnahme von Vitaminpräparaten. <br />__________ hält Vitamin D im Winter für besonders wichtig. <br /> <br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Ernährungsberater*innen empfehlen die Einnahme von Vitaminpräparaten. <br />___________ hält Vitamin D im Winter für besonders wichtig. <br /> <br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
@@ -212,9 +212,9 @@ const textbox_input_trials = {
         stereotype: "male",
         role_noun: "Mörder*innen",
         question:
-        _.sample(["Die erfolgreiche Festnahme von Mördern nimmt aufgrund technologischen Fortschritts immer weiter zu. <br />	__________ konnte aufgrund von Videoüberwachung und der Ortung seines Smartphones schnell verhaftet werde, bevor es ein neues Opfer gab. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Die erfolgreiche Festnahme von Mörderinnen nimmt aufgrund technologischen Fortschritts immer weiter zu. <br />	__________ konnte aufgrund von Videoüberwachung und der Ortung seines Smartphones schnell verhaftet werde, bevor es ein neues Opfer gab. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
-        "Die erfolgreiche Festnahme von Mörder*innen nimmt aufgrund technologischen Fortschritts immer weiter zu. <br />	__________ konnte aufgrund von Videoüberwachung und der Ortung seines Smartphones schnell verhaftet werde, bevor es ein neues Opfer gab. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
+        _.sample(["Die erfolgreiche Festnahme von Mördern nimmt aufgrund technologischen Fortschritts immer weiter zu. <br />	__________ konnte aufgrund von Videoüberwachung und der Ortung des Smartphones schnell verhaftet werden, bevor es ein neues Opfer gab. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Die erfolgreiche Festnahme von Mörderinnen nimmt aufgrund technologischen Fortschritts immer weiter zu. <br />	__________ konnte aufgrund von Videoüberwachung und der Ortung des Smartphones schnell verhaftet werden, bevor es ein neues Opfer gab. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+        "Die erfolgreiche Festnahme von Mörder*innen nimmt aufgrund technologischen Fortschritts immer weiter zu. <br />	__________ konnte aufgrund von Videoüberwachung und der Ortung des Smartphones schnell verhaftet werden, bevor es ein neues Opfer gab. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
         min_chars: 2
     },
     {
@@ -344,9 +344,9 @@ const textbox_input_trials = {
       stereotype: "neutral",
       role_noun: "Mieter*innen",
       question:
-      _.sample(["Wegen des Mietendeckels konnten viele Mieter während der Pandemie zu günstigen Mieten in den Wohnungen bleiben. <br /> ________ wurde jedoch kürzlich wegen Eigenbedarfs der Mietvertrag gekündigt. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Wegen des Mietendeckels konnten viele Mieterinnen während der Pandemie zu günstigen Mieten in den Wohnungen bleiben. <br /> ________ wurde jedoch kürzlich wegen Eigenbedarfs der Mietvertrag gekündigt. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Wegen des Mietendeckels konnten viele Mieter*innen während der Pandemie zu günstigen Mieten in den Wohnungen bleiben. <br /> ________ wurde jedoch kürzlich wegen Eigenbedarfs der Mietvertrag gekündigt. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
+      _.sample(["Wegen des Mietendeckels konnten viele Mieter während der Pandemie zu günstigen Mieten in ihren Wohnungen bleiben. <br /> ________ wurde jedoch kürzlich wegen Eigenbedarfs der Mietvertrag gekündigt. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Wegen des Mietendeckels konnten viele Mieterinnen während der Pandemie zu günstigen Mieten in ihren Wohnungen bleiben. <br /> ________ wurde jedoch kürzlich wegen Eigenbedarfs der Mietvertrag gekündigt. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Wegen des Mietendeckels konnten viele Mieter*innen während der Pandemie zu günstigen Mieten in ihren Wohnungen bleiben. <br /> ________ wurde jedoch kürzlich wegen Eigenbedarfs der Mietvertrag gekündigt. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
       min_chars: 2
     },
     {
@@ -377,9 +377,9 @@ const textbox_input_trials = {
       stereotype: "neutral",
       role_noun: "Mediziner*innen",
       question:
-      _.sample(["Als Mediziner trägt man eine große Verantwortung. <br /> ________ kontrolliert jedes Rezept, das ausgestellt wird mehrfach, um Fehler zu vermeiden. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Als Medizinerinnen trägt man eine große Verantwortung. <br /> ________ kontrolliert jedes Rezept, das ausgestellt wird mehrfach, um Fehler zu vermeiden. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
-      "Als Mediziner*innen trägt man eine große Verantwortung. <br /> ________ kontrolliert jedes Rezept, das ausgestellt wird mehrfach, um Fehler zu vermeiden. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
+      _.sample(["Mediziner tragen eine große Verantwortung. <br /> ________ kontrolliert jedes Rezept, das ausgestellt wird mehrfach, um Fehler zu vermeiden. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Medizinerinnen tragen eine große Verantwortung. <br /> ________ kontrolliert jedes Rezept, das ausgestellt wird mehrfach, um Fehler zu vermeiden. <br /><br /> Bitte schreibe einen passenden Namen in das Feld.",
+      "Mediziner*innen tragen eine große Verantwortung. <br /> ________ kontrolliert jedes Rezept, das ausgestellt wird mehrfach, um Fehler zu vermeiden. <br /><br /> Bitte schreibe einen passenden Namen in das Feld."]),
       min_chars: 2
     },
     {

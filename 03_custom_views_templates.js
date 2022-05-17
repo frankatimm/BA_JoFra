@@ -22,8 +22,8 @@ const forced_choice_2A_customized = function(config) {
               <p class='magpie-view-question'> Würden Sie den Namen <strong>${magpie.trial_data[CT].response}</strong> eher der Kategorie "männlich" oder "weiblich" zuordnen?</p>
 
         <div class='magpie-view-answer-container'>
-              <button id="first" class='magpie-view-button'>weiblich</button>
-              <button id="second" class='magpie-view-button'>männlich</button>
+              <button id="weiblich" class='magpie-view-button'>weiblich</button>
+              <button id="männlich" class='magpie-view-button'>männlich</button>
         </div>
         `)
         // This function will handle  the response
@@ -45,8 +45,19 @@ const forced_choice_2A_customized = function(config) {
                     };
 
                     // We will add the handle_click functions to both buttons
-                    $('#first').on("click", handle_click);
-                    $('#second').on("click", handle_click);
+                    $("input[name=answer]").on("change", function() {
+                      const RT = Date.now() - startTime;
+                      let trial_data = {
+                // nicht vergessen
+                name: magpie.trial_data[0].response,
+                trial_name: config.name,
+                trial_number: CT + 1,
+                response: $("input[name=answer]:checked").val(),
+                RT: RT
+            };
+
+                    $('#weiblich').on("click", handle_click);
+                    $('#männlich').on("click", handle_click);
 
                     // That's everything for this view
                 }

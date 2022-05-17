@@ -104,11 +104,11 @@ const stereotype_check_instructions = magpieViews.view_generator("instructions",
   <br />
   <br />
   In der dritten Aufgabe sollen Sie erneut Wörter bewerten. Hierbei handelt es sich allerdings nicht um die von Ihnen gewählten Namen,
-  sondern um Substantive, die Personen beschreiben (Beispiel: Kollegen). Auch hier sollen intuitiv entscheiden, ob die beschriebene Personengruppe
+  sondern um Substantive, die Personen beschreiben (Beispiel: Kollegen). Auch hier Sie sollen intuitiv entscheiden, ob die beschriebene Personengruppe
   für Sie eher männlich, weiblich oder neutral besetzt ist.
   <br />
   <br />
-  Um mit der letzten Phase des Experiments zu beginnen, klicken Sie bitt auf den <strong>Mit dem Experiment fortfahren</strong>-Button.
+  Um mit der letzten Phase des Experiments zu beginnen, klicken Sie bitte auf den <strong>Mit dem Experiment fortfahren</strong>-Button.
   <p style="text-align:center;"><img src="images/picture_phase3.png" alt="instructions" height="300" width="400"></p>`,
   buttonText: 'Mit dem Experiment fortfahren'
 });
