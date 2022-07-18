@@ -1,0 +1,127 @@
+---
+title: "bayesian_stats"
+author: "johannaschillig"
+date: '2022-07-13'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+#Loading important libraries
+
+library(remotes)
+library(tidyverse)
+library(readr)
+library(ggplot2)
+library(tidyselect)
+library(dplyr)
+library(brms)
+library(boot)
+library(parallel)
+library(rstan)
+library(cmdstanr)
+library(faintr)
+
+```
+
+```{r}
+# Technical helper functions
+options(mc.cores = parallel::detectCores())
+rstan_options(auto_write = TRUE)
+```
+
+
+```{r}
+# Loading the prepared data set
+the_onexy <- readRDS('/Users/johannaschillig/Downloads/file_r.rds')
+```
+
+
+```{r}
+# Factorizing the variables to prepare for logistic regression
+real_numeric_chart <- the_onexy%>%
+  mutate(stereotype = as.factor(stereotype),
+         condition = as.factor(condition),
+         responded_gender = ifelse(responded_gender == "female_response", 1, 0))%>%
+  select(stereotype, condition, responded_gender)
+print(real_numeric_chart)
+
+# Changing default use of rstan to alternative to avoid crashing of Rstudio
+options(brms.backend = "cmdstanr")
+
+# Instantiating the brms model 
+mymodel <- brm(responded_gender ~ condition + stereotype, data = real_numeric_chart, family = "bernoulli", seed = 104)
+summary(mymodel)
+
+
+
+```
+
+
+```{r}
+# Overview over all different cell levels of the finished model
+get_cell_definitions(mymodel)
+```
+
+```{r}
+### Clustering cell information belonging to the same grammatical condition together 
+
+# Grammatical male condition
+gramm_male_stereo_male <- extract_cell_draws(mymodel, condition == "gramm_male" & stereotype == "stereo_male", colname = 'gramm_male_stereo_male')
+gramm_male_stereo_neutral <- extract_cell_draws(mymodel, condition == "gramm_male" & stereotype == "stereo_neutral", colname = 'gramm_male_stereo_neutral')
+gramm_male_stereo_female <- extract_cell_draws(mymodel, condition == "gramm_male" & stereotype == "stereo_female", colname ='gramm_male_stereo_female')
+
+# Grammatical neutral condition
+gramm_neutral_stereo_male <- extract_cell_draws(mymodel, condition == "gramm_neutral" & stereotype == "stereo_male", colname = 'gramm_neutral_stereo_male')
+gramm_neutral_stereo_neutral <- extract_cell_draws(mymodel, condition == "gramm_neutral" & stereotype == "stereo_neutral", colname = 'gramm_neutral_stereo_neutral')
+gramm_neutral_stereo_female <- extract_cell_draws(mymodel, condition == "gramm_neutral" & stereotype == "stereo_female", colname ='gramm_neutral_stereo_female')
+
+# Grammatical female condition
+gramm_female_stereo_male <- extract_cell_draws(mymodel, condition == "gramm_male" & stereotype == "stereo_male", colname = 'gramm_female_stereo_male')
+gramm_female_stereo_neutral <- extract_cell_draws(mymodel, condition == "gramm_female" & stereotype == "stereo_neutral", colname = 'gramm_female_stereo_neutral')
+gramm_female_stereo_female <- extract_cell_draws(mymodel, condition == "gramm_female" & stereotype == "stereo_female", colname ='gramm_female_stereo_female')
+
+```
+
+```{r}
+### Plotting the odds of female response in the grammatical male condition
+draws_condition_GM <- tibble(gramm_male_stereo_male, gramm_male_stereo_female, gramm_male_stereo_neutral) %>% 
+  pivot_longer(cols = everything(), names_to = "group", values_to = "draws")
+
+draws_condition_GM %>% 
+  ggplot(aes(x = draws, color = group, fill = group)) +
+  geom_density(alpha = 0.4) +
+  xlab("Odds of choosing female as response in the grammatical male condition")
+```
+
+```{r}
+### Plotting the odds of female response in the grammatical neutral condition
+draws_condition_GN <- tibble(gramm_neutral_stereo_male, gramm_neutral_stereo_female, gramm_neutral_stereo_neutral) %>% 
+  pivot_longer(cols = everything(), names_to = "group", values_to = "draws")
+
+draws_condition_GN %>% 
+  ggplot(aes(x = draws, color = group, fill = group)) +
+  geom_density(alpha = 0.4) +
+  xlab("Odds of choosing female as response in the grammatical neutral condition")
+```
+
+
+```{r}
+### Plotting the odds of female response in the grammatical female condition
+draws_condition_GF <- tibble(gramm_female_stereo_male, gramm_female_stereo_female, gramm_female_stereo_neutral) %>% 
+  pivot_longer(cols = everything(), names_to = "group", values_to = "draws")
+
+draws_condition_GF %>% 
+  ggplot(aes(x = draws, color = group, fill = group)) +
+  geom_density(alpha = 0.4) +
+  xlab("Odds of choosing female as response in the grammatical female condition")
+```
+
+
+
+
+

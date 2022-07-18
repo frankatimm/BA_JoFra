@@ -1,0 +1,857 @@
+---
+title: "bootstrap_JoFra"
+author: "johannaschillig"
+date: "2022-07-18"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#Loading important libraries
+
+library(remotes)
+library(tidyverse)
+library(readr)
+library(ggplot2)
+library(tidyselect)
+library(dplyr)
+library(boot)
+library(brms)
+library(parallel)
+```
+
+```{r}
+options(mc.cores = parallel::detectCores())
+```
+
+```{r}
+the_onexy <- readRDS('/Users/johannaschillig/Downloads/file_r.rds')
+```
+
+```{r}
+the_onexy
+
+set.seed(103)
+
+# combination 1: grammatical male & stereotypical male
+
+df1 <- the_onexy%>%
+  filter(condition == "gramm_male", stereotype == "stereo_male")%>%
+  select(condition, stereotype, responded_gender)
+#print(df1)
+
+N = 100
+
+bootstrapped_means1 <- map(seq(1, N), function(iter){
+     data1 = df1$responded_gender    
+     n_datapoints1 = length(data1)
+     bootstrap_sample1 <- sample(data1, size = n_datapoints1 , 
+                                 prob = rep(1/n_datapoints1,n_datapoints1),
+                                 replace = TRUE)
+     counts1 = bootstrap_sample1 %>% table()
+     result1  = tibble(count1 = counts1) %>% mutate(ratio1 = count1 / sum(count1))
+     return(result1)  
+   }) %>% bind_rows()
+
+print(bootstrapped_means1)
+
+###
+# combination 2: grammatical male & stereotypical neutral
+
+df2 <- the_onexy%>%
+  filter(condition == "gramm_male", stereotype == "stereo_neutral")%>%
+  select(condition, stereotype, responded_gender)
+#print(df2)
+
+N = 100
+
+bootstrapped_means2 <- map(seq(1, N), function(iter){
+     data2 = df2$responded_gender    
+     n_datapoints2 = length(data2)
+     bootstrap_sample2 <- sample(data2, size = n_datapoints2 , 
+                                 prob = rep(1/n_datapoints2,n_datapoints2),                                                       replace = TRUE)
+     counts2 = bootstrap_sample2 %>% table()
+     result2  = tibble(count2 = counts2) %>% mutate(ratio2 = count2 / sum(count2))
+     return(result2)  
+   }) %>% bind_rows()
+
+print(bootstrapped_means2)
+
+###
+# combination 3: grammatical male & stereotypical female
+
+df3 <- the_onexy%>%
+  filter(condition == "gramm_male", stereotype == "stereo_female")%>%
+  select(condition, stereotype, responded_gender)
+#print(df3)
+
+N = 100
+
+bootstrapped_means3 <- map(seq(1, N), function(iter){
+     data3 = df3$responded_gender    
+     n_datapoints3 = length(data3)
+     bootstrap_sample3 <- sample(data3, size = n_datapoints3 , 
+                                 prob = rep(1/n_datapoints3,n_datapoints3),                                                       replace = TRUE)
+     counts3 = bootstrap_sample3 %>% table()
+     result3  = tibble(count3 = counts3) %>% mutate(ratio3 = count3 / sum(count3))
+     return(result3)  
+   }) %>% bind_rows()
+
+print(bootstrapped_means3)
+
+###
+# combination 4: grammatical neutral & stereotypical male
+
+df4 <- the_onexy%>%
+  filter(condition == "gramm_neutral", stereotype == "stereo_male")%>%
+  select(condition, stereotype, responded_gender)
+#print(df4)
+
+N = 100
+
+bootstrapped_means4 <- map(seq(1, N), function(iter){
+     data4 = df4$responded_gender    
+     n_datapoints4 = length(data4)
+     bootstrap_sample4 <- sample(data4, size = n_datapoints4 , 
+                                 prob = rep(1/n_datapoints4,n_datapoints4),                                                       replace = TRUE)
+     counts4 = bootstrap_sample4 %>% table()
+     result4  = tibble(count4 = counts4) %>% mutate(ratio4 = count4 / sum(count4))
+     return(result4)  
+   }) %>% bind_rows()
+
+print(bootstrapped_means4)
+
+###
+# combination 5: grammatical neutral & stereotypical neutral
+
+df5 <- the_onexy%>%
+  filter(condition == "gramm_neutral", stereotype == "stereo_neutral")%>%
+  select(condition, stereotype, responded_gender)
+#print(df5)
+N = 100
+
+bootstrapped_means5 <- map(seq(1, N), function(iter){
+     data5 = df5$responded_gender    
+     n_datapoints5 = length(data5)
+     bootstrap_sample5 <- sample(data5, size = n_datapoints5 , 
+                                 prob = rep(1/n_datapoints5,n_datapoints5),                                                       replace = TRUE)
+     counts5 = bootstrap_sample5 %>% table()
+     result5  = tibble(count5 = counts5) %>% mutate(ratio5 = count5 / sum(count5))
+     return(result5)  
+   }) %>% bind_rows()
+
+print(bootstrapped_means5)
+
+###
+# combination 6: grammatical neutral & stereotypical female
+
+df6 <- the_onexy%>%
+  filter(condition == "gramm_neutral", stereotype == "stereo_female")%>%
+  select(condition, stereotype, responded_gender)
+#print(df6)
+
+N = 100
+
+bootstrapped_means6 <- map(seq(1, N), function(iter){
+     data6 = df6$responded_gender    
+     n_datapoints6 = length(data6)
+     bootstrap_sample6 <- sample(data6, size = n_datapoints6 , 
+                                 prob = rep(1/n_datapoints6,n_datapoints6),                                                       replace = TRUE)
+     counts6 = bootstrap_sample6 %>% table()
+     result6  = tibble(count6 = counts6) %>% mutate(ratio6 = count6 / sum(count6))
+     return(result6)  
+   }) %>% bind_rows()
+
+print(bootstrapped_means6)
+
+###
+# combination 7: grammatical female & stereotypical male
+
+df7 <- the_onexy%>%
+  filter(condition == "gramm_female", stereotype == "stereo_male")%>%
+  select(condition, stereotype, responded_gender)
+#print(df7)
+
+N = 100
+
+bootstrapped_means7 <- map(seq(1, N), function(iter){
+     data7 = df7$responded_gender    
+     n_datapoints7 = length(data7)
+     bootstrap_sample7 <- sample(data7, size = n_datapoints7 , 
+                                 prob = rep(1/n_datapoints7,n_datapoints7),                                                       replace = TRUE)
+     counts7 = bootstrap_sample7 %>% table()
+     result7  = tibble(count7 = counts7) %>% mutate(ratio7 = count7 / sum(count7))
+     return(result7)  
+   }) %>% bind_rows()
+
+print(bootstrapped_means7)
+
+###
+# combination 1: grammatical female & stereotypical neutral
+
+df8 <- the_onexy%>%
+  filter(condition == "gramm_female", stereotype == "stereo_neutral")%>%
+  select(condition, stereotype, responded_gender)
+#print(df8)
+
+N = 100
+
+bootstrapped_means8 <- map(seq(1, N), function(iter){
+     data8 = df8$responded_gender    
+     n_datapoints8 = length(data8)
+     bootstrap_sample8 <- sample(data8, size = n_datapoints8 , 
+                                 prob = rep(1/n_datapoints8,n_datapoints8),                                                       replace = TRUE)
+     counts8 = bootstrap_sample8 %>% table()
+     result8  = tibble(count8 = counts8) %>% mutate(ratio8 = count8 / sum(count8))
+     return(result8)  
+   }) %>% bind_rows()
+
+print(bootstrapped_means8)
+
+###
+# combination 9: grammatical female & stereotypical female
+
+df9 <- the_onexy%>%
+  filter(condition == "gramm_female", stereotype == "stereo_female")%>%
+  select(condition, stereotype, responded_gender)
+#print(df9)
+
+N = 100
+
+bootstrapped_means9 <- map(seq(1, N), function(iter){
+     data9 = df9$responded_gender    
+     n_datapoints9 = length(data9)
+     bootstrap_sample9 <- sample(data9, size = n_datapoints9 , 
+                                 prob = rep(1/n_datapoints9,n_datapoints9),                                                       replace = TRUE)
+     counts9 = bootstrap_sample9 %>% table()
+     result9  = tibble(count9 = counts9) %>% mutate(ratio9 = count9 / sum(count9))
+     return(result9)  
+   }) %>% bind_rows()
+
+print(bootstrapped_means9)
+```
+
+```{r}
+### Creating tibbles with bootstrapped information
+
+# grammatical male, stereo male
+
+mean_tibble1a <- bootstrapped_means1%>%
+  rename(count_female1 = count1)%>%
+  rename(ratio_female1 = ratio1)%>%
+  slice(c(1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99))
+  
+mean_tibble1b <- bootstrapped_means1%>%
+  rename(count_male1 = count1)%>%
+  rename(ratio_male1 = ratio1)%>%
+  slice(c(2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100))
+
+mean_tibble1 <- bind_cols(mean_tibble1a, mean_tibble1b)
+print(mean_tibble1)
+
+###
+# grammatical male, stereo neutral
+
+mean_tibble2a <- bootstrapped_means2%>%
+  rename(count_female2 = count2)%>%
+  rename(ratio_female2 = ratio2)%>%
+  slice(c(1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99))
+  
+mean_tibble2b <- bootstrapped_means2%>%
+  rename(count_male2 = count2)%>%
+  rename(ratio_male2 = ratio2)%>%
+  slice(c(2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100))
+
+mean_tibble2 <- bind_cols(mean_tibble2a, mean_tibble2b)
+print(mean_tibble2)
+
+###
+# grammatical male, stereotypical female
+
+mean_tibble3a <- bootstrapped_means3%>%
+  rename(count_female3 = count3)%>%
+  rename(ratio_female3 = ratio3)%>%
+  slice(c(1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99))
+  
+mean_tibble3b <- bootstrapped_means3%>%
+  rename(count_male3 = count3)%>%
+  rename(ratio_male3 = ratio3)%>%
+  slice(c(2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100))
+
+mean_tibble3 <- bind_cols(mean_tibble3a, mean_tibble3b)
+print(mean_tibble3)
+
+###
+# grammatical neutral, stereotypical male
+
+mean_tibble4a <- bootstrapped_means4%>%
+  rename(count_female4 = count4)%>%
+  rename(ratio_female4 = ratio4)%>%
+  slice(c(1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99))
+  
+mean_tibble4b <- bootstrapped_means4%>%
+  rename(count_male4 = count4)%>%
+  rename(ratio_male4 = ratio4)%>%
+  slice(c(2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100))
+
+mean_tibble4 <- bind_cols(mean_tibble4a, mean_tibble4b)
+print(mean_tibble4)
+
+###
+# grammatical neutral, stereotypical neutral
+
+mean_tibble5a <- bootstrapped_means5%>%
+  rename(count_female5 = count5)%>%
+  rename(ratio_female5 = ratio5)%>%
+  slice(c(1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99))
+  
+mean_tibble5b <- bootstrapped_means5%>%
+  rename(count_male5 = count5)%>%
+  rename(ratio_male5 = ratio5)%>%
+  slice(c(2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100))
+
+mean_tibble5 <- bind_cols(mean_tibble5a, mean_tibble5b)
+print(mean_tibble5)
+
+###
+#grammatical neutral, stereotypical female
+
+mean_tibble6a <- bootstrapped_means6%>%
+  rename(count_female6 = count6)%>%
+  rename(ratio_female6 = ratio6)%>%
+  slice(c(1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99))
+  
+mean_tibble6b <- bootstrapped_means6%>%
+  rename(count_male6 = count6)%>%
+  rename(ratio_male6 = ratio6)%>%
+  slice(c(2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100))
+
+mean_tibble6 <- bind_cols(mean_tibble6a, mean_tibble6b)
+print(mean_tibble6)
+
+###
+# grammatical female, stereotypical male
+
+mean_tibble7a <- bootstrapped_means7%>%
+  rename(count_female7 = count7)%>%
+  rename(ratio_female7 = ratio7)%>%
+  slice(c(1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99))
+  
+mean_tibble7b <- bootstrapped_means7%>%
+  rename(count_male7 = count7)%>%
+  rename(ratio_male7 = ratio7)%>%
+  slice(c(2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100))
+
+mean_tibble7 <- bind_cols(mean_tibble7a, mean_tibble7b)
+print(mean_tibble7)
+
+###
+# grammatical female, stereotypical neutral
+
+mean_tibble8a <- bootstrapped_means8%>%
+  rename(count_female8 = count8)%>%
+  rename(ratio_female8 = ratio8)%>%
+  slice(c(1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99))
+  
+mean_tibble8b <- bootstrapped_means8%>%
+  rename(count_male8 = count8)%>%
+  rename(ratio_male8 = ratio8)%>%
+  slice(c(2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100))
+
+mean_tibble8 <- bind_cols(mean_tibble8a, mean_tibble8b)
+print(mean_tibble8)
+
+###
+# grammatical female, stereotypical female
+
+mean_tibble9a <- bootstrapped_means9%>%
+  rename(count_female9 = count9)%>%
+  rename(ratio_female9 = ratio9)%>%
+  slice(c(1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99))
+  
+mean_tibble9b <- bootstrapped_means9%>%
+  rename(count_male9 = count9)%>%
+  rename(ratio_male9 = ratio9)%>%
+  slice(c(2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100))
+
+mean_tibble9 <- bind_cols(mean_tibble9a, mean_tibble9b)
+print(mean_tibble9)
+```
+
+```{r}
+new_tib1a <- mean_tibble1%>%
+pivot_longer(cols = c(2,4),
+             names_to = "gender_ratio1",
+             values_to = "ratio1")%>%
+select(gender_ratio1, ratio1)  
+print(new_tib1a)
+
+###
+
+new_tib2a <- mean_tibble2%>%
+pivot_longer(cols = c(2,4),
+             names_to = "gender_ratio2",
+             values_to = "ratio2")%>%
+select(gender_ratio2, ratio2)  
+print(new_tib2a)
+
+###
+
+new_tib3a <- mean_tibble3%>%
+pivot_longer(cols = c(2,4),
+             names_to = "gender_ratio3",
+             values_to = "ratio3")%>%
+select(gender_ratio3, ratio3)  
+print(new_tib3a)
+
+###
+
+new_tib4a <- mean_tibble4%>%
+pivot_longer(cols = c(2,4),
+             names_to = "gender_ratio4",
+             values_to = "ratio4")%>%
+select(gender_ratio4, ratio4)
+
+print(new_tib4a)
+
+###
+
+new_tib5a <- mean_tibble5%>%
+pivot_longer(cols = c(2,4),
+             names_to = "gender_ratio5",
+             values_to = "ratio5")%>%
+select(gender_ratio5, ratio5)  
+
+print(new_tib5a)
+
+###
+
+new_tib6a <- mean_tibble6%>%
+pivot_longer(cols = c(2,4),
+             names_to = "gender_ratio6",
+             values_to = "ratio6")%>%
+select(gender_ratio6, ratio6)  
+
+print(new_tib6a)
+
+###
+
+new_tib7a <- mean_tibble7%>%
+pivot_longer(cols = c(2,4),
+             names_to = "gender_ratio7",
+             values_to = "ratio7")%>%
+select(gender_ratio7, ratio7)  
+
+print(new_tib7a)
+
+###
+
+new_tib8a <- mean_tibble8%>%
+pivot_longer(cols = c(2,4),
+             names_to = "gender_ratio8",
+             values_to = "ratio8")%>%
+select(gender_ratio8, ratio8)  
+
+print(new_tib8a)
+
+###
+
+new_tib9a <- mean_tibble9%>%
+pivot_longer(cols = c(2,4),
+             names_to = "gender_ratio9",
+             values_to = "ratio9")%>%
+select(gender_ratio9, ratio9)  
+
+print(new_tib9a)
+
+###
+tibble_all_bsamples <- bind_cols(new_tib1a, new_tib2a, new_tib3a, new_tib4a, new_tib5a, new_tib6a, new_tib7a, new_tib8a, new_tib9a)%>%
+  select(gender_ratio1, ratio1, ratio2, ratio3, ratio4, ratio5, ratio6, ratio7, ratio8, ratio9)
+print(tibble_all_bsamples)
+
+tibble_bsamples_clean <- tibble_all_bsamples%>%
+  rename("responded_gender" = gender_ratio1,
+         "gramm_male_stereo_male" = ratio1,
+         "gramm_male_stereo_neutral" = ratio2,
+         "gramm_male_stereo_female" = ratio3,
+         "gramm_neutral_stereo_male" = ratio4,
+         "gramm_neutral_stereo_neutral" = ratio5,
+         "gramm_neutral_stereo_female" = ratio6,
+         "gramm_female_stereo_male" = ratio7,
+         "gramm_female_stereo_neutral" = ratio8,
+         "gramm_female_stereo_female" = ratio9)
+print(tibble_bsamples_clean)
+
+tibble_bsamples_clean$responded_gender[tibble_bsamples_clean$responded_gender == "ratio_female1"] <- "female_reponse"
+tibble_bsamples_clean$responded_gender[tibble_bsamples_clean$responded_gender == "ratio_male1"] <- "male_reponse"
+
+final_tib <- tibble_bsamples_clean%>%
+  pivot_longer(
+    cols = - 1,
+    names_to = "condition_combination",
+    values_to = "ratio"
+  ) 
+print(final_tib)
+
+### Plotting the CIs for the grammatical condition male
+
+plot_masculine <- final_tib%>%
+  filter(condition_combination == "gramm_male_stereo_male" | condition_combination == "gramm_male_stereo_neutral" | condition_combination == "gramm_male_stereo_female")
+  plot_masculine$condition_combination <- factor(plot_masculine$condition_combination,
+                                                 levels = c("gramm_male_stereo_male",
+                                                            "gramm_male_stereo_neutral",                                                                     "gramm_male_stereo_female"))
+
+ggplot(data = plot_masculine, aes(x = responded_gender, y = ratio, color = responded_gender)) +
+  facet_wrap(~ condition_combination)+
+geom_boxplot()
+
+### Plotting the CIs for the grammatical condition neutral
+
+plot_neutral <- final_tib%>%
+  filter(condition_combination == "gramm_neutral_stereo_male" | condition_combination == "gramm_neutral_stereo_neutral"  | condition_combination == "gramm_neutral_stereo_female")
+  
+plot_neutral$condition_combination <- factor(plot_neutral$condition_combination,
+                                             levels = c("gramm_neutral_stereo_male",
+                                                        "gramm_neutral_stereo_neutral",                                                                  "gramm_neutral_stereo_female"))
+
+ggplot(data = plot_neutral, aes(x = responded_gender, y = ratio, color = responded_gender)) +
+  facet_wrap(~ condition_combination)+
+geom_boxplot()
+
+### Plotting the CIs for the grammatical condition female
+
+plot_feminine <- final_tib%>%
+  filter(condition_combination == "gramm_female_stereo_male" | condition_combination ==     "gramm_female_stereo_neutral" | condition_combination == "gramm_female_stereo_female")
+  
+plot_feminine$condition_combination <- factor(plot_feminine$condition_combination,     
+                                             levels = c("gramm_female_stereo_male",
+                                                        "gramm_female_stereo_neutral",                                                                   "gramm_female_stereo_female"))
+
+ggplot(data = plot_feminine, aes(x = responded_gender, y = ratio, color = responded_gender)) +
+  facet_wrap(~ condition_combination)+
+geom_boxplot()
+```
+
+```{r}
+tibble_all_bsamples
+
+### grammatical male, stereotypical male, male response
+gMsMrM <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_male1")
+  quantile(
+  # vector of observations
+  x = gMsMrM$ratio1, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gMsMrM%>%
+summarise(mean_gMsMrM = mean(ratio1))
+
+###grammatical male, stereotypical neutral, male response
+gMsNrM <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_male1")
+  quantile(
+  # vector of observations
+  x = gMsNrM$ratio2, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gMsNrM%>%
+summarise(mean_gMsNrM = mean(ratio2))
+
+### grammtical male, stereotypical female, male response
+gMsFrM <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_male1")
+  quantile(
+  # vector of observations
+  x = gMsFrM$ratio3, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gMsFrM%>%
+summarise(mean_gMsFrM = mean(ratio3))
+
+### grammatical neutral, stereotypical male, male response
+gNsMrM <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_male1")
+  quantile(
+  # vector of observations
+  x = gNsMrM$ratio4, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gMsNrM%>%
+summarise(mean_gNsMrM = mean(ratio4))
+
+### grammatical neutral, stereotypical neutral, male response
+gNsNrM <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_male1")
+  quantile(
+  # vector of observations
+  x = gNsNrM$ratio5, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gNsNrM%>%
+summarise(mean_gNsNrM = mean(ratio5))
+
+### grammatical neutral, stereotypical female, male response
+gNsFrM <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_male1")
+  quantile(
+  # vector of observations
+  x = gNsFrM$ratio6, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gNsFrM%>%
+summarise(mean_gNsFrM = mean(ratio6))
+
+### grammatical female, stereotypical male, male response
+gFsMrM <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_male1")
+  quantile(
+  # vector of observations
+  x = gFsMrM $ratio7, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gFsMrM%>%
+summarise(mean_gFsMrM  = mean(ratio7))
+
+###grammatical female, stereotypical neutral, male response
+gFsNrM <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_male1")
+  quantile(
+  # vector of observations
+  x = gFsNrM $ratio8, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gFsNrM%>%
+summarise(mean_gFsNrM  = mean(ratio8))
+
+###grammatical female, stereotypical female, male response
+gFsFrM <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_male1")
+  quantile(
+  # vector of observations
+  x = gFsFrM $ratio9, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gFsFrM%>%
+summarise(mean_gFsFrM  = mean(ratio9))
+
+```
+```{r}
+### Female Responses ###
+tibble_all_bsamples
+
+### grammatical male, stereotypical male, female response
+gMsMrF <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_female1")
+  quantile(
+  # vector of observations
+  x = gMsMrF$ratio1, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gMsMrF%>%
+summarise(mean_gMsMrF = mean(ratio1))
+
+###grammatical male, stereotypical neutral, female response
+gMsNrF <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_female1")
+  quantile(
+  # vector of observations
+  x = gMsNrF$ratio2, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gMsNrF%>%
+summarise(mean_gMsNrF = mean(ratio2))
+
+### grammtical male, stereotypical female, female response
+gMsFrF <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_female1")
+  quantile(
+  # vector of observations
+  x = gMsFrF$ratio3, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gMsFrF%>%
+summarise(mean_gMsFrF = mean(ratio3))
+
+### grammatical neutral, stereotypical male, female response
+gNsMrF <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_female1")
+  quantile(
+  # vector of observations
+  x = gNsMrF$ratio4, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gMsNrF%>%
+summarise(mean_gNsMrF = mean(ratio4))
+
+### grammatical neutral, stereotypical neutral, female response
+gNsNrF <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_female1")
+  quantile(
+  # vector of observations
+  x = gNsNrF$ratio5, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gNsNrF%>%
+summarise(mean_gNsNrF = mean(ratio5))
+
+### grammatical neutral, stereotypical female, female response
+gNsFrF <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_female1")
+  quantile(
+  # vector of observations
+  x = gNsFrF$ratio6, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gNsFrF%>%
+summarise(mean_gNsFrF = mean(ratio6))
+
+### grammatical female, stereotypical male, female response
+gFsMrF <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_female1")
+  quantile(
+  # vector of observations
+  x = gFsMrF $ratio7, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gFsMrF%>%
+summarise(mean_gFsMrF  = mean(ratio7))
+
+###grammatical female, stereotypical neutral, female response
+gFsNrF <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_female1")
+  quantile(
+  # vector of observations
+  x = gFsNrF $ratio8, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gFsNrF%>%
+summarise(mean_gFsNrF  = mean(ratio8))
+
+###grammatical female, stereotypical female, female response
+gFsFrF <- tibble_all_bsamples%>%
+  filter(gender_ratio1 == "ratio_female1")
+  quantile(
+  # vector of observations
+  x = gFsFrF $ratio9, 
+  # which quantiles 
+  probs = c(0.025, 0.975)
+  )  
+  
+gFsFrF%>%
+summarise(mean_gFsFrF  = mean(ratio9))
+```
+```{r}
+### tables showing the 95% confidence interval
+
+### grammatical male, male response
+
+GM_male_responses_CI <- tribble(
+  ~level_combination,                       ~"mean",   ~"lower bound (0.025)",   ~"upper bound (0.975)",
+  "grammatical male, stereotype male",      0.8315,       0.7935417,                0.8615625,
+  "grammatical male, stereotype neutral",   0.5852857	,    0.5230357,                0.6357143,
+  "grammatical male, stereotype female",    0.4782642	,    0.4130189,                0.5580189
+  
+)
+print(GM_male_responses_CI)
+
+#grammatical male, female response
+
+GM_female_responses_CI <- tribble(
+  ~level_combination,                       ~"mean",   ~"lower bound (0.025)",   ~"upper bound (0.975)",
+  "grammatical male, stereotype male",      0.1685	,    0.1384375,                0.2064583,
+  "grammatical male, stereotype neutral",   0.4147143	,  0.3642857,                0.4769643,
+  "grammatical male, stereotype female",    0.5217358,   0.4419811,                0.5869811
+  
+)
+print(GM_female_responses_CI)
+
+```
+```{r}
+### tables showing the 95% confidence interval
+
+### grammatical neutral, male response
+
+GN_male_responses_CI <- tribble(
+  ~level_combination,                       ~"mean",   ~"lower bound (0.025)",   ~"upper bound (0.975)",
+  "grammatical neutral, stereotype male",      0.5498099	,       0.5141635,                0.5969582,
+  "grammatical neutral, stereotype neutral",   0.4235433	,       0.3709646,                0.4876969,
+  "grammatical neutral, stereotype female",    0.2474914		,     0.2031787,                0.2852234
+  
+)
+print(GN_male_responses_CI)
+
+#grammatical neutral, female response
+
+GN_female_responses_CI <- tribble(
+  ~level_combination,                       ~"mean",   ~"lower bound (0.025)",   ~"upper bound (0.975)",
+  "grammatical neutral, stereotype male",      0.4501901	,      0.4030418,                0.4858365,
+  "grammatical neutral, stereotype neutral",   0.5764567	,      0.5123031,                0.6290354,
+  "grammatical neutral, stereotype female",    0.7525086,        0.7147766,                0.7968213
+  
+)
+print(GN_female_responses_CI)
+```
+
+```{r}
+### tables showing the 95% confidence interval
+
+### grammatical female, male response
+
+GN_male_responses_CI <- tribble(
+  ~level_combination,                       ~"mean",   ~"lower bound (0.025)",   ~"upper bound (0.975)",
+  "grammatical female, stereotype male",      0.2907641	,       0.2465947,                0.3373754,
+  "grammatical female, stereotype neutral",   0.1828889	,       0.1407407,                0.2234259,
+  "grammatical female, stereotype female",    0.08153226		,   0.04616935,               0.10796371
+  
+)
+print(GN_male_responses_CI)
+
+#grammatical female, female response
+
+GN_female_responses_CI <- tribble(
+  ~level_combination,                       ~"mean",   ~"lower bound (0.025)",   ~"upper bound (0.975)",
+  "grammatical female, stereotype male",      0.7092359	,      0.6626246,                0.7534053,
+  "grammatical female, stereotype neutral",   0.8171111	,      0.7765741,                0.8592593,
+  "grammatical female, stereotype female",    0.9184677,       0.8920363,                0.9538306
+  
+)
+print(GN_female_responses_CI)
+```
+

@@ -1,0 +1,117 @@
+---
+title: "data_analysis"
+author: "johannaschillig"
+date: "2022-07-18"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#Loading important libraries
+
+library(remotes)
+library(tidyverse)
+library(readr)
+library(ggplot2)
+library(tidyselect)
+library(dplyr)
+library(boot)
+library(brms)
+library(parallel)
+```
+
+```{r}
+#Loading the prepared data set
+
+the_onexy <- readRDS('/Users/johannaschillig/Downloads/file_r.rds')
+```
+
+```{r}
+### Chi^2 test of independence
+
+# Checking independence of response from grammatical condition
+reponse_cond_xchart <- xtabs(~the_onexy$responded_gender + ~the_onexy$condition)                
+print(reponse_cond_xchart)
+chisq.test(
+  reponse_cond_xchart, 
+  correct = FALSE
+)
+
+# Checking independence of response from stereotype
+reponse_stereo_xchart <- xtabs(~the_onexy$responded_gender + ~the_onexy$stereotype)                
+print(reponse_stereo_xchart)
+chisq.test(
+  reponse_stereo_xchart, 
+  correct = FALSE
+)
+```
+
+```{r}
+### Plotting the responses for different conditions ###
+
+# grammatical neutral form
+
+distribution_GNL <- the_onexy%>%
+select(condition, responded_gender, stereotype)%>%
+filter(condition == "gramm_neutral")
+print(distribution_GNL)
+
+distribution_GNL$stereotype <- factor(distribution_GNL$stereotype,     
+                                     levels = c("stereo_male",
+                                                "stereo_neutral",                                                                                "stereo_female"))
+
+cond_gender_plot1 <- ggplot(data = distribution_GNL, mapping = aes(x = responded_gender, fill = responded_gender)) +
+  geom_bar() +
+  scale_fill_manual(values=c("deeppink4", "deepskyblue4"))+
+  facet_wrap( ~ stereotype) +
+    labs(
+    x = 'Responded Gender',
+    y = 'Count',
+    title = "Distribution of responses for GNL depending on stereotypes") 
+print(cond_gender_plot1)  
+
+#female grammatical form
+
+distribution_female <- the_onexy%>%
+select(condition, responded_gender, stereotype)%>%
+filter(condition == "gramm_female")
+print(distribution_female)
+
+distribution_female$stereotype <- factor(distribution_female$stereotype,     
+                                     levels = c("stereo_male",
+                                                "stereo_neutral",                                                                                "stereo_female"))
+
+cond_gender_plot2 <- ggplot(data = distribution_female, mapping = aes(x = responded_gender, fill = responded_gender)) +
+  geom_bar() +
+  scale_fill_manual(values=c("deeppink4", "deepskyblue4"))+
+  facet_wrap( ~ stereotype) +
+    labs(
+    x = 'Responded Gender',
+    y = 'Count',
+    title = "Distribution of responses for the grammatical feminine depending on stereotypes") 
+print(cond_gender_plot2) 
+
+# male grammatical form
+
+distribution_male <- the_onexy%>%
+select(condition, responded_gender, stereotype)%>%
+filter(condition == "gramm_male")
+print(distribution_male)
+
+distribution_male$stereotype <- factor(distribution_male$stereotype,     
+                                     levels = c("stereo_male",
+                                                "stereo_neutral",                                                                                "stereo_female"))
+
+cond_gender_plot3 <- ggplot(data = distribution_male, mapping = aes(x = responded_gender, fill = responded_gender)) +
+  geom_bar() +
+  scale_fill_manual(values=c("deeppink4", "deepskyblue4"))+
+  facet_wrap( ~ stereotype) +
+    labs(
+    x = 'Responded Gender',
+    y = 'Count',
+    title = "Distribution of responses for the masculine generic depending on stereotypes") 
+print(cond_gender_plot3)  
+```
