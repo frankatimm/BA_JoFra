@@ -1,0 +1,38 @@
+word #0/608130 is Die
+word #1/608130 is fuer
+word #2/608130 is wurde
+word #3/608130 is Der
+word #4/608130 is dass
+word #5/608130 is Das
+word #6/608130 is ueber
+word #7/608130 is In
+word #8/608130 is Im
+word #9/608130 is wurden
+'Mann'	'Lehrer'	0.3208
+'Frau'	'Lehrer'	0.3095
+'Mann'	'Sportler'	0.3828
+'Frau'	'Sportler'	0.3532
+'Mann'	'Buergermeister'	0.2219
+'Frau'	'Buergermeister'	0.2622
+'Mann'	'Trainer'	0.2650
+'Frau'	'Trainer'	0.1888
+'Mann'	'Spieler'	0.3925
+'Frau'	'Spieler'	0.2955
+'Mann'	'Schueler'	0.3021
+'Frau'	'Schueler'	0.2865
+'Mann'	'Mitarbeiter'	0.3754
+'Frau'	'Mitarbeiter'	0.3462
+'Mann'	'Besucher'	0.2671
+'Frau'	'Besucher'	0.2665
+'Mann'	'Buerger'	0.3390
+'Frau'	'Buerger'	0.3512
+'Mann'	'Teilnehmer'	0.3101
+'Frau'	'Teilnehmer'	0.2832
+'Mann'	'Mitglied'	0.2551
+'Frau'	'Mitglied'	0.2791
+'Mann'	'Gast'	0.4110
+'Frau'	'Gast'	0.3660
+'Mann'	'Person'	0.6131
+'Frau'	'Person'	0.6415
+'Mann'	'Pflegekraft'	0.4206
+'Frau'	'Pflegekraft'	0.4814

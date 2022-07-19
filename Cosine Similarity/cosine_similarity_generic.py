@@ -22,74 +22,35 @@ import gensim.models
 sentences = MyCorpus()
 model = gensim.models.Word2Vec(sentences=sentences, min_count = 1)
 
-# vec_mann = model.wv('männer')
-# vec_frau = model.wv('frauen')
-# print(vec_mann)
-# print(vec_frau)
-
-
-# word2vec_path = 'C:/Users/Franka/Soft_Cosine_Measure/word2vec.model'
-# wv = models.KeyedVectors.load_word2vec_format(word2vec_path, binary=True)
 
 for index, word in enumerate(model.wv.index_to_key):
-    if index == 1000:
+    if index == 10:
         break
     print(f"word #{index}/{len(model.wv.index_to_key)} is {word}")
 
 
 pairs = [
-    ('männer', 'lehrer'),   # a minivan is a kind of car
+    ('männer', 'lehrer'),
     ('frauen', 'lehrer'),
-    ('männer', 'bürger'),   # a minivan is a kind of car
+    ('männer', 'bürger'),
     ('frauen', 'bürger'),
-    ('männer', 'arbeitnehmer'),   # a minivan is a kind of car
-    ('frauen', 'arbeitnehmer'),
-    ('männer', 'verbraucher'),   # a minivan is a kind of car
-    ('frauen', 'verbraucher'),
-    ('männer', 'wähler'),   # a minivan is a kind of car
+    ('männer', 'experten'),
+    ('frauen', 'experten'),
+    ('männer', 'forscher'),
+    ('frauen', 'forscher'),
+    ('männer', 'wähler'),
     ('frauen', 'wähler'),
-    ('männer', 'steuerzahler'),   # a minivan is a kind of car
-    ('frauen', 'steuerzahler'),
-    ('männer', 'urheber'),   # a minivan is a kind of car
+    ('männer', 'urheber'),
     ('frauen', 'urheber'),
-    ('männer', 'nutzer'),   # a minivan is a kind of car
+    ('männer', 'nutzer'),
     ('frauen', 'nutzer'),
-    ('männer', 'schüler'),   # a minivan is a kind of car
+    ('männer', 'schüler'),
     ('frauen', 'schüler'),
-    ('männer', 'unternehmer'),   # a minivan is a kind of car
-    ('frauen', 'unternehmer'),
-    ('männer', 'sportler'),   # a minivan is a kind of car
+    ('männer', 'sportler'),
     ('frauen', 'sportler'),
-    ('männer', 'politiker'),   # a minivan is a kind of car
+    ('männer', 'politiker'),
     ('frauen', 'politiker'),
-      # still a wheeled vehicle
+
 ]
 for w1, w2 in pairs:
     print('%r\t%r\t%.5f' % (w1, w2, model.wv.similarity(w1, w2)))
-
-# vec_frau = model.wv['frauen']
-# vec_mann = model.wv['männer']
-# vec_lehrer = model.wv['lehrer']
-# vec_buerger = model.wv['bürger']
-# vec_arbeitnehmer = model.wv['arbeitnehmer']
-# vec_verbraucher = model.wv['verbraucher']
-# vec_waehler = model.wv['wähler']
-# vec_steuerzahler = model.wv['steuerzahler']
-# vec_urheber = model.wv['urheber']
-# vec_nutzer = model.wv['nutzer']
-# vec_schueler = model.wv['schüler']
-# vec_unternehmer = model.wv['unternehmer']
-# vec_sportler = model.wv['sportler']
-# vec_politiker = model.wv['politiker']
-#
-#
-#
-# print(cosine_similarity([vec_frau],[vec_lehrer]))
-# print(cosine_similarity([vec_mann],[vec_lehrer]))
-
-
-# print(cosine_similarity([vec_frau],[vec_teilnehmer]))
-# print(cosine_similarity([vec_mann],[vec_teilnehmer]))
-#
-# print(cosine_similarity([vec_frau],[vec_mitglied]))
-# print(cosine_similarity([vec_mann],[vec_mitglied]))

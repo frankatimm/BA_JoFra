@@ -22,74 +22,42 @@ import gensim.models
 sentences = MyCorpus()
 model = gensim.models.Word2Vec(sentences=sentences, min_count = 1)
 
-# vec_mann = model.wv('männer')
-# vec_frau = model.wv('frauen')
-# print(vec_mann)
-# print(vec_frau)
-
-
-# word2vec_path = 'C:/Users/Franka/Soft_Cosine_Measure/word2vec.model'
-# wv = models.KeyedVectors.load_word2vec_format(word2vec_path, binary=True)
 
 for index, word in enumerate(model.wv.index_to_key):
-    if index == 1000:
+    if index == 10:
         break
     print(f"word #{index}/{len(model.wv.index_to_key)} is {word}")
 
 
 pairs = [
-    ('männer', 'lehrerinnen'),   # a minivan is a kind of car
+    ('männer', 'lehrerinnen'),
     ('frauen', 'lehrerinnen'),
-    ('männer', 'bürgerinnen'),   # a minivan is a kind of car
+    ('männer', 'bürgerinnen'),
     ('frauen', 'bürgerinnen'),
-    # ('männer', 'arbeitnehmerinnen'),   # a minivan is a kind of car
-    # ('frauen', 'arbeitnehmerinnen'),
-    # ('männer', 'verbraucherinnen'),   # a minivan is a kind of car
-    # ('frauen', 'verbraucherinnen'),
-    ('männer', 'wählerinnen'),   # a minivan is a kind of car
+    ('männer', 'expertinnen'),
+    ('frauen', 'expertinnen'),
+    ('männer', 'forscherinnen'),
+    ('frauen', 'forscherinnen'),
+    ('männer', 'wählerinnen'),
     ('frauen', 'wählerinnen'),
-    # ('männer', 'steuerzahlerinnen'),   # a minivan is a kind of car
-    # ('frauen', 'steuerzahlerinnen'),
-    ('männer', 'urheberinnen'),   # a minivan is a kind of car
+    ('männer', 'urheberinnen'),
     ('frauen', 'urheberinnen'),
-    # ('männer', 'nutzerinnen'),   # a minivan is a kind of car
-    # ('frauen', 'nutzerinnen'),
-    ('männer', 'schülerinnen'),   # a minivan is a kind of car
+    ('männer', 'nutzerinnen'),
+    ('frauen', 'nutzerinnen'),
+    ('männer', 'schülerinnen'),
     ('frauen', 'schülerinnen'),
-    # ('männer', 'unternehmerinnen'),   # a minivan is a kind of car
-    # ('frauen', 'unternehmerinnen'),
-    ('männer', 'sportlerinnen'),   # a minivan is a kind of car
+    ('männer', 'sportlerinnen'),
     ('frauen', 'sportlerinnen'),
-    ('männer', 'politikerinnen'),   # a minivan is a kind of car
+    ('männer', 'politikerinnen'),
     ('frauen', 'politikerinnen'),
-      # still a wheeled vehicle
 ]
 for w1, w2 in pairs:
     print('%r\t%r\t%.5f' % (w1, w2, model.wv.similarity(w1, w2)))
 
-# vec_frau = model.wv['frauen']
-# vec_mann = model.wv['männer']
-# vec_lehrer = model.wv['lehrer']
-# vec_buerger = model.wv['bürger']
-# vec_arbeitnehmer = model.wv['arbeitnehmer']
-# vec_verbraucher = model.wv['verbraucher']
-# vec_waehler = model.wv['wähler']
-# vec_steuerzahler = model.wv['steuerzahler']
-# vec_urheber = model.wv['urheber']
-# vec_nutzer = model.wv['nutzer']
-# vec_schueler = model.wv['schüler']
-# vec_unternehmer = model.wv['unternehmer']
-# vec_sportler = model.wv['sportler']
-# vec_politiker = model.wv['politiker']
-#
-#
-#
-# print(cosine_similarity([vec_frau],[vec_lehrer]))
-# print(cosine_similarity([vec_mann],[vec_lehrer]))
+#create variable and print vector von politik
 
+vec_politik = model.wv['politik']
+print('Vector Politik: ', vec_politik)
 
-# print(cosine_similarity([vec_frau],[vec_teilnehmer]))
-# print(cosine_similarity([vec_mann],[vec_teilnehmer]))
-#
-# print(cosine_similarity([vec_frau],[vec_mitglied]))
-# print(cosine_similarity([vec_mann],[vec_mitglied]))
+#print most similar for politik
+print('Politik and most similar', model.wv.most_similar(positive=['politik'], topn=10))

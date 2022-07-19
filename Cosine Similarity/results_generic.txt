@@ -1,0 +1,30 @@
+word #0/23092 is und
+word #1/23092 is die
+word #2/23092 is der
+word #3/23092 is wir
+word #4/23092 is für
+word #5/23092 is in
+word #6/23092 is zu
+word #7/23092 is den
+word #8/23092 is von
+word #9/23092 is werden
+'männer'	'lehrer'	0.10858
+'frauen'	'lehrer'	0.08485
+'männer'	'bürger'	0.07406
+'frauen'	'bürger'	-0.02117
+'männer'	'experten'	0.16549
+'frauen'	'experten'	0.03423
+'männer'	'forscher'	0.12101
+'frauen'	'forscher'	0.07003
+'männer'	'wähler'	-0.16274
+'frauen'	'wähler'	-0.12148
+'männer'	'urheber'	0.12736
+'frauen'	'urheber'	0.17858
+'männer'	'nutzer'	0.10462
+'frauen'	'nutzer'	0.12783
+'männer'	'schüler'	0.10287
+'frauen'	'schüler'	-0.06602
+'männer'	'sportler'	0.22946
+'frauen'	'sportler'	0.11072
+'männer'	'politiker'	0.07239
+'frauen'	'politiker'	-0.01048
