@@ -1,0 +1,141 @@
+---
+title: "Figures"
+author: "johannaschillig"
+date: "2022-07-19"
+output: html_document
+---
+
+```{r}
+# Loading libraries
+# not all are needed, but loaded by default
+library(remotes)
+library(tidyverse)
+library(readr)
+library(ggplot2)
+library(tidyselect)
+library(dplyr)
+library(boot)
+library(brms)
+library(parallel)
+```
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+### Plotting the comparison of similarities between target role nouns and männer and frauen
+
+# Creating the tibble for the self-made corpus
+
+cosine_sim_tibble <- tribble(
+  ~target_word,  ~"target_role_noun",  ~"cosine_similarity",
+   "Männer",    "LehrerInnen",           0.1856,
+   "Frauen",    "LehrerInnen",           0.2463,
+   "Männer",    "Lehrer",                0.1086,
+   "Frauen",    "Lehrer",                0.0849,
+   "Männer",    "BürgerInnen",          -0.0436,
+   "Frauen",    "BürgerInnen",           0.0466,
+   "Männer",    "Bürger",                0.0741,
+   "Frauen",    "Bürger",               -0.0212,
+   "Männer",    "ExpertInnen",          -0.1212,        
+   "Frauen",    "ExpertInnen",           0.0466,
+   "Männer",    "Experten",              0.1655,
+   "Frauen",    "Experten",              0.0342,
+   "Männer",    "ForscherInnen",          0.1818,       
+   "Frauen",    "ForscherInnen",          0.1872,       
+   "Männer",    "Forscher",               0.1210,
+   "Frauen",    "Forscher",               0.0700,
+   "Männer",    "WählerInnen",            0.0313,       
+   "Frauen",    "WählerInnen",           -0.363, 
+   "Männer",    "Wähler",                -0.1627,
+   "Frauen",    "Wähler",                -0.1215,
+   "Männer",    "UrheberInnen",          -0.1145,       
+   "Frauen",    "UrheberInnen",          -0.1068, 
+   "Männer",    "Urheber",                0.1274,
+   "Frauen",    "Urheber",                0.1786,
+   "Männer",    "NutzerInnen",            0.0260,       
+   "Frauen",    "NutzerInnen",            0.1776, 
+   "Männer",    "Nutzer",                 0.1046,
+   "Frauen",    "Nutzer",                 0.1278,
+   "Männer",    "SchülerInnen",           0.1431,       
+   "Frauen",    "SchülerInnen",           0.2327, 
+   "Männer",    "Schüler",                0.1029,
+   "Frauen",    "Schüler",               -0.0660,
+   "Männer",    "SportlerInnen",         -0.1616,       
+   "Frauen",    "SportlerInnen",         -0.1413, 
+   "Männer",    "Sportler",               0.2295,
+   "Frauen",    "Sportler",               0.1107,
+   "Männer",    "PolitikerInnen",        -0.0431,       
+   "Frauen",    "PolitikerInnen",         0.11078, 
+   "Männer",    "Politiker",              0.0724,
+   "Frauen",    "Politiker",             -0.0105
+)
+print(cosine_sim_tibble)
+```
+```{r}
+# Plotting results from the self-made corpus
+
+plot_cosssim <- ggplot(data = cosine_sim_tibble, aes(x = target_role_noun, y = cosine_similarity, color = target_word, fill = target_word)) +
+  facet_grid(~"target_word") +
+  geom_point(shape = 23, size = 3 )
+print(plot_cosssim)
+```
+```{r}
+### Plotting the comparison of similarities between target role nouns and männer and frauen
+
+# Creating tibbles for the pretrained corpus
+
+# masculine generic role nouns
+cosine_sim_tibble_pretrained <- tribble(
+  ~target_word,  ~"target_role_noun",  ~"cosine_similarity",  ~"condition",
+   "Mann",             "Lehrer",           0.3208,                 "MG",
+   "Frau",             "Lehrer",           0.3095,                 "MG",
+   "Mann",             "Sportler",         0.3095,                 "MG",
+   "Frau",             "Sportler",         0.3532,                 "MG",
+   "Mann",             "Bürgermeister",    0.2219,                 "MG",
+   "Frau",             "Bürgermeister",    0.2622,                 "MG",
+   "Mann",             "Trainer",          0.2650,                 "MG",
+   "Frau",             "Trainer",          0.1888,                 "MG",
+   "Mann",             "Spieler",          0.3925,                 "MG",
+   "Frau",             "Spieler",          0.2955,                 "MG",
+   "Mann",             "Schüler",          0.3021,                 "MG",
+   "Frau",             "Schüler",          0.2865,                 "MG",
+   "Mann",             "Mitarbeiter",      0.3754,                 "MG",
+   "Frau",             "Mitarbeiter",      0.3452,                 "MG",
+   "Mann",             "Besucher",         0.2671,                 "MG",
+   "Frau",             "Besucher",         0.2665,                 "MG",
+   "Mann",             "Bürger",           0.3390,                 "MG",
+   "Frau",             "Bürger",           0.3512,                 "MG",
+   "Mann",             "Teilnehmer",       0.3101,                 "MG",
+   "Frau",             "Teilnehmer",       0.2832,                 "MG"
+) 
+print(cosine_sim_tibble_pretrained)
+
+# grammatical neutral role nouns
+tibble_GNL_cossim <-tribble(
+  ~target_word,  ~"target_role_noun",  ~"cosine_similarity",  ~"condition",
+   "Mann",             "Mitglied",         0.2551,                 "GNL",
+   "Frau",             "Mitglied",         0.2791,                 "GNL",
+   "Mann",             "Gast",             0.4110,                 "GNL",
+   "Frau",             "Gast",             0.3660,                 "GNL",
+   "Mann",             "Person",           0.6131,                 "GNL", 
+   "Frau",             "Person",           0.6415,                 "GNL",
+   "Mann",             "Pflegekraft",      0.4206,                 "GNL", 
+   "Frau",             "Pflegekraft",      0.4814,                 "GNL"
+)
+print(tibble_GNL_cossim)
+```
+```{r}
+### Visualization of the results using a scatter plot
+
+plot_cossim_pretrained_MG <- ggplot(data = cosine_sim_tibble_pretrained, aes(x = target_role_noun, y = cosine_similarity, color = target_word, fill = target_word)) +
+  geom_point(shape = 23, size = 3 )
+print(plot_cossim_pretrained_MG)
+
+plot_cossim_pretrained_GNL <- ggplot(data = tibble_GNL_cossim, aes(x = target_role_noun, y = cosine_similarity, color = target_word, fill = target_word)) +
+  geom_point(shape = 23, size = 3 )
+print(plot_cossim_pretrained_GNL)
+```
+
