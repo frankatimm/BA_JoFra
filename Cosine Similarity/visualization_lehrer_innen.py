@@ -10,7 +10,7 @@ from sklearn.manifold import TSNE
 
 # create list of target words
 role_nouns = [
-    'frauen', 'lehrer', 'männer', 'lehrer', 'frauen', 'lehrerinnen', 'männer', 'lehrerinnen'
+    'frauen', 'männer', 'lehrer', 'lehrerinnen'
 ]
 
 
