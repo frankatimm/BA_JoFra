@@ -1,0 +1,410 @@
+---
+title: "bayesian_stats"
+author: "johannaschillig"
+date: '2022-07-13'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+#Loading important libraries
+
+library(remotes)
+library(tidyverse)
+library(readr)
+library(ggplot2)
+library(tidyselect)
+library(dplyr)
+library(brms)
+library(boot)
+library(parallel)
+library(rstan)
+library(cmdstanr)
+library(faintr)
+
+```
+
+```{r}
+# Technical helper functions
+options(mc.cores = parallel::detectCores())
+rstan_options(auto_write = TRUE)
+```
+
+
+```{r}
+# Loading the prepared data set
+the_onexy <- readRDS('/Users/johannaschillig/Downloads/file_r.rds')
+```
+
+
+
+```{r}
+# Factorizing the variables to prepare for logistic regression
+real_numeric_chart <- the_onexy%>%
+  mutate(stereotype = as.factor(stereotype),
+         condition = as.factor(condition),
+         responded_gender = ifelse(responded_gender == "female_response", 1, 0))%>%
+  select(stereotype, condition, responded_gender)
+print(real_numeric_chart)
+
+# Changing default use of rstan to alternative to avoid crashing of Rstudio
+options(brms.backend = "cmdstanr")
+
+# Instantiating the brms model
+
+mymodel <- brm(responded_gender ~ condition + stereotype, data = real_numeric_chart, family = "bernoulli", seed = 104)
+summary(mymodel)
+
+
+
+```
+
+
+```{r}
+# Overview over all different cell levels of the finished model
+get_cell_definitions(mymodel)
+```
+
+```{r}
+### Clustering cell information belonging to the same grammatical condition together 
+
+# Grammatical male condition
+gramm_male_stereo_male <- extract_cell_draws(mymodel, condition == "gramm_male" & stereotype == "stereo_male", colname = 'gramm_male_stereo_male')
+gramm_male_stereo_neutral <- extract_cell_draws(mymodel, condition == "gramm_male" & stereotype == "stereo_neutral", colname = 'gramm_male_stereo_neutral')
+gramm_male_stereo_female <- extract_cell_draws(mymodel, condition == "gramm_male" & stereotype == "stereo_female", colname ='gramm_male_stereo_female')
+
+# Grammatical neutral condition
+gramm_neutral_stereo_male <- extract_cell_draws(mymodel, condition == "gramm_neutral" & stereotype == "stereo_male", colname = 'gramm_neutral_stereo_male')
+gramm_neutral_stereo_neutral <- extract_cell_draws(mymodel, condition == "gramm_neutral" & stereotype == "stereo_neutral", colname = 'gramm_neutral_stereo_neutral')
+gramm_neutral_stereo_female <- extract_cell_draws(mymodel, condition == "gramm_neutral" & stereotype == "stereo_female", colname ='gramm_neutral_stereo_female')
+
+# Grammatical female condition
+gramm_female_stereo_male <- extract_cell_draws(mymodel, condition == "gramm_female" & stereotype == "stereo_male", colname = 'gramm_female_stereo_male')
+gramm_female_stereo_neutral <- extract_cell_draws(mymodel, condition == "gramm_female" & stereotype == "stereo_neutral", colname = 'gramm_female_stereo_neutral')
+gramm_female_stereo_female <- extract_cell_draws(mymodel, condition == "gramm_female" & stereotype == "stereo_female", colname ='gramm_female_stereo_female')
+
+```
+
+```{r}
+### Plotting the odds of female response in the grammatical male condition
+draws_condition_GM <- tibble(gramm_male_stereo_male, gramm_male_stereo_female, gramm_male_stereo_neutral) %>% 
+  pivot_longer(cols = everything(), names_to = "group", values_to = "draws")
+
+draws_condition_GM %>% 
+  ggplot(aes(y = inv_logit_scaled(draws), fill = group)) +
+  geom_boxplot() +
+  xlab("Stereotype") +
+  ylab("Posterior probability") +
+  scale_fill_manual(values=c("deeppink4", "deepskyblue4", "lightgreen"))
+
+
+```
+
+```{r}
+### Plotting the odds of female response in the grammatical neutral condition
+draws_condition_GN <- tibble(gramm_neutral_stereo_male, gramm_neutral_stereo_female, gramm_neutral_stereo_neutral) %>% 
+  pivot_longer(cols = everything(), names_to = "group", values_to = "draws")
+
+draws_condition_GN %>% 
+  ggplot(aes(y = inv_logit_scaled(draws), fill = group)) +
+  geom_boxplot() +
+  xlab("Stereotype") +
+  ylab("Posterior probability")+
+  scale_fill_manual(values=c("deeppink4", "deepskyblue4", "lightgreen")) 
+```
+
+
+```{r}
+### Plotting the odds of female response in the grammatical female condition
+draws_condition_GF <- tibble(gramm_female_stereo_male, gramm_female_stereo_female, gramm_female_stereo_neutral) %>% 
+  pivot_longer(cols = everything(), names_to = "group", values_to = "draws")
+
+draws_condition_GF %>% 
+  ggplot(aes(y = inv_logit_scaled(draws),  fill = group)) +
+  geom_boxplot() +
+  xlab("Stereotype") +
+  ylab("Posterior probability") +
+  scale_fill_manual(values=c("deeppink4", "deepskyblue4", "lightgreen"))
+```
+
+```{r}
+mymodel
+du <- posterior_samples(mymodel)
+  as_tibble(du)
+print(du)
+
+```
+
+
+```{r}
+### Odds for a female answer in the grammatical female condition###
+
+# Odds for female response in  stereo = female and grammatical condition = female
+odds_fff <- du%>%
+  mutate(predicted_odds_fff = b_Intercept)%>% 
+  summarize(o1 = mean(predicted_odds_fff))
+
+# Quantiles
+quantiles_fff <- du%>%  
+  mutate(predicted_odds_fff = b_Intercept)%>%
+  summarize(CI1 = quantile(
+    x = predicted_odds_fff,
+    probs = c(0.025, 0.975)
+  ))
+
+
+### Odds for female response in stereo = neutral and grammatical condition = female ###
+
+odds_ffn <- du%>%
+  mutate(predicted_odds_ffn = b_Intercept + b_stereotypestereo_neutral)%>% 
+  summarize(o2 = mean(predicted_odds_ffn))
+
+# Quantiles
+quantiles_ffn <- du%>%  
+  mutate(predicted_odds_ffn = b_Intercept + b_stereotypestereo_neutral)%>%
+  summarize(CI2 = quantile(
+    x = predicted_odds_ffn,
+    probs = c(0.025, 0.975)
+  ))
+
+
+# Odds for female response in stereo = male and grammatical = female
+
+odds_ffm <- du%>%
+  mutate(predicted_odds_ffm = b_Intercept + b_stereotypestereo_male)%>% 
+  summarize(o3 = mean(predicted_odds_ffm))
+
+# Quantiles
+quantiles_ffm <- du%>%  
+  mutate(predicted_odds_ffm = b_Intercept + b_stereotypestereo_male)%>%
+  summarize(CI3 = quantile(
+    x = predicted_odds_ffm,
+    probs = c(0.025, 0.975)
+  ))
+
+
+
+### Probabilities of female answers the grammatical female condition
+
+prob_fff <- inv_logit_scaled(odds_fff)
+print(prob_fff)
+prob_quantiles_fff <- inv_logit_scaled(quantiles_fff)
+print(prob_quantiles_fff)
+
+prob_ffn <- inv_logit_scaled(odds_ffn)
+print(prob_ffn)
+prob_quantiles_ffn <- inv_logit_scaled(quantiles_ffn)
+print(prob_quantiles_ffn)
+
+prob_ffm <- inv_logit_scaled(odds_ffm)
+print(prob_ffm)
+prob_quantiles_ffm <- inv_logit_scaled(quantiles_ffm)
+print(prob_quantiles_ffm)
+
+```
+```{r}
+overview_chart_female <- tribble(
+  ~"stereotype",     ~"mean",    ~"upper",   ~"lower",
+    "female",        0.909,       0.928,      0.887,
+    "neutral",       0.835,       0.864,      0.803,
+    "male",          0.709,       0.749,      0.664
+)
+
+```
+
+
+
+
+```{r}
+### Odds for a female answer in the grammatical neutral condition
+
+# Odds for female response in  stereo = female and grammatical condition = neutral
+odds_fnf <- du%>%
+  mutate(predicted_odds_fnf = b_Intercept + b_conditiongramm_neutral)%>% 
+  summarize(o4 = mean(predicted_odds_fnf))
+print(odds_fnf)
+
+quantiles_fnf <- du%>%  
+  mutate(predicted_odds_fnf = b_Intercept + b_conditiongramm_neutral)%>%
+  summarize(CI4 = quantile(
+    x = predicted_odds_fnf,
+    probs = c(0.025, 0.975)
+  ))
+print(quantiles_fnf)
+
+
+# Odds for female response in condition stereo = neutral and grammatical condition = neutral
+odds_fnn <- du%>%
+  mutate(predicted_odds_fnn = b_Intercept + b_stereotypestereo_neutral + b_conditiongramm_neutral)%>% 
+  summarize(o5 = mean(predicted_odds_fnn))
+print(odds_fnn)
+
+quantiles_fnn <- du%>%  
+  mutate(predicted_odds_fnn = b_Intercept + b_stereotypestereo_neutral + b_conditiongramm_neutral)%>%
+  summarize(CI5 = quantile(
+    x = predicted_odds_fnn,
+    probs = c(0.025, 0.975)
+  ))
+print(quantiles_fnn)
+
+
+# Odds for female response in stereo =male and grammatical = female
+odds_fnm <- du%>%
+  mutate(predicted_odds_fnm = b_Intercept + b_stereotypestereo_male + b_conditiongramm_neutral)%>% 
+  summarize(o6 = mean(predicted_odds_fnm))
+print(odds_fnm)
+
+quantiles_fnm <- du%>%  
+  mutate(predicted_odds_fnm = b_Intercept + b_stereotypestereo_male + b_conditiongramm_neutral)%>%
+  summarize(CI6 = quantile(
+    x = predicted_odds_fnm,
+    probs = c(0.025, 0.975)
+  ))
+print(quantiles_fnm)
+
+### Probabilities of female answers the grammatical female condition
+
+prob_fnf <- inv_logit_scaled(odds_fnf)
+print(prob_fnf)
+prob_quantiles_fnf <- inv_logit_scaled(quantiles_fnf)
+print(prob_quantiles_fnf)
+
+prob_fnn <- inv_logit_scaled(odds_fnn)
+print(prob_fnn)
+prob_quantiles_fnn <- inv_logit_scaled(quantiles_fnn)
+print(prob_quantiles_fnn)
+
+prob_fnm <- inv_logit_scaled(odds_fnm)
+print(prob_fnm)
+prob_quantiles_fnm <- inv_logit_scaled(quantiles_fnm)
+print(prob_quantiles_fnm)
+
+```
+```{r}
+overview_chart_neutral <- tribble(
+  ~"stereotype",     ~"mean",    ~"upper",   ~"lower",
+    "female",        0.752,       0.788,      0.711,
+    "neutral",       0.605,       0.651,      0.558,
+    "male",          0.424,       0.472,      0.376
+)
+print(overview_chart_neutral)
+```
+
+
+```{r}
+### Odds for a female answer in the grammatical male condition
+
+# Odds for female response in  stereo = female and grammatical condition = neutral
+odds_fmf <- du%>%
+  mutate(predicted_odds_fmf = b_Intercept + b_conditiongramm_male)%>% 
+  summarize(o7 = mean(predicted_odds_fmf))
+print(odds_fmf)
+
+quantiles_fmf <- du%>%  
+  mutate(predicted_odds_fmf = b_Intercept + b_conditiongramm_male)%>%
+  summarize(CI7 = quantile(
+    x = predicted_odds_fmf,
+    probs = c(0.025, 0.975)
+  ))
+print(quantiles_fmf)
+
+
+# Odds for female response in condition stereo = neutral and grammatical condition = male
+odds_fmn <- du%>%
+  mutate(predicted_odds_fmn = b_Intercept + b_stereotypestereo_neutral + b_conditiongramm_male)%>% 
+  summarize(o8 = mean(predicted_odds_fmn))
+print(odds_fmn)
+
+quantiles_fmn <- du%>%  
+  mutate(predicted_odds_fmn = b_Intercept + b_stereotypestereo_neutral + b_conditiongramm_male)%>%
+  summarize(CI8 = quantile(
+    x = predicted_odds_fmn,
+    probs = c(0.025, 0.975)
+  ))
+print(quantiles_fmn)
+
+
+# Odds for female response in stereo = male and grammatical = male
+odds_fmm <- du%>%
+  mutate(predicted_odds_fmm = b_Intercept + b_stereotypestereo_male + b_conditiongramm_male)%>% 
+  summarize(o9 = mean(predicted_odds_fmm))
+print(odds_fmm)
+
+quantiles_fmm <- du%>%  
+  mutate(predicted_odds_fmm = b_Intercept + b_stereotypestereo_male + b_conditiongramm_male)%>%
+  summarize(CI9 = quantile(
+    x = predicted_odds_fmm,
+    probs = c(0.025, 0.975)
+  ))
+print(quantiles_fmm)
+
+### Probabilities of female answers the grammatical male condition
+
+prob_fmf <- inv_logit_scaled(odds_fmf)
+print(prob_fmf)
+prob_quantiles_fmf <- inv_logit_scaled(quantiles_fmf)
+print(prob_quantiles_fmf)
+
+prob_fmn <- inv_logit_scaled(odds_fmn)
+print(prob_fmn)
+prob_quantiles_fmn <- inv_logit_scaled(quantiles_fmn)
+print(prob_quantiles_fmn)
+
+prob_fmm <- inv_logit_scaled(odds_fmm)
+print(prob_fmm)
+prob_quantiles_fmm <- inv_logit_scaled(quantiles_fmm)
+print(prob_quantiles_fmm)
+
+
+```
+```{r}
+overview_chart_male <- tribble(
+  ~"stereotype",     ~"mean",    ~"upper",   ~"lower",
+    "female",        0.528,       0.577,      0.479,
+    "neutral",       0.361,       0.408,      0.318,
+    "male",          0.214,       0.251,      0.180
+)
+print(overview_chart_male)
+```
+
+
+
+```{r}
+###Hypothesis testing
+
+# grammatical male:
+GM_hyp1 <- draws_condition_GM%>%
+  mutate(post_prob1 = inv_logit_scaled(draws))
+print(GM_hyp1)
+
+h1 <- "post_prob1 < 0.5"
+
+hypothesis(GM_hyp1, h1, ignore_prior = TRUE)
+
+# grammatical female:
+GF_hyp2 <- draws_condition_GF%>%
+  mutate(post_prob2 = inv_logit_scaled(draws))
+print(GF_hyp2)
+
+h2 <- "post_prob2 > 0.5"
+
+hypothesis(GF_hyp2, h2, ignore_prior = TRUE)
+
+# grammatical neutral:
+GN_hyp3 <- draws_condition_GN%>%
+  mutate(post_prob3 = inv_logit_scaled(draws))
+print(GN_hyp3)
+
+hyp3_collective <- bind_cols(GM_hyp1, GF_hyp2, GN_hyp3)%>%
+  select(post_prob1, post_prob2, post_prob3)
+print(hyp3_collective)
+
+h3 <- c("post_prob1 < post_prob3", "post_prob2 > post_prob3")
+
+hypothesis(hyp3_collective, h3, ignore_prior = TRUE)
+```
+
